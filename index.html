@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Phát Lộc Natural Food: yến sào, đông trùng hạ thảo, nha đam, táo đỏ chính hãng.">
+<link rel="icon" href="mark.jpg">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Phát Lộc Natural Food</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+/* Layout: a narrow shop column; one emerald band carries the brand promise, everything else sits on ivory with gold hairlines. */
+:root {
+  --ivory: #fbfaf5;
+  --paper: #ffffff;
+  --ink: #17261d;
+  --muted: #5d6b61;
+  --emerald: #0d4a2c;
+  --emerald-2: #135f39;
+  --gold: #b8892b;
+  --gold-soft: #e9d9b0;
+  --line: #e4dfcf;
+  --on-emerald: #f6efd9;
+  --sale: #a3321f;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ivory: #0d1712; --paper: #13211a; --ink: #eee9da; --muted: #a9b5ab;
+    --emerald: #0f3b25; --emerald-2: #1b6b42; --gold: #d8b05a; --gold-soft: #4a3e22;
+    --line: #2a3a30; --on-emerald: #f3ead0; --sale: #ef8a74; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ivory: #0d1712; --paper: #13211a; --ink: #eee9da; --muted: #a9b5ab;
+  --emerald: #0f3b25; --emerald-2: #1b6b42; --gold: #d8b05a; --gold-soft: #4a3e22;
+  --line: #2a3a30; --on-emerald: #f3ead0; --sale: #ef8a74; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--ivory); color: var(--ink); font: 400 15px/1.6 var(--font-body); }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; text-wrap: balance; margin: 0; }
+.eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* header */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--ivory) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand .mark { width: 52px; height: 52px; border-radius: 10px; background: #fff; display: grid; place-items: center; border: 1px solid var(--gold-soft); }
+.brand .mark img { width: 42px; }
+.brand b { font-family: var(--font-display); font-size: 22px; letter-spacing: .02em; color: var(--emerald-2); display: block; line-height: 1; }
+.brand small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+nav.menu { display: flex; gap: 22px; font-size: 14px; }
+nav.menu a { text-decoration: none; color: var(--muted); }
+nav.menu a:hover { color: var(--ink); }
+.btn { display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; text-decoration: none; font: 600 14px var(--font-body); padding: 11px 18px; border-radius: 999px; }
+.btn-gold { background: var(--gold); color: #1b1404; }
+.btn-ghost { background: transparent; color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--gold); }
+.btn-line { background: transparent; color: var(--emerald-2); box-shadow: inset 0 0 0 1px var(--line); }
+@media (max-width: 760px) { nav.menu { display: none; } }
+
+/* hero */
+.hero { background: var(--emerald); color: var(--on-emerald); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at 85% 20%, rgba(216,176,90,.18), transparent 70%); pointer-events: none; }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; padding-block: 56px; position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(36px, 5.6vw, 64px); font-style: italic; font-weight: 500; }
+.hero h1 span { display: block; font-style: normal; font-weight: 700; color: var(--gold); }
+.hero p { max-width: 52ch; color: color-mix(in srgb, var(--on-emerald) 82%, transparent); margin: 18px 0 26px; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .seal { justify-self: center; width: min(320px, 100%); aspect-ratio: 1; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 0 0 10px rgba(216,176,90,.25), 0 30px 60px rgba(0,0,0,.35); }
+.hero .seal img { width: 78%; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 30px; font-size: 13px; }
+.facts div { border-left: 1px solid var(--gold); padding-left: 10px; }
+.facts b { display: block; color: var(--gold); font-weight: 600; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; } .hero .seal { width: 200px; order: -1; } }
+
+/* products */
+section.block { padding-block: 56px; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.head h2 { font-size: clamp(30px, 4vw, 42px); color: var(--emerald-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--line); background: var(--paper); color: var(--muted); border-radius: 999px; padding: 7px 14px; font: 500 13px var(--font-body); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--emerald-2); border-color: var(--emerald-2); color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.ph { aspect-ratio: 4/3; max-width: 100%; background: linear-gradient(140deg, var(--emerald), var(--emerald-2)); color: var(--on-emerald); display: grid; place-items: center; text-align: center; position: relative; }
+.ph strong { font: italic 600 26px var(--font-display); color: var(--gold); padding: 0 12px; }
+.ph em { position: absolute; bottom: 8px; left: 0; right: 0; font-style: normal; font-size: 11px; opacity: .7; }
+.card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+.card .cat { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.card h3 { font: 600 15px/1.4 var(--font-body); }
+.card .spec { font-size: 13px; color: var(--muted); }
+.price { display: flex; align-items: baseline; gap: 8px; margin-top: auto; padding-top: 8px; font-variant-numeric: tabular-nums; }
+.price b { font: 700 22px var(--font-display); color: var(--sale); }
+.price s { font-size: 13px; color: var(--muted); }
+.card .btn { justify-content: center; margin-top: 8px; }
+
+/* gift band */
+.gift { background: var(--paper); border-block: 1px solid var(--line); }
+.gift .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; padding-block: 48px; }
+.gift h2 { font-size: clamp(30px, 4vw, 44px); color: var(--emerald-2); }
+.gift ul { padding-left: 18px; color: var(--muted); }
+.gift .box { border: 1px solid var(--gold); border-radius: 16px; padding: 24px; display: grid; gap: 8px; }
+.gift .box .price b { font-size: 30px; }
+@media (max-width: 760px) { .gift .wrap { grid-template-columns: 1fr; } }
+
+/* trust */
+.trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.trust div { border-top: 2px solid var(--gold); padding-top: 14px; }
+.trust h3 { font-size: 22px; color: var(--emerald-2); margin-bottom: 6px; }
+.trust p { margin: 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 760px) { .trust { grid-template-columns: 1fr; } }
+
+/* order */
+.order { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+form.f { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: grid; gap: 12px; }
+.f label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.f input, .f select, .f textarea { font: 15px var(--font-body); padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--ivory); color: var(--ink); width: 100%; }
+.f .row { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
+.summary { white-space: pre-wrap; background: var(--ivory); border: 1px dashed var(--gold); border-radius: 10px; padding: 12px; font-size: 14px; }
+.contact p { margin: 0 0 10px; }
+.contact .big { font: 700 30px var(--font-display); color: var(--emerald-2); user-select: all; }
+@media (max-width: 760px) { .order { grid-template-columns: 1fr; } .f .row { grid-template-columns: 1fr; } }
+
+footer { background: var(--emerald); color: var(--on-emerald); font-size: 13px; }
+footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; padding-block: 36px; }
+footer b { color: var(--gold); }
+footer p { margin: 0 0 6px; opacity: .9; }
+@media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: no-preference) { .card { transition: transform .2s, box-shadow .2s; } .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(13,74,44,.12); } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Phát Lộc Natural Food">
+      <span class="mark"><img src="mark.jpg" alt=""></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+    </a>
+    <nav class="menu" aria-label="Chính">
+      <a href="#san-pham">Sản phẩm</a>
+      <a href="#qua-tet">Quà Tết</a>
+      <a href="#cam-ket">Cam kết</a>
+      <a href="#dat-hang">Đặt hàng</a>
+    </nav>
+    <a class="btn btn-line" href="#dat-hang">Đặt hàng</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Yến sào · Đông trùng hạ thảo · Táo đỏ</div>
+      <h1>Tinh hoa tạo vị <span>Chất lượng tạo danh</span></h1>
+      <p>Phát Lộc Natural Food phân phối yến sào thương hiệu Yến sào Đỗ Thị Toán cùng đông trùng hạ thảo, táo đỏ và quà biếu. Mỗi sản phẩm có bản tự công bố và phiếu kiểm nghiệm, giao toàn quốc.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#san-pham">Xem sản phẩm</a>
+        <a class="btn btn-ghost" href="#qua-tet">Hộp quà Tết 2027</a>
+      </div>
+      <div class="facts">
+        <div><b>15</b>sản phẩm</div>
+        <div><b>Từ 99.000đ</b>dùng thử</div>
+        <div><b>Toàn quốc</b>giao hàng</div>
+      </div>
+    </div>
+    <div class="seal"><img src="logo.jpg" alt="Logo Phát Lộc, Tinh hoa tạo vị, Chất lượng tạo danh"></div>
+  </div>
+</section>
+
+<section class="block" id="san-pham">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Bảng giá</div><h2>Sản phẩm</h2></div>
+      <div class="chips" id="chips" role="group" aria-label="Lọc theo nhóm"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="gift" id="qua-tet">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Tết Đinh Mùi 2027</div>
+      <h2>Hộp quà yến sào và đông trùng hạ thảo</h2>
+      <ul>
+        <li>Yến tinh chế sợi ngắn đầu chân 50g</li>
+        <li>Đông trùng hạ thảo sấy khô nguyên con 10g</li>
+        <li>Đặt sớm từ tháng 11 để giữ hàng mùa Tết</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="eyebrow">Hộp quà Tết</div>
+      <h3 style="font-size:26px">Yến tinh chế 50g + Đông trùng 10g</h3>
+      <div class="price"><b>1.390.000đ</b><s>1.690.000đ</s></div>
+      <button class="btn btn-gold" type="button" data-pick="15">Đặt hộp quà này</button>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cam-ket">
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Vì sao chọn Phát Lộc</div><h2>Cam kết</h2></div></div>
+    <div class="trust">
+      <div><h3>Đủ giấy tờ</h3><p>Sản phẩm có bản tự công bố và phiếu kiểm nghiệm. Khách cần xem, chúng tôi gửi bản chụp.</p></div>
+      <div><h3>Hàng chính hãng</h3><p>Phân phối theo ủy quyền của Công ty TNHH TM-DV Việt Cường Nhân, chủ thương hiệu Yến sào Đỗ Thị Toán.</p></div>
+      <div><h3>Tư vấn cách dùng</h3><p>Hướng dẫn ngâm, chưng và bảo quản cho từng loại yến trước khi giao hàng.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="dat-hang" style="padding-top:0">
+  <div class="wrap order">
+    <div class="contact">
+      <div class="eyebrow">Đặt hàng</div>
+      <h2 style="font-size:40px;color:var(--emerald-2);margin-bottom:12px">Gọi hoặc nhắn Zalo</h2>
+      <p class="big">0989 874 153</p>
+      <p>Điền đơn bên cạnh, bấm <b>Tạo đơn</b> rồi chép nội dung gửi qua Zalo số trên. Nhân viên sẽ gọi lại xác nhận giá và phí giao.</p>
+      <p style="color:var(--muted);font-size:13px">Email: phatlocnaturalfoodcompany@gmail.com</p>
+    </div>
+    <form class="f" id="form" novalidate>
+      <label for="o-name">Họ tên<input id="o-name" required autocomplete="name"></label>
+      <label for="o-phone">Số điện thoại<input id="o-phone" required inputmode="tel" autocomplete="tel"></label>
+      <label for="o-addr">Địa chỉ giao hàng<input id="o-addr" required autocomplete="street-address"></label>
+      <div class="row">
+        <label for="o-prod">Sản phẩm<select id="o-prod"></select></label>
+        <label for="o-qty">Số lượng<input id="o-qty" type="number" min="1" value="1"></label>
+      </div>
+      <label for="o-note">Ghi chú<textarea id="o-note" rows="2"></textarea></label>
+      <p id="o-err" style="color:var(--sale);margin:0;font-size:13px" hidden>Vui lòng điền họ tên, số điện thoại và địa chỉ.</p>
+      <button class="btn btn-gold" type="submit">Tạo đơn</button>
+      <div id="o-out" hidden>
+        <div class="summary" id="o-sum"></div>
+        <button class="btn btn-line" type="button" id="o-copy" style="margin-top:8px">Chép nội dung đơn</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p><b>CÔNG TY TNHH SẢN XUẤT PHÁT LỘC NATURAL FOOD</b></p>
+      <p>Mã số doanh nghiệp: 3703421984, cấp ngày 26/12/2025 tại Phòng Đăng ký kinh doanh, Sở Tài chính TP. Hồ Chí Minh</p>
+      <p>Địa chỉ: 511/9 Bùi Thị Xuân, Phường Tân Đông Hiệp, TP. Hồ Chí Minh</p>
+      <p>Người đại diện: Bà Phạm Thị Thu Thảo, Giám đốc</p>
+    </div>
+    <div>
+      <p>Điện thoại: 0989 874 153</p>
+      <p>Email: phatlocnaturalfoodcompany@gmail.com</p>
+      <p>Website: phatlocnaturalfood.com</p>
+      <p style="opacity:.7">Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const P = [
+  [1,"Yến thô","Tổ Yến Thô Nguyên Tổ Ít Lông","Hộp 50g",829000,990000],
+  [2,"Yến thô","Tổ Yến Thô Nguyên Tổ Ít Lông","Hộp 100g",1590000,1890000],
+  [3,"Yến rút lông","Yến Rút Lông Đắp Tổ","Hộp 50g",1050000,1250000],
+  [4,"Yến rút lông","Yến Rút Lông Đắp Tổ","Hộp 100g",1990000,2390000],
+  [5,"Yến tinh chế","Yến Tinh Chế Vụn Đắp Tổ Dùng Thử","Hộp 20g",279000,349000],
+  [6,"Yến tinh chế","Yến Tinh Chế Sợi Ngắn Đầu Chân","Hộp 50g",990000,1250000],
+  [7,"Yến chưng","Yến Chưng Sẵn Đường Phèn","Hộp 6 hũ x 70ml",259000,320000],
+  [8,"Yến chưng","Yến Chưng Sẵn Cho Mẹ Bầu","Hộp 6 hũ x 70ml",289000,350000],
+  [9,"Yến chưng","Yến Chưng Sẵn Cho Bé","Hộp 6 hũ x 70ml",219000,269000],
+  [10,"Yến chưng","Yến Chưng Nha Đam Đường Phèn","Hộp 6 hũ x 70ml",199000,249000],
+  [11,"Đông trùng","Đông Trùng Hạ Thảo Sấy Khô Nguyên Con","Hộp 10g",450000,550000],
+  [12,"Đông trùng","Đông Trùng Hạ Thảo Sấy Khô Nguyên Con","Hũ 30g",790000,990000],
+  [13,"Táo đỏ","Táo Đỏ Tân Cương Sấy Khô Loại 1","Túi 500g",99000,129000],
+  [14,"Combo","Combo Chưng Yến Táo Đỏ","Yến vụn 20g, táo đỏ 200g, đường phèn",329000,399000],
+  [15,"Quà Tết","Hộp Quà Yến Tinh Chế và Đông Trùng","Yến 50g, đông trùng 10g",1390000,1690000]
+];
+const vnd = n => n.toLocaleString("vi-VN") + "đ";
+const cats = ["Tất cả", ...new Set(P.map(p => p[1]))];
+const grid = document.getElementById("grid"), chips = document.getElementById("chips"), sel = document.getElementById("o-prod");
+let cur = "Tất cả";
+function draw() {
+  grid.innerHTML = P.filter(p => cur === "Tất cả" || p[1] === cur).map(p => `
+    <article class="card">
+      <div class="ph"><strong>${p[2]}</strong><em>Ảnh sản phẩm đang cập nhật</em></div>
+      <div class="body">
+        <div class="cat">${p[1]}</div>
+        <h3>${p[2]}</h3>
+        <div class="spec">${p[3]}</div>
+        <div class="price"><b>${vnd(p[4])}</b><s>${vnd(p[5])}</s></div>
+        <button class="btn btn-line" type="button" data-pick="${p[0]}">Đặt mua</button>
+      </div>
+    </article>`).join("");
+  chips.innerHTML = cats.map(c => `<button class="chip" type="button" aria-pressed="${c === cur}" data-cat="${c}">${c}</button>`).join("");
+}
+sel.innerHTML = P.map(p => `<option value="${p[0]}">${p[2]} (${p[3]}) - ${vnd(p[4])}</option>`).join("");
+draw();
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-cat]"); if (c) { cur = c.dataset.cat; draw(); return; }
+  const k = e.target.closest("[data-pick]");
+  if (k) { sel.value = k.dataset.pick; document.getElementById("dat-hang").scrollIntoView({behavior: "smooth"}); }
+});
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const ok = v("o-name") && v("o-phone") && v("o-addr");
+  document.getElementById("o-err").hidden = !!ok;
+  if (!ok) return;
+  const p = P.find(x => String(x[0]) === sel.value), q = Math.max(1, parseInt(v("o-qty")) || 1);
+  document.getElementById("o-sum").textContent =
+`ĐƠN HÀNG PHÁT LỘC NATURAL FOOD
+Khách: ${v("o-name")} - ${v("o-phone")}
+Địa chỉ: ${v("o-addr")}
+Sản phẩm: ${p[2]} (${p[3]}) x ${q}
+Tạm tính: ${vnd(p[4] * q)} (chưa gồm phí giao)
+Ghi chú: ${v("o-note") || "không"}`;
+  document.getElementById("o-out").hidden = false;
+});
+document.getElementById("o-copy").addEventListener("click", async e => {
+  const t = document.getElementById("o-sum");
+  try { await navigator.clipboard.writeText(t.textContent); e.target.textContent = "Đã chép"; }
+  catch { const r = document.createRange(); r.selectNodeContents(t); const s = getSelection(); s.removeAllRanges(); s.addRange(r); e.target.textContent = "Đã chọn nội dung, bấm sao chép"; }
+});
+</script>
+
+</body>
+</html>
