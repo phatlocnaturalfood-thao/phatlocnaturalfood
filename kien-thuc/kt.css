@@ -71,5 +71,6 @@ nav.menu a:hover, nav.menu a[aria-current] { color: var(--ink); }
 footer { background: var(--emerald); color: var(--on-emerald); font-size: 13px; }
 footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; padding-block: 36px; }
 footer b { color: var(--gold); }
+footer .policy-links a { color: var(--on-emerald); }
 footer p { margin: 0 0 6px; opacity: .9; }
 @media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }

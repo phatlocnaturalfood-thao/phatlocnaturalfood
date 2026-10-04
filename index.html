@@ -130,6 +130,7 @@ form.f { background: var(--paper); border: 1px solid var(--line); border-radius:
 footer { background: var(--emerald); color: var(--on-emerald); font-size: 13px; }
 footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; padding-block: 36px; }
 footer b { color: var(--gold); }
+footer .policy-links a { color: var(--on-emerald); }
 footer p { margin: 0 0 6px; opacity: .9; }
 @media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: no-preference) { .card { transition: transform .2s, box-shadow .2s; } .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(13,74,44,.12); } }
@@ -261,6 +262,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
       <input id="o-web" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
       <p id="o-err" style="color:var(--sale);margin:0;font-size:13px" hidden>Vui lòng điền họ tên, số điện thoại và địa chỉ.</p>
       <button class="btn btn-gold" type="submit" id="o-btn">Gửi đơn</button>
+      <p style="margin:0;font-size:12px;color:var(--muted)">Khi gửi đơn, bạn đồng ý với <a href="chinh-sach/dieu-khoan.html">Điều khoản giao dịch</a> và <a href="chinh-sach/bao-mat.html">Chính sách bảo mật thông tin</a>.</p>
       <p id="o-ok" style="color:var(--emerald-2);margin:0;font-weight:600" hidden></p>
       <div id="o-out" hidden>
         <div class="summary" id="o-sum"></div>
@@ -283,6 +285,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
       <p>Email: phatlocnaturalfood@gmail.com</p>
       <p>Website: phatlocnaturalfood.com</p>
       <p><a href="kien-thuc/">Góc kiến thức: yến sào, đông trùng hạ thảo, nha đam</a></p>
+      <p class="policy-links"><a href="chinh-sach/gioi-thieu.html">Giới thiệu</a> · <a href="chinh-sach/dieu-khoan.html">Điều khoản giao dịch</a> · <a href="chinh-sach/doi-tra.html">Đổi trả, hoàn tiền</a> · <a href="chinh-sach/van-chuyen.html">Vận chuyển, kiểm hàng</a> · <a href="chinh-sach/thanh-toan.html">Thanh toán</a> · <a href="chinh-sach/bao-mat.html">Bảo mật thông tin</a> · <a href="chinh-sach/khieu-nai.html">Giải quyết khiếu nại</a></p>
       <p style="opacity:.7">Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
     </div>
   </div>
