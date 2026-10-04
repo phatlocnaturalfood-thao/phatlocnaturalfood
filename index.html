@@ -220,7 +220,7 @@ footer p { margin: 0 0 6px; opacity: .9; }
       <div class="eyebrow">Đặt hàng</div>
       <h2 style="font-size:40px;color:var(--emerald-2);margin-bottom:12px">Gọi hoặc nhắn Zalo</h2>
       <p class="big">0768 759 419</p>
-      <p>Điền đơn bên cạnh, bấm <b>Tạo đơn</b> rồi chép nội dung gửi qua Zalo số trên. Nhân viên sẽ gọi lại xác nhận giá và phí giao.</p>
+      <p>Điền đơn bên cạnh rồi bấm <b>Gửi đơn</b>, hoặc chép nội dung đơn gửi qua Zalo số trên. Nhân viên sẽ gọi lại xác nhận giá và phí giao.</p>
       <p style="color:var(--muted);font-size:13px">Email: phatlocnaturalfoodcompany@gmail.com</p>
     </div>
     <form class="f" id="form" novalidate>
@@ -232,8 +232,10 @@ footer p { margin: 0 0 6px; opacity: .9; }
         <label for="o-qty">Số lượng<input id="o-qty" type="number" min="1" value="1"></label>
       </div>
       <label for="o-note">Ghi chú<textarea id="o-note" rows="2"></textarea></label>
+      <input id="o-web" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
       <p id="o-err" style="color:var(--sale);margin:0;font-size:13px" hidden>Vui lòng điền họ tên, số điện thoại và địa chỉ.</p>
-      <button class="btn btn-gold" type="submit">Tạo đơn</button>
+      <button class="btn btn-gold" type="submit" id="o-btn">Gửi đơn</button>
+      <p id="o-ok" style="color:var(--emerald-2);margin:0;font-weight:600" hidden></p>
       <div id="o-out" hidden>
         <div class="summary" id="o-sum"></div>
         <button class="btn btn-line" type="button" id="o-copy" style="margin-top:8px">Chép nội dung đơn</button>
@@ -302,7 +304,9 @@ document.addEventListener("click", e => {
   const k = e.target.closest("[data-pick]");
   if (k) { sel.value = k.dataset.pick; document.getElementById("dat-hang").scrollIntoView({behavior: "smooth"}); }
 });
-document.getElementById("form").addEventListener("submit", e => {
+// Địa chỉ Apps Script nhận đơn (Google Sheet). Để trống thì chỉ tạo nội dung đơn để gửi Zalo.
+const ORDER_ENDPOINT = "";
+document.getElementById("form").addEventListener("submit", async e => {
   e.preventDefault();
   const v = id => document.getElementById(id).value.trim();
   const ok = v("o-name") && v("o-phone") && v("o-addr");
@@ -317,6 +321,22 @@ Sản phẩm: ${p[2]} (${p[3]}) x ${q}
 Tạm tính: ${vnd(p[4] * q)} (chưa gồm phí giao)
 Ghi chú: ${v("o-note") || "không"}`;
   document.getElementById("o-out").hidden = false;
+  const msg = document.getElementById("o-ok"), btn = document.getElementById("o-btn");
+  if (!ORDER_ENDPOINT) return;
+  btn.disabled = true; msg.hidden = false; msg.textContent = "Đang gửi đơn...";
+  const body = new URLSearchParams({
+    name: v("o-name"), phone: v("o-phone"), addr: v("o-addr"),
+    product: p[2], spec: p[3], qty: q, total: p[4] * q,
+    note: v("o-note"), website: v("o-web")
+  });
+  try {
+    await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body });
+    msg.textContent = "Đã nhận đơn. Nhân viên sẽ gọi lại xác nhận giá và phí giao.";
+    document.getElementById("form").reset();
+  } catch {
+    msg.textContent = "Chưa gửi được đơn. Anh/chị vui lòng chép nội dung bên dưới gửi Zalo 0768 759 419.";
+  }
+  btn.disabled = false;
 });
 document.getElementById("o-copy").addEventListener("click", async e => {
   const t = document.getElementById("o-sum");
