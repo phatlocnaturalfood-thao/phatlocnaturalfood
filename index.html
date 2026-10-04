@@ -305,7 +305,8 @@ const P = [
   [9,"Yến chưng","Yến Chưng Sẵn Cho Bé","Hộp 6 hũ x 70ml",219000,269000],
   [10,"Yến chưng","Yến Chưng Nha Đam Đường Phèn","Hộp 6 hũ x 70ml",199000,249000],
   [11,"Đông trùng","Đông Trùng Hạ Thảo Sấy Khô Nguyên Con","Hộp 10g",450000,550000],
-  [12,"Đông trùng","Đông Trùng Hạ Thảo Sấy Khô Nguyên Con","Hũ 30g",790000,990000],
+  [12,"Đông trùng","Đông Trùng Hạ Thảo Sấy Khô Nguyên Con","Hộp 50g",0,0],
+  [16,"Đông trùng","Đông Trùng Hạ Thảo Sấy Khô Nguyên Con","Hộp 100g",0,0],
   [13,"Táo đỏ","Táo Đỏ Tân Cương Sấy Khô Loại 1","Túi 500g",99000,129000],
   [14,"Combo","Combo Chưng Yến Táo Đỏ","Yến vụn 20g, táo đỏ 200g, đường phèn",329000,399000],
   [15,"Quà Tết","Hộp Quà Yến Tinh Chế và Đông Trùng","Yến 50g, đông trùng 10g",1390000,1690000]
@@ -316,7 +317,7 @@ const IMG = {
   3: R("yen-rut-long-dap-to", [3,1,2]), 4: R("yen-rut-long-dap-to", [1,2,3]),
   6: R("yen-tinh-che-soi-ngan", [3,1,2]),
   7: R("yen-chung-hop-6-hu", [5]), 8: R("yen-chung-hop-6-hu", [5]), 9: R("yen-chung-hop-6-hu", [5]), 10: R("yen-chung-hop-6-hu", [5]),
-  11: R("dong-trung-ha-thao", [3,1,4]), 12: R("dong-trung-ha-thao", [1,4]),
+  11: R("dong-trung-ha-thao", [3,1,4]), 12: R("dong-trung-ha-thao", [2,1,4]), 16: R("dong-trung-ha-thao", [5,1,4]),
   13: R("tao-do-tan-cuong", [1,2,3,4,5,6])
 };
 const SETS = [
@@ -340,7 +341,7 @@ document.getElementById("lb-next").onclick = () => { gi = (gi + 1) % gal.length;
 document.getElementById("lb-x").onclick = () => lb.close();
 lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
 document.getElementById("sets").innerHTML = SETS.map((s, i) => `<figure><button type="button" data-set="${i}" aria-label="Xem ảnh ${s[1]}"><img src="${DIR}nho/${s[0]}" alt="${s[1]}" loading="lazy" width="480" height="480"></button><figcaption>${s[1]}</figcaption></figure>`).join("");
-const vnd = n => n.toLocaleString("vi-VN") + "đ";
+const vnd = n => n ? n.toLocaleString("vi-VN") + "đ" : "Liên hệ báo giá";
 const cats = ["Tất cả", ...new Set(P.map(p => p[1]))];
 const grid = document.getElementById("grid"), chips = document.getElementById("chips"), sel = document.getElementById("o-prod");
 let cur = "Tất cả";
@@ -352,7 +353,7 @@ function draw() {
         <div class="cat">${p[1]}</div>
         <h3>${p[2]}</h3>
         <div class="spec">${p[3]}</div>
-        <div class="price"><b>${vnd(p[4])}</b><s>${vnd(p[5])}</s></div>
+        <div class="price"><b>${vnd(p[4])}</b>${p[5] ? `<s>${vnd(p[5])}</s>` : ""}</div>
         <button class="btn btn-line" type="button" data-pick="${p[0]}">Đặt mua</button>
       </div>
     </article>`).join("");
@@ -383,7 +384,7 @@ document.getElementById("form").addEventListener("submit", async e => {
 Khách: ${v("o-name")} - ${v("o-phone")}
 Địa chỉ: ${v("o-addr")}
 Sản phẩm: ${p[2]} (${p[3]}) x ${q}
-Tạm tính: ${vnd(p[4] * q)} (chưa gồm phí giao)
+Tạm tính: ${p[4] ? vnd(p[4] * q) + " (chưa gồm phí giao)" : "Liên hệ báo giá"}
 Ghi chú: ${v("o-note") || "không"}`;
   document.getElementById("o-out").hidden = false;
   const msg = document.getElementById("o-ok"), btn = document.getElementById("o-btn");
