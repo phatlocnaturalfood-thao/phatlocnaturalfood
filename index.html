@@ -308,7 +308,7 @@ const P = [
   [12,"Đông trùng","Nấm Đông Trùng Hạ Thảo Sấy Khô","Hộp 50g",0,0],
   [16,"Đông trùng","Nấm Đông Trùng Hạ Thảo Sấy Khô","Hộp 100g",0,0],
   [13,"Táo đỏ","Táo Đỏ Tân Cương Sấy Khô Loại 1","Túi 500g",99000,129000],
-  [14,"Combo","Combo Chưng Yến Táo Đỏ","Yến vụn 20g, táo đỏ 200g, đường phèn",329000,399000],
+  [14,"Quà Tết","Set Hộp Quà Tặng Đông Trùng Hạ Thảo","Hộp quà",0,0],
   [15,"Quà Tết","Hộp Quà Yến Tinh Chế và Đông Trùng","Yến 50g, đông trùng 10g",1390000,1690000]
 ];
 const R = (k, n) => n.map(i => `${k}-${i}.jpg`);
@@ -318,7 +318,8 @@ const IMG = {
   6: R("yen-tinh-che-soi-ngan", [3,1,2]),
   7: R("yen-chung-hop-6-hu", [5]), 8: R("yen-chung-hop-6-hu", [5]), 9: R("yen-chung-hop-6-hu", [5]), 10: R("yen-chung-hop-6-hu", [5]),
   11: R("dong-trung-ha-thao", [3,1,4]), 12: R("dong-trung-ha-thao", [2,1,4]), 16: R("dong-trung-ha-thao", [5,1,4]),
-  13: R("tao-do-tan-cuong", [1,2,3,4,5,6])
+  13: R("tao-do-tan-cuong", [1,2,3,4,5,6]),
+  14: R("set-qua-dong-trung-ha-thao", [1,2,3])
 };
 const SETS = [
   ...[1,2,3,4,5,6,7].map(i => [`set-qua-yen-tinh-che-100g-${i}.jpg`, "Set quà yến tinh chế 100g, kèm táo đỏ và đường phèn"]),
@@ -328,8 +329,7 @@ const SETS = [
   ["set-qua-yen-tinh-che-50g-4.jpg", "Set quà yến rút lông đắp tổ 50g"],
   ["set-qua-yen-tinh-che-50g-5.jpg", "Set quà yến tinh chế vụn baby 50g"],
   ["set-qua-yen-tinh-che-50g-6.jpg", "Set quà yến tinh chế 1 lớp sợi 50g"],
-  ["set-qua-yen-tinh-che-50g-7.jpg", "Set quà 50g yến rút lông đắp tổ và 1 hũ đông trùng"],
-  ...[1,2,3].map(i => [`set-qua-dong-trung-ha-thao-${i}.jpg`, "Set quà đông trùng hạ thảo"])
+  ["set-qua-yen-tinh-che-50g-7.jpg", "Set quà 50g yến rút lông đắp tổ và 1 hũ đông trùng"]
 ];
 const DIR = "images/san-pham/";
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
