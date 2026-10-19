@@ -519,7 +519,7 @@ const SETS = [
 ];
 const DIR = "images/san-pham/";
 // Đổi số phiên bản khi thay ảnh catalog để trình duyệt tải ảnh mới thay vì ảnh cũ đã lưu.
-const IMG_V = "?v=2";
+const IMG_V = "?v=3";
 const full = f => DIR + f + (f.startsWith("catalog/") ? IMG_V : "");
 const thumb = f => f.startsWith("catalog/") ? full(f) : DIR + "nho/" + f;
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
