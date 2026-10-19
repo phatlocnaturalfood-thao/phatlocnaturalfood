@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Phát Lộc Natural Food: yến sào, đông trùng hạ thảo, nha đam, táo đỏ chính hãng.">
+<meta name="description" content="Phát Lộc Natural Food: yến sào, đông trùng hạ thảo, nha đam, táo đỏ chính hãng, cùng xà bông thiên nhiên và mỹ phẩm.">
 <link rel="icon" href="mark.jpg">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Phát Lộc Natural Food</title>
@@ -174,7 +174,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
 <section class="hero" id="top">
   <div class="wrap">
     <div>
-      <div class="eyebrow">Yến sào · Đông trùng hạ thảo · Táo đỏ</div>
+      <div class="eyebrow">Yến sào · Đông trùng hạ thảo · Táo đỏ · Nha đam</div>
       <h1>Tinh hoa tạo vị <span>Chất lượng tạo danh</span></h1>
       <p>Phát Lộc Natural Food phân phối yến sào thương hiệu Yến sào Đỗ Thị Toán cùng đông trùng hạ thảo, táo đỏ và quà biếu. Mỗi sản phẩm có bản tự công bố và phiếu kiểm nghiệm, giao toàn quốc.</p>
       <div class="cta">
@@ -182,8 +182,8 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
         <a class="btn btn-ghost" href="#qua-tet">Hộp quà Tết 2027</a>
       </div>
       <div class="facts">
-        <div><b>15</b>sản phẩm</div>
-        <div><b>Từ 99.000đ</b>dùng thử</div>
+        <div><b id="f-count">99</b>sản phẩm</div>
+        <div><b id="f-min">Từ 35.000đ</b>dùng thử</div>
         <div><b>Toàn quốc</b>giao hàng</div>
       </div>
     </div>
@@ -297,34 +297,209 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
 </dialog>
 
 <script>
+// Bảng giá theo catalog Việt Cường Nhân (11/9). Dữ liệu gốc và ảnh: catalog/products.json trong thư mục dự án.
 const P = [
-  [1,"Yến thô","Tổ Yến Thô Nguyên Tổ","Hộp 50g",850000,990000],
-  [2,"Yến thô","Tổ Yến Thô Nguyên Tổ","Hộp 100g",1590000,1890000],
-  [3,"Yến rút lông","Yến Rút Lông Đắp Tổ","Hộp 50g",1050000,1250000],
-  [4,"Yến rút lông","Yến Rút Lông Đắp Tổ","Hộp 100g",1990000,2390000],
-  [5,"Yến tinh chế","Yến Tinh Chế Vụn Đắp Tổ Dùng Thử","Hộp 20g",279000,349000],
-  [6,"Yến tinh chế","Yến Tinh Chế Sợi Ngắn Đầu Chân","Hộp 50g",990000,1250000],
-  [7,"Yến chưng","Yến Chưng Sẵn Đường Phèn","Hộp 6 hũ x 70ml",259000,320000],
-  [8,"Yến chưng","Yến Chưng Sẵn Cho Mẹ Bầu","Hộp 6 hũ x 70ml",289000,350000],
-  [9,"Yến chưng","Yến Chưng Sẵn Cho Bé","Hộp 6 hũ x 70ml",219000,269000],
-  [10,"Yến chưng","Yến Chưng Đường Phèn Cho Người Cao Tuổi","Hộp 6 hũ x 70ml",199000,249000],
-  [11,"Đông trùng","Nấm Đông Trùng Hạ Thảo Sấy Khô","Hộp 10g",209000,400000],
-  [12,"Đông trùng","Nấm Đông Trùng Hạ Thảo Sấy Khô","Hộp 50g",490000,1200000],
-  [16,"Đông trùng","Nấm Đông Trùng Hạ Thảo Sấy Khô","Hộp 100g",945000,2000000],
-  [13,"Táo đỏ","Táo Đỏ Tân Cương Sấy Khô Loại 1","Túi 500g",99000,129000],
+  [101,"Yến thô","Yến Thô Tổ AB Ít Lông","100gr",2150000],
+  [102,"Yến thô","Yến Thô Nguyên Tổ Giá Mềm","100gr",1880000],
+  [103,"Yến thô","Yến Thô Bể Nứt Nhẹ Ít Lông","100gr",1900000],
+  [104,"Yến thô","Yến Thô Bể Nứt Nhẹ","100gr",1590000],
+  [105,"Yến thô","Chân Rìa Thô","100gr",1869000],
+  [106,"Yến tinh chế","Yến Tinh Chế Vụn Đắp Tổ","100gr",1680000],
+  [107,"Yến tinh chế","Yến Tinh Chế Vụn Baby","100gr",1680000],
+  [108,"Yến tinh chế","Yến Tinh Chế Sợi Ngắn, Đầu Chân","100gr",1999000],
+  [109,"Yến tinh chế","Yến Tinh Chế 1 Lớp Sợi Vừa","100gr",2090000],
+  [110,"Yến tinh chế","Yến Tinh Chế 1 Lớp Sợi 10 Tai","100gr",2390000],
+  [111,"Yến tinh chế","Yến Tinh Chế 1 Lớp Sợi 18-20 Tai","100gr",2390000],
+  [112,"Yến tinh chế","Yến Tinh Chế 2 Lớp Sợi","100gr",2690000],
+  [113,"Yến tinh chế","Yến Rút Lông Đắp Tổ","100gr",2899000],
+  [114,"Yến tinh chế","Yến Rút Lông Định Hình","100gr",3380000],
+  [115,"Yến tinh chế","Yến Rút Lông Xương","100gr",3490000],
+  [116,"Yến tinh chế","Yến Rút Lông Khô","100gr",4169000],
+  [117,"Yến tinh chế","Yến Rút Lông Khô Ép Miếng","100gr",3850000],
+  [118,"Yến tinh chế","Chân Tua Sạch Loại 1","100gr",2890000],
+  [119,"Yến tinh chế","Chân Tua Sạch Loại 2","100gr",2680000],
+  [120,"Yến tinh chế","Viên Baby Mix Sẵn Phụ Gia","10 gói",299000],
+  [121,"Yến tinh chế","Viên Baby Mix Sẵn Phụ Gia","10 hũ",350000],
+  [122,"Yến tinh chế","Đắp Miếng Sợi Vuông","100gr",3630000],
+  [123,"Yến tinh chế","Vuông Miếng Lớn","100gr",1890000],
+  [124,"Nước yến chưng thủ công","Nước Yến Chưng Thủ Công 12gr Yến Tươi","Hũ 70ml",60000],
+  [125,"Nước yến chưng thủ công","Nước Yến Chưng Thủ Công 36gr Yến Tươi","Hũ 200ml",160000],
+  [126,"Nước yến chưng VCN Nest","Nước Yến VCN Nest 0.3gr Tổ Yến Thô","Hũ",35000],
+  [127,"Nước yến chưng VCN Nest","Nước Yến VCN Nest 0.8gr Tổ Yến Thô","Hũ",55000],
+  [128,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest","Loại 0.3gr",180000],
+  [129,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest","Loại 0.8gr",300000],
+  [130,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest","Loại 0.3gr",300000],
+  [131,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest","Loại 0.8gr",500000],
+  [132,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest (Có Hộp)","Loại 0.3gr",230000],
+  [133,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest (Có Hộp)","Loại 0.8gr",350000],
+  [134,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest (Có Hộp)","Loại 0.3gr",350000],
+  [135,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest (Có Hộp)","Loại 0.8gr",550000],
+  [136,"Đông trùng hạ thảo","Nấm Đông Trùng Hạ Thảo Loại Cây","100gr",599000],
+  [137,"Đông trùng hạ thảo","Nấm Đông Trùng Hạ Thảo Loại Cây","50gr",350000],
+  [138,"Đông trùng hạ thảo","Nấm Đông Trùng Hạ Thảo Loại Gãy","100gr",299000],
+  [139,"Đông trùng hạ thảo","Đông Trùng Tươi","Hũ",99000],
+  [140,"Đông trùng hạ thảo","Đông Trùng Hạ Thảo 10gr","Hũ 10gr",99000],
+  [141,"Đông trùng hạ thảo","Đông Trùng Hạ Thảo 20gr","20gr",189000],
+  [142,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Trung","1kg (100-120 quả/kg)",169000],
+  [143,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Đại","1kg (80-100 quả/kg)",189000],
+  [144,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Thượng Hạng","1kg (70-80 quả/kg)",219000],
+  [145,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Trung","Hộp 350gr",65000],
+  [146,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Đại","Hộp 350gr",75000],
+  [147,"Táo đỏ Tân Cương","Táo Đỏ Nhược Khương","Hộp 350gr",45000],
+  [148,"Nha đam Tây Nguyên","Nha Đam Có Đường","Túi 1kg",59000],
+  [149,"Nha đam Tây Nguyên","Nha Đam Không Đường","Túi 1kg",59000],
+  [150,"Nha đam Tây Nguyên","Nha Đam Có Đường","Hũ 1kg",69000],
+  [151,"Nha đam Tây Nguyên","Nha Đam Không Đường","Hũ 1kg",69000],
   [14,"Quà Tết","Set Hộp Quà Tặng Đông Trùng Hạ Thảo","Hộp quà",729000,1150000],
-  [15,"Quà Tết","Set Quà Biếu Tặng Cao Cấp","100g yến tinh chế, kèm táo đỏ và đường phèn",2689000,4599000]
+  [15,"Quà Tết","Set Quà Biếu Tặng Cao Cấp","100g yến tinh chế, kèm táo đỏ và đường phèn",2689000,4599000],
+  [201,"Xà bông tắm hình vuông","Xà Bông Hương Trà Xanh","Cục 110g",69000],
+  [202,"Xà bông tắm hình vuông","Xà Bông Hương Bạc Hà","Cục 110g",69000],
+  [203,"Xà bông tắm hình vuông","Xà Bông Hương Cherry","Cục 110g",69000],
+  [204,"Xà bông tắm hình vuông","Xà Bông Hương Chuối","Cục 110g",69000],
+  [205,"Xà bông tắm hình vuông","Xà Bông Hương Dứa","Cục 110g",69000],
+  [206,"Xà bông tắm hình vuông","Xà Bông Hương Dừa","Cục 110g",69000],
+  [207,"Xà bông tắm hình vuông","Xà Bông Hương Gạo Rang","Cục 110g",69000],
+  [208,"Xà bông tắm hình vuông","Xà Bông Hương Lyly","Cục 110g",69000],
+  [209,"Xà bông tắm hình vuông","Xà Bông Hương Lan","Cục 110g",69000],
+  [210,"Xà bông tắm hình vuông","Xà Bông Hương Măng Cụt","Cục 110g",69000],
+  [211,"Xà bông tắm hình vuông","Xà Bông Hương Sen","Cục 110g",69000],
+  [212,"Xà bông tắm hình vuông","Xà Bông Hương Vani","Cục 110g",69000],
+  [213,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Mẫu Đơn","Cục 133g",103000],
+  [214,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Nho","Cục 84g",85000],
+  [215,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bắp","Cục 81g",85000],
+  [216,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bưởi","Cục 100g",77000],
+  [217,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Cam","Cục 81g",77000],
+  [218,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Chuối","Cục 80g",85000],
+  [219,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Dâu","Cục 99g",85000],
+  [220,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Dừa","Cục 67g",93000],
+  [221,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Dứa","Cục 75g",85000],
+  [222,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Hồng","Cục 140g",103000],
+  [223,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Hướng Dương","Cục 111g",93000],
+  [224,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Lan","Cục 95g",93000],
+  [225,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Măng Cụt","Cục 84g",77000],
+  [226,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Mật Ong","Cục 80g",77000],
+  [227,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Sứ","Cục 97g",103000],
+  [228,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Xoài","Cục 74g",85000],
+  [229,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bông Bưởi","Cục 100g",77000],
+  [230,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bông Cà Phê","Cục 71g",77000],
+  [231,"Mỹ phẩm","Nước Tẩy Trang","Chai",200000],
+  [232,"Mỹ phẩm","Sữa Rửa Mặt","Tuýp",190000],
+  [233,"Mỹ phẩm","Toner","Chai",200000],
+  [234,"Mỹ phẩm","Serum Trắng Da, Giảm Nếp Nhăn","Chai",290000],
+  [235,"Mỹ phẩm","Kem Dưỡng Ẩm, Trắng Da","Hũ",260000],
+  [236,"Mỹ phẩm","Gel Tẩy Da Chết","Tuýp",230000],
+  [237,"Mỹ phẩm","Kem Chống Nắng","Tuýp",290000],
+  [238,"Mỹ phẩm","Mặt Nạ","Hộp 10 miếng",189000],
+  [239,"Mỹ phẩm","Dầu Gội Nhân Sâm Hàn Quốc","Chai",550000],
+  [240,"Mỹ phẩm","Tinh Chất Dưỡng Tóc Nhân Sâm Hàn Quốc","Chai",350000],
+  [241,"Mỹ phẩm","Kem Ủ Tóc Nhân Sâm Hàn Quốc","Tuýp",320000],
+  [242,"Mỹ phẩm","Mặt Nạ Hồng / Nâu / Xanh Nâng Tone","Hộp 10 miếng",360000],
+  [243,"Chăm sóc cơ thể","Dầu Gội Trái Nhàu","Chai",344000],
+  [244,"Chăm sóc cơ thể","Xà Bông Tắm Giảm Mụn","Cục",120000],
+  [245,"Chăm sóc cơ thể","Nước Rửa Tay Khô","Chai",126000],
+  [246,"Chăm sóc cơ thể","Combo Quà 3 Xà Bông Tắm","Hộp",207000]
 ];
 const R = (k, n) => n.map(i => `${k}-${i}.jpg`);
 const IMG = {
-  1: R("yen-tho-nguyen-to", [3,1,2]), 2: R("yen-tho-nguyen-to", [1,2,3]),
-  3: R("yen-rut-long-dap-to", [3,1,2]), 4: R("yen-rut-long-dap-to", [1,2,3]),
-  6: R("yen-tinh-che-soi-ngan", [3,1,2]),
-  7: R("yen-chung-hop-6-hu", [5]), 8: R("yen-chung-hop-6-hu", [5]), 9: R("yen-chung-hop-6-hu", [5]), 10: R("yen-chung-hop-6-hu", [5]),
-  11: R("dong-trung-ha-thao", [3,1,4]), 12: R("dong-trung-ha-thao", [2,1,4]), 16: R("dong-trung-ha-thao", [5,1,4]),
-  13: R("tao-do-tan-cuong", [1,2,3,4,5,6]),
+  101: ["catalog/yen-tho-to-ab-it-long.jpg"],
+  102: ["catalog/yen-tho-nguyen-to-gia-mem.jpg", "yen-tho-nguyen-to-1.jpg", "yen-tho-nguyen-to-2.jpg", "yen-tho-nguyen-to-3.jpg"],
+  103: ["catalog/yen-tho-be-nut-nhe-it-long.jpg"],
+  104: ["catalog/yen-tho-be-nut-nhe.jpg"],
+  105: ["catalog/chan-ria-tho.jpg"],
+  106: ["catalog/tinh-che-vun-dap-to.jpg"],
+  107: ["catalog/tinh-che-vun-baby.jpg"],
+  108: ["catalog/tinh-che-soi-ngan-dau-chan.jpg", "yen-tinh-che-soi-ngan-1.jpg", "yen-tinh-che-soi-ngan-2.jpg", "yen-tinh-che-soi-ngan-3.jpg"],
+  109: ["catalog/tinh-che-1-lop-soi-vua.jpg"],
+  110: ["catalog/tinh-che-1-lop-soi-10-tai.jpg"],
+  111: ["catalog/tinh-che-1-lop-soi-18-20-tai.jpg"],
+  112: ["catalog/tinh-che-2-lop-soi.jpg"],
+  113: ["catalog/rut-long-dap-to.jpg", "yen-rut-long-dap-to-1.jpg", "yen-rut-long-dap-to-2.jpg", "yen-rut-long-dap-to-3.jpg"],
+  114: ["catalog/rut-long-dinh-hinh.jpg"],
+  115: ["catalog/rut-long-xuong.jpg"],
+  116: ["catalog/rut-long-kho.jpg"],
+  117: ["catalog/rut-long-kho-ep-mieng.jpg"],
+  118: ["catalog/chan-tua-sach-loai-1.jpg"],
+  119: ["catalog/chan-tua-sach-loai-2.jpg"],
+  120: ["catalog/vien-baby-mix-phu-gia-goi.jpg"],
+  121: ["catalog/vien-baby-mix-phu-gia-goi.jpg"],
+  122: ["catalog/dap-mieng-soi-vuong.jpg"],
+  123: ["catalog/vuong-mieng-lon.jpg"],
+  124: ["catalog/yen-chung-thu-cong-70ml.jpg"],
+  125: ["catalog/yen-chung-thu-cong-200ml.jpg"],
+  126: ["catalog/vcn-nest-0-3gr.jpg"],
+  127: ["catalog/vcn-nest-0-8gr.jpg"],
+  128: ["catalog/vcn-nest-loc-6-0-3gr.jpg"],
+  129: ["catalog/vcn-nest-loc-6-0-3gr.jpg"],
+  130: ["catalog/vcn-nest-loc-10-0-3gr.jpg"],
+  131: ["catalog/vcn-nest-loc-10-0-3gr.jpg"],
+  132: ["catalog/vcn-nest-loc-6-hop-0-3gr.jpg"],
+  133: ["catalog/vcn-nest-loc-6-hop-0-3gr.jpg"],
+  134: ["catalog/vcn-nest-loc-10-hop-0-3gr.jpg"],
+  135: ["catalog/vcn-nest-loc-10-hop-0-3gr.jpg"],
+  136: ["catalog/nam-dong-trung-loai-cay-100gr.jpg"],
+  137: ["catalog/nam-dong-trung-loai-cay-100gr.jpg"],
+  138: ["catalog/nam-dong-trung-loai-gay.jpg"],
+  139: ["catalog/dong-trung-tuoi.jpg"],
+  140: ["catalog/dong-trung-10gr.jpg"],
+  141: ["catalog/dong-trung-20gr.jpg"],
+  142: ["catalog/tao-do-size-trung-1kg.jpg"],
+  143: ["catalog/tao-do-size-dai-1kg.jpg"],
+  144: ["catalog/tao-do-thuong-hang-1kg.jpg"],
+  145: ["catalog/tao-do-size-trung-hop.jpg"],
+  146: ["catalog/tao-do-size-dai-hop.jpg"],
+  147: ["catalog/tao-do-nhuoc-khuong-hop.jpg"],
+  148: ["catalog/nha-dam-co-duong-tui.jpg"],
+  149: ["catalog/nha-dam-khong-duong-tui.jpg"],
+  150: ["catalog/nha-dam-co-duong-hu.jpg"],
+  151: ["catalog/nha-dam-khong-duong-hu.jpg"],
   14: R("set-qua-dong-trung-ha-thao", [1,5,2,4,3,6,7]),
-  15: R("set-qua-yen-tinh-che-100g", [1,7,3,4,2,6,5])
+  15: R("set-qua-yen-tinh-che-100g", [1,7,3,4,2,6,5]),
+  201: ["catalog/xa-bong-vuong-tra-xanh.jpg"],
+  202: ["catalog/xa-bong-vuong-bac-ha.jpg"],
+  203: ["catalog/xa-bong-vuong-cherry.jpg"],
+  204: ["catalog/xa-bong-vuong-chuoi.jpg"],
+  205: ["catalog/xa-bong-vuong-dua.jpg"],
+  206: ["catalog/xa-bong-vuong-dua-2.jpg"],
+  207: ["catalog/xa-bong-vuong-gao-rang.jpg"],
+  208: ["catalog/xa-bong-vuong-lyly.jpg"],
+  209: ["catalog/xa-bong-vuong-lan.jpg"],
+  210: ["catalog/xa-bong-vuong-mang-cut.jpg"],
+  211: ["catalog/xa-bong-vuong-sen.jpg"],
+  212: ["catalog/xa-bong-vuong-vani.jpg"],
+  213: ["catalog/xa-bong-hoa-hoa-mau-don.jpg"],
+  214: ["catalog/xa-bong-hoa-nho.jpg"],
+  215: ["catalog/xa-bong-hoa-bap.jpg"],
+  216: ["catalog/xa-bong-hoa-buoi.jpg"],
+  217: ["catalog/xa-bong-hoa-cam.jpg"],
+  218: ["catalog/xa-bong-hoa-chuoi.jpg"],
+  219: ["catalog/xa-bong-hoa-dau.jpg"],
+  220: ["catalog/xa-bong-hoa-dua.jpg"],
+  221: ["catalog/xa-bong-hoa-dua-2.jpg"],
+  222: ["catalog/xa-bong-hoa-hoa-hong.jpg"],
+  223: ["catalog/xa-bong-hoa-hoa-huong-duong.jpg"],
+  224: ["catalog/xa-bong-hoa-hoa-lan.jpg"],
+  225: ["catalog/xa-bong-hoa-mang-cut.jpg"],
+  226: ["catalog/xa-bong-hoa-mat-ong.jpg"],
+  227: ["catalog/xa-bong-hoa-hoa-su.jpg"],
+  228: ["catalog/xa-bong-hoa-xoai.jpg"],
+  229: ["catalog/xa-bong-hoa-bong-buoi.jpg"],
+  230: ["catalog/xa-bong-hoa-bong-ca-phe.jpg"],
+  231: ["catalog/nuoc-tay-trang.jpg"],
+  232: ["catalog/sua-rua-mat.jpg"],
+  233: ["catalog/toner.jpg"],
+  234: ["catalog/serum-trang-da-giam-nep-nhan.jpg"],
+  235: ["catalog/kem-duong-am-trang-da.jpg"],
+  236: ["catalog/gel-tay-da-chet.jpg"],
+  237: ["catalog/kem-chong-nang.jpg"],
+  238: ["catalog/mat-na.jpg"],
+  239: ["catalog/dau-goi-nhan-sam-han-quoc.jpg"],
+  240: ["catalog/tinh-chat-duong-toc-nhan-sam-han-quoc.jpg"],
+  241: ["catalog/kem-u-toc-nhan-sam-han-quoc.jpg"],
+  242: ["catalog/mat-na-hong-nau-xanh.jpg"],
+  243: ["catalog/dau-goi-trai-nhau.jpg"],
+  244: ["catalog/xa-bong-giam-mun.jpg"],
+  245: ["catalog/nuoc-rua-tay-kho.jpg"],
+  246: ["catalog/combo-3-xa-bong.jpg"]
 };
 const SETS = [
   ["set-qua-yen-tinh-che-50g-1.jpg", "Set quà yến tinh chế sợi ngắn 50g"],
@@ -336,6 +511,7 @@ const SETS = [
   ["set-qua-yen-tinh-che-50g-7.jpg", "Set quà 50g yến rút lông đắp tổ và 1 hũ đông trùng"]
 ];
 const DIR = "images/san-pham/";
+const thumb = f => DIR + (f.startsWith("catalog/") ? "" : "nho/") + f;
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
 let gal = [], gi = 0;
 function lbShow() { lbImg.src = DIR + gal[gi][0]; lbImg.alt = gal[gi][1]; document.getElementById("lb-n").textContent = gal.length > 1 ? `${gi + 1}/${gal.length}` : gal[gi][1]; }
@@ -352,7 +528,7 @@ let cur = "Tất cả";
 function draw() {
   grid.innerHTML = P.filter(p => cur === "Tất cả" || p[1] === cur).map(p => `
     <article class="card">
-      ${IMG[p[0]] ? `<button class="ph" type="button" data-gal="${p[0]}" aria-label="Xem ảnh ${p[2]}"><img src="${DIR}nho/${IMG[p[0]][0]}" alt="${p[2]} ${p[3]}" loading="lazy" width="480" height="480">${IMG[p[0]].length > 1 ? `<span class="count">${IMG[p[0]].length} ảnh</span>` : ""}</button>` : `<div class="ph"><strong>${p[2]}</strong><em>Ảnh sản phẩm đang cập nhật</em></div>`}
+      ${IMG[p[0]] ? `<button class="ph" type="button" data-gal="${p[0]}" aria-label="Xem ảnh ${p[2]}"><img src="${thumb(IMG[p[0]][0])}" alt="${p[2]} ${p[3]}" loading="lazy" width="480" height="480">${IMG[p[0]].length > 1 ? `<span class="count">${IMG[p[0]].length} ảnh</span>` : ""}</button>` : `<div class="ph"><strong>${p[2]}</strong><em>Ảnh sản phẩm đang cập nhật</em></div>`}
       <div class="body">
         <div class="cat">${p[1]}</div>
         <h3>${p[2]}</h3>
@@ -363,7 +539,9 @@ function draw() {
     </article>`).join("");
   chips.innerHTML = cats.map(c => `<button class="chip" type="button" aria-pressed="${c === cur}" data-cat="${c}">${c}</button>`).join("");
 }
-sel.innerHTML = P.map(p => `<option value="${p[0]}">${p[2]} (${p[3]}) - ${vnd(p[4])}</option>`).join("");
+sel.innerHTML = cats.slice(1).map(c => `<optgroup label="${c}">${P.filter(p => p[1] === c).map(p => `<option value="${p[0]}">${p[2]} (${p[3]}) - ${vnd(p[4])}</option>`).join("")}</optgroup>`).join("");
+document.getElementById("f-count").textContent = P.length;
+document.getElementById("f-min").textContent = "Từ " + vnd(Math.min(...P.map(p => p[4])));
 draw();
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-gal]");
