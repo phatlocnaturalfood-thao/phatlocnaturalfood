@@ -99,6 +99,13 @@ section.block { padding-block: 56px; }
 .price b { font: 700 22px var(--font-display); color: var(--sale); }
 .price s { font-size: 13px; color: var(--muted); }
 .card .btn { justify-content: center; margin-top: 8px; }
+/* product cards sit on the hero green so the whole tile reads as one green block */
+.grid .card { background: linear-gradient(160deg, var(--emerald), var(--emerald-2)); border-color: var(--emerald-2); color: var(--on-emerald); }
+.grid .card .spec { color: color-mix(in srgb, var(--on-emerald) 72%, transparent); }
+.grid .card .price b { color: var(--gold); }
+.grid .card .price s { color: color-mix(in srgb, var(--on-emerald) 60%, transparent); }
+.grid .card .btn-line { color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--gold); }
+.grid .card .btn-line:hover { background: var(--gold); color: #1b1404; }
 
 /* gift band */
 .gift { background: var(--paper); border-block: 1px solid var(--line); }
