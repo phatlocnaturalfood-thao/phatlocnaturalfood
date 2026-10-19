@@ -518,10 +518,13 @@ const SETS = [
   ["set-qua-yen-tinh-che-50g-7.jpg", "Set quà 50g yến rút lông đắp tổ và 1 hũ đông trùng"]
 ];
 const DIR = "images/san-pham/";
-const thumb = f => DIR + (f.startsWith("catalog/") ? "" : "nho/") + f;
+// Đổi số phiên bản khi thay ảnh catalog để trình duyệt tải ảnh mới thay vì ảnh cũ đã lưu.
+const IMG_V = "?v=2";
+const full = f => DIR + f + (f.startsWith("catalog/") ? IMG_V : "");
+const thumb = f => f.startsWith("catalog/") ? full(f) : DIR + "nho/" + f;
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
 let gal = [], gi = 0;
-function lbShow() { lbImg.src = DIR + gal[gi][0]; lbImg.alt = gal[gi][1]; document.getElementById("lb-n").textContent = gal.length > 1 ? `${gi + 1}/${gal.length}` : gal[gi][1]; }
+function lbShow() { lbImg.src = full(gal[gi][0]); lbImg.alt = gal[gi][1]; document.getElementById("lb-n").textContent = gal.length > 1 ? `${gi + 1}/${gal.length}` : gal[gi][1]; }
 function lbOpen(list, i) { gal = list; gi = i; lbShow(); lb.showModal(); }
 document.getElementById("lb-prev").onclick = () => { gi = (gi + gal.length - 1) % gal.length; lbShow(); };
 document.getElementById("lb-next").onclick = () => { gi = (gi + 1) % gal.length; lbShow(); };
