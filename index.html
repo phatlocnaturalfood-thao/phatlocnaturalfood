@@ -423,29 +423,29 @@ const R = (k, n) => n.map(i => `${k}-${i}.jpg`);
 const IMG = {
   101: ["that/yen-tho-nguyen-to-it-long.jpg", "that/yen-tho-to-ab-that-1.jpg", "that/yen-tho-to-ab-that-2.jpg", "that/yen-tho-to-ab-that-3.jpg", "catalog/yen-tho-to-ab-it-long.jpg"],
   102: ["yen-tho-nguyen-to-1.jpg", "that/yen-tho-nguyen-to-that-1.jpg", "that/yen-tho-nguyen-to-that-2.jpg", "that/yen-tho-nguyen-to-that-3.jpg", "yen-tho-nguyen-to-2.jpg", "yen-tho-nguyen-to-3.jpg", "catalog/yen-tho-nguyen-to-gia-mem.jpg"],
-  103: ["catalog/yen-tho-be-nut-nhe-it-long.jpg"],
-  104: ["catalog/yen-tho-be-nut-nhe.jpg"],
-  105: ["catalog/chan-ria-tho.jpg"],
+  103: ["that/yen-tho-be-nut-nhe-it-long-that-1.jpg", "that/yen-tho-be-nut-nhe-it-long-that-2.jpg", "catalog/yen-tho-be-nut-nhe-it-long.jpg"],
+  104: ["that/yen-tho-be-nut-nhe-that-1.jpg", "catalog/yen-tho-be-nut-nhe.jpg"],
+  105: ["that/chan-ria-tho-that-1.jpg", "catalog/chan-ria-tho.jpg"],
   106: ["that/yen-tinh-che-vun-dap-to.jpg", "catalog/tinh-che-vun-dap-to.jpg"],
   107: ["catalog/tinh-che-vun-baby.jpg"],
   108: ["that/yen-tinh-che-soi-ngan-sach.jpg", "yen-tinh-che-soi-ngan-1.jpg", "yen-tinh-che-soi-ngan-2.jpg", "yen-tinh-che-soi-ngan-3.jpg", "catalog/tinh-che-soi-ngan-dau-chan.jpg"],
-  109: ["catalog/tinh-che-1-lop-soi-vua.jpg"],
+  109: ["that/tinh-che-1-lop-soi-vua-that-1.jpg", "catalog/tinh-che-1-lop-soi-vua.jpg"],
   110: ["catalog/tinh-che-1-lop-soi-10-tai.jpg"],
-  111: ["catalog/tinh-che-1-lop-soi-18-20-tai.jpg"],
+  111: ["that/tinh-che-18-20-tai-that-1.jpg", "catalog/tinh-che-1-lop-soi-18-20-tai.jpg"],
   112: ["catalog/tinh-che-2-lop-soi.jpg"],
   113: ["that/yen-rut-long-dap-to-sach.jpg", "yen-rut-long-dap-to-1.jpg", "yen-rut-long-dap-to-2.jpg", "yen-rut-long-dap-to-3.jpg", "catalog/rut-long-dap-to.jpg"],
-  114: ["catalog/rut-long-dinh-hinh.jpg"],
+  114: ["that/rut-long-dinh-hinh-that-1.jpg", "catalog/rut-long-dinh-hinh.jpg"],
   115: ["catalog/rut-long-xuong.jpg"],
-  116: ["catalog/rut-long-kho.jpg"],
+  116: ["that/rut-long-kho-that-1.jpg", "catalog/rut-long-kho.jpg"],
   117: ["catalog/rut-long-kho-ep-mieng.jpg"],
-  118: ["catalog/chan-tua-sach-loai-1.jpg"],
-  119: ["catalog/chan-tua-sach-loai-2.jpg"],
+  118: ["that/chan-tua-loai-1-that-1.jpg", "that/chan-tua-loai-1-that-2.jpg", "catalog/chan-tua-sach-loai-1.jpg"],
+  119: ["that/chan-tua-loai-2-that-1.jpg", "catalog/chan-tua-sach-loai-2.jpg"],
   120: ["catalog/vien-baby-mix-phu-gia-goi.jpg"],
   121: ["catalog/vien-baby-mix-phu-gia-goi.jpg"],
   122: ["catalog/dap-mieng-soi-vuong.jpg"],
   123: ["catalog/vuong-mieng-lon.jpg"],
   124: ["that/nuoc-yen-chung-duong-phen.jpg", "that/nuoc-yen-chung-cho-be.jpg", "that/nuoc-yen-chung-cho-me-bau.jpg", "catalog/yen-chung-thu-cong-70ml.jpg"],
-  125: ["catalog/yen-chung-thu-cong-200ml.jpg"],
+  125: ["that/nuoc-yen-chung-thu-cong-that-1.jpg", "catalog/yen-chung-thu-cong-200ml.jpg"],
   126: ["catalog/vcn-nest-0-3gr.jpg"],
   127: ["catalog/vcn-nest-0-8gr.jpg"],
   128: ["catalog/vcn-nest-loc-6-0-3gr.jpg"],
@@ -458,7 +458,7 @@ const IMG = {
   135: ["catalog/vcn-nest-loc-10-hop-0-3gr.jpg"],
   136: ["dong-trung-ha-thao-5.jpg", "dong-trung-ha-thao-1.jpg", "dong-trung-ha-thao-4.jpg", "catalog/nam-dong-trung-loai-cay-100gr.jpg"],
   137: ["dong-trung-ha-thao-2.jpg", "catalog/nam-dong-trung-loai-cay-100gr.jpg"],
-  138: ["catalog/nam-dong-trung-loai-gay.jpg"],
+  138: ["that/dong-trung-loai-gay-that-1.jpg", "catalog/nam-dong-trung-loai-gay.jpg"],
   139: ["catalog/dong-trung-tuoi.jpg"],
   140: ["that/dong-trung-ha-thao-10gr-hu.jpg", "dong-trung-ha-thao-3.jpg", "catalog/dong-trung-10gr.jpg"],
   141: ["catalog/dong-trung-20gr.jpg"],
@@ -532,7 +532,7 @@ const SETS = [
 ];
 const DIR = "images/san-pham/";
 // Đổi số phiên bản khi thay ảnh catalog để trình duyệt tải ảnh mới thay vì ảnh cũ đã lưu.
-const IMG_V = "?v=5";
+const IMG_V = "?v=6";
 const full = f => DIR + f + (/^(catalog|that)\//.test(f) ? IMG_V : "");
 const thumb = f => /^(catalog|that)\//.test(f) ? full(f) : DIR + "nho/" + f;
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
