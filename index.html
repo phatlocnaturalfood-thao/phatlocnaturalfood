@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Phát Lộc Natural Food: yến sào, đông trùng hạ thảo, nha đam, táo đỏ chính hãng, cùng xà bông thiên nhiên và mỹ phẩm.">
+<meta name="description" content="Phát Lộc Natural Food: yến sào, đông trùng hạ thảo, nha đam, táo đỏ chính hãng, cùng mỹ phẩm thiên nhiên.">
 <link rel="icon" href="mark.jpg">
 <link rel="canonical" href="https://phatlocnaturalfood.com/">
 <meta property="og:type" content="website">
@@ -200,7 +200,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
         <a class="btn btn-ghost" href="#qua-tet">Hộp quà Tết 2027</a>
       </div>
       <div class="facts">
-        <div><b id="f-count">99</b>sản phẩm</div>
+        <div><b id="f-count">67</b>sản phẩm</div>
         <div><b id="f-min">Từ 35.000đ</b>dùng thử</div>
         <div><b>Toàn quốc</b>giao hàng</div>
       </div>
@@ -419,6 +419,9 @@ const P = [
   [245,"Chăm sóc cơ thể","Nước Rửa Tay Khô","Chai",126000],
   [246,"Chăm sóc cơ thể","Combo Quà 3 Xà Bông Tắm","Hộp",207000]
 ];
+// Tạm ẩn các mặt hàng xà bông (20/10/2026). Muốn hiện lại: đổi AN_XA_BONG thành false.
+const AN_XA_BONG = true;
+if (AN_XA_BONG) for (let i = P.length - 1; i >= 0; i--) if (/xà bông/i.test(P[i][1] + " " + P[i][2])) P.splice(i, 1);
 const R = (k, n) => n.map(i => `${k}-${i}.jpg`);
 const IMG = {
   101: ["that/yen-tho-nguyen-to-it-long.jpg", "that/yen-tho-to-ab-that-1.jpg", "that/yen-tho-to-ab-that-2.jpg", "that/yen-tho-to-ab-that-3.jpg", "catalog/yen-tho-to-ab-it-long.jpg"],
