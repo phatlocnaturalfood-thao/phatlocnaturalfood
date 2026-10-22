@@ -92,12 +92,12 @@ module.exports = [
   },
   {
     id: 323, slug: "hop-qua-an-lac-qth06", dm: "qua-tet",
-    title: "Hộp quà An Lạc QTH06 – 10 hũ yến chưng 5 vị – 524.000đ | Phát Lộc",
-    desc: "Hộp quà Tết An Lạc QTH06: 10 hũ yến chưng sẵn 5 vị, muỗng vàng nhỏ, hộp giấy cứng, túi giấy. Giá 524.000đ, hợp quà cho khách hàng, nhân viên.",
-    points: ["10 hũ yến chưng sẵn, 5 vị", "Kèm muỗng vàng nhỏ", "Hộp giấy cứng, túi giấy", "Hợp quà khách hàng, nhân viên"],
-    body: `<p>An Lạc là hộp quà Tết dưới 600.000đ với 10 hũ yến chưng sẵn 5 vị, người nhận dùng ngay không cần chế biến. Hợp tặng khách hàng và nhân viên số lượng lớn.</p>
+    title: "Hộp quà An Lạc QTH06 – 10 hũ yến chưng sẵn – 524.000đ | Phát Lộc",
+    desc: "Hộp quà Tết An Lạc QTH06: 10 hũ yến chưng sẵn vị đường phèn hoặc đông trùng hạ thảo, muỗng vàng nhỏ, hộp giấy cứng, túi giấy. Giá 524.000đ, hợp quà cho khách hàng, nhân viên.",
+    points: ["10 hũ yến chưng sẵn, vị đường phèn hoặc đông trùng", "Kèm muỗng vàng nhỏ", "Hộp giấy cứng, túi giấy", "Hợp quà khách hàng, nhân viên"],
+    body: `<p>An Lạc là hộp quà Tết dưới 600.000đ với 10 hũ yến chưng sẵn vị đường phèn hoặc đông trùng hạ thảo, người nhận dùng ngay không cần chế biến. Hợp tặng khách hàng và nhân viên số lượng lớn.</p>
 <h2>Đặt số lượng</h2><p>Chiết khấu từ 20 hộp, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>, hoặc xem bài <a href="../../kien-thuc/qua-tet-doanh-nghiep-theo-ngan-sach.html">Chọn quà Tết doanh nghiệp theo ngân sách</a>.</p>`,
-    faq: [["5 vị gồm những vị nào?", "Nhắn Zalo 0768 759 419 để được báo các vị đang có tại thời điểm đặt."], ["Đặt 100 hộp mất bao lâu?", "Thường 3–7 ngày tùy thời điểm; nhận đặt từ 22/10/2026, nên đặt sớm trước cao điểm Tết."], ["Bảo quản thế nào?", "Để nơi khô mát, tránh nắng; ngon hơn khi để lạnh."]]
+    faq: [["Hộp có những vị nào?", "Yến chưng vị đường phèn hoặc vị đông trùng hạ thảo. Khi đặt, nhắn Zalo 0768 759 419 để chọn vị hoặc tỷ lệ hai vị trong hộp."], ["Đặt 100 hộp mất bao lâu?", "Thường 3–7 ngày tùy thời điểm; nhận đặt từ 22/10/2026, nên đặt sớm trước cao điểm Tết."], ["Bảo quản thế nào?", "Để nơi khô mát, tránh nắng; ngon hơn khi để lạnh."]]
   },
   {
     id: 347, slug: "tui-qua-xuan-sac-qtt05", dm: "qua-tet",

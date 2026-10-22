@@ -51,7 +51,7 @@ b1 = f'''  <p class="lede">Mười mẫu quà Tết yến sào 2027 dưới đâ
   <h2>Dưới 1 triệu: quà phát đồng loạt, quà khách hàng</h2>
   <ol>
 {li(335, "Yến chưng sẵn uống ngay, hộp có tay xách, hợp phát cho nhân viên.")}
-{li(323, "10 hũ 5 vị kèm muỗng vàng, hộp giấy cứng sang hơn ở mức dưới 600.000đ.")}
+{li(323, "10 hũ yến chưng vị đường phèn hoặc đông trùng, kèm muỗng vàng, hộp giấy cứng sang hơn ở mức dưới 600.000đ.")}
 {li(347, "Dành cho phái đẹp: mặt nạ yến và bộ làm sạch da T'Beauty.")}
 {li(341, "Yến vụn sạch tự chưng kèm đông trùng, táo đỏ, đường phèn trên khay Tết.")}
   </ol>
