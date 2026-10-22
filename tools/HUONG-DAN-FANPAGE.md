@@ -4,6 +4,20 @@ Mỗi ngày lên lịch **2 bài** trên Page "Phát Lộc Natural Food - Yến 
 (asset_id 1415830271609330, business_id 1837579484336824) lúc **11:00** và **18:00** cùng ngày.
 Từ 23/10 đến 29/10/2026 buổi tối đã có bài 19:30 lên lịch sẵn: những ngày này chỉ lên lịch bài 11:00.
 
+## Làm bù khi lỡ lịch (yêu cầu của anh Việt)
+
+Việc này chạy mỗi giờ từ 8:40 đến 20:40. Mỗi lần chạy:
+1. Xem `tools/fanpage-da-dang.json`: hôm nay đã có đủ bài 11:00 và 18:00 chưa (23–29/10/2026 chỉ cần bài 11:00),
+   và các ngày trước kể từ 23/10/2026 có ngày nào thiếu không.
+2. Nếu đủ hết: dừng ngay, **không** mở Chrome, **không** gửi thông báo, không commit gì.
+3. Nếu thiếu: lên lịch bù ngay khi kết nối được.
+   - Bài hôm nay mà giờ đã qua (vd 11:00 đã qua): lên lịch sớm nhất có thể (hiện tại + 20 phút).
+   - Bài các ngày trước bị lỡ: lên lịch trong hôm nay, cách nhau ít nhất 90 phút, trước 21:30; tổng cả ngày
+     tối đa 4 bài, còn dư thì dời sang các khung trống ngày mai (8:00, 13:00, 15:00) và ghi rõ.
+   - Thông báo ghi rõ "Lên lịch bù" và giờ đăng mới.
+4. Không kết nối được Chrome / Facebook: gửi thông báo lỗi **một lần mỗi buổi** (sáng, chiều), không gửi mỗi giờ;
+   lần chạy sau tự thử lại.
+
 ## Chọn nội dung
 
 - **11:00 – chia sẻ bài web mới:** bài kiến thức đăng sáng cùng ngày trên phatlocnaturalfood.com
