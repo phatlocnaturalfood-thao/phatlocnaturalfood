@@ -51,6 +51,8 @@ khách, số đã bán, "bán chạy nhất"; hứa khuyến mãi chưa có; đ�
 
 ## Thao tác Business Suite (Claude in Chrome)
 
+0. **Quan trọng (từ 22/10/2026 Page đã nối Instagram):** ô "Đăng lên" mặc định chọn cả Facebook và Instagram.
+   Bài Fanpage: mở ô "Đăng lên", **bỏ tick phatlocnaturalfood (Instagram)**, chỉ giữ Page. Bài Instagram làm ngược lại.
 1. Chọn trình duyệt có Business Suite đã đăng nhập phatlocnaturalfood@gmail.com (hồ sơ "PHÁT LỘC NATURAL FOODS"),
    gọi tabs_context_mcp, mở tab mới:
    `https://business.facebook.com/latest/composer?asset_id=1415830271609330&business_id=1837579484336824`
@@ -64,3 +66,35 @@ khách, số đã bán, "bán chạy nhất"; hứa khuyến mãi chưa có; đ�
 6. Mở `https://business.facebook.com/latest/posts/scheduled_posts?asset_id=1415830271609330&business_id=1837579484336824`
    xác nhận 2 bài mới đúng giờ, không trùng. Đóng tab đã mở.
 7. Ghi 2 bài vào `tools/fanpage-da-dang.json`, commit + PR + merge như quy định repo.
+
+---
+
+# Instagram @phatlocnaturalfood (anh Việt yêu cầu 22/10/2026: tự lên lịch mỗi ngày cùng Fanpage)
+
+Mỗi ngày **1 bài feed lúc 19:30** trên Instagram @phatlocnaturalfood, lên lịch qua Business Suite cùng lượt chạy Fanpage.
+23–25/10/2026 đã lên lịch 9 bài ra mắt (xem `tools/instagram-da-dang.json`); việc tự động bắt đầu từ **26/10/2026**.
+Lịch chi tiết và tuần mẫu: tab "Lịch Instagram hằng ngày" trong tài liệu kế hoạch SEO (claude.ai/artifact/EQrUZDTHHn7ZLVqoiZgFaK).
+
+## Làm bù
+Giống Fanpage: xem `tools/instagram-da-dang.json`; ngày nào từ 26/10/2026 thiếu bài 19:30 thì lên lịch bù
+(giờ đã qua → hiện tại + 20 phút; bài ngày cũ cách nhau ≥ 90 phút, trước 21:30, tối đa 2 bài Instagram/ngày).
+
+## Chọn nội dung (tuần mẫu)
+T2 carousel kiến thức (tóm bài web sáng cùng ngày, 3–5 ảnh) · T3 mẫu quà Tết · T4 Reels hoặc carousel nhiều mẫu quà theo ngân sách ·
+T5 carousel công thức · T6 quà Tết doanh nghiệp · T7 Reels video anh quay (chưa có video thì carousel ảnh cửa hàng/sản phẩm) · CN hỏi đáp.
+Từ 01/12/2026 đến Tết: T3 và T6 đều là quà Tết. Không lặp mẫu đã đăng Instagram trong 14 ngày.
+Không dùng ảnh có chữ "5 vị" (ảnh ghép `images/mxh/qua-tet-theo-ngan-sach.jpg`, ảnh QTH06 cũ).
+
+## Chuẩn bài (SEO Instagram)
+1. Dòng đầu: biểu tượng + từ khóa chính + lợi ích, dưới 125 ký tự.
+2. 1 câu hỏi gợi nhu cầu, 3–5 dòng ✅, giá đúng theo web (`BY[id]`).
+3. `👉 Xem mẫu và đặt hàng: link ở bio` (link trong bài Instagram không bấm được – không dán URL).
+4. `📞 Zalo 0768 759 419`, 1 câu mời bình luận/lưu bài/tag bạn.
+5. Dòng trống + 5 hashtag (bộ hashtag như Fanpage), kết thúc bằng 1 dấu cách.
+Cùng các điều cấm như Fanpage (không chiết khấu sỉ/CTV, không công dụng chữa bệnh, không bịa nhận xét).
+
+## Thao tác
+Composer như Fanpage, nhưng ở "Đăng lên" chỉ giữ **phatlocnaturalfood** (bỏ tick Page). Hộp văn bản Instagram ở y≈590;
+"Đặt ngày và giờ" → chọn ngày, giờ 19:30 → "Lên lịch" → "Để sau". Kiểm tra trang "Đã lên lịch": dòng có tên phatlocnaturalfood.
+Ghi bài vào `tools/instagram-da-dang.json` (cùng commit với Fanpage). Thông báo gộp: "Fanpage: … | IG 19:30: …".
+Story và link bio: anh Việt tự làm trên điện thoại (Business Suite web không gắn được sticker link).
