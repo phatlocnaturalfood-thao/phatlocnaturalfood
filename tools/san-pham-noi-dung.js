@@ -68,7 +68,7 @@ module.exports = [
     body: `<p>Phú Quý Đại Cát là giỏ quà Tết cao cấp với thành phần chính là 100gr yến rút lông đắp tổ, kèm đông trùng hạ thảo, táo đỏ và yến chưng sẵn. Phù hợp biếu sếp, đối tác quan trọng hoặc cha mẹ, ông bà dịp Tết Đinh Mùi 2027.</p>
 <h2>Đặt số lượng cho doanh nghiệp</h2><p>Từ 20 giỏ có chiết khấu, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>.</p>
 <h2>Giấy tờ</h2><p>${YEN_GIAY_TO}</p>`,
-    faq: [["Đặt trước bao lâu?", "Đơn lẻ trước 3–5 ngày; đơn doanh nghiệp nên đặt trước 15/12/2026."], ["Có thiệp và in logo công ty không?", "Nhắn Zalo 0768 759 419 để được tư vấn theo số lượng."], ["Giao tận nơi người nhận được không?", "Có, giao toàn quốc, người nhận được kiểm hàng."]]
+    faq: [["Đặt trước bao lâu?", "Đơn lẻ trước 3–5 ngày; đơn doanh nghiệp nhận đặt từ 22/10/2026, nên đặt sớm để chủ động lịch giao."], ["Có thiệp và in logo công ty không?", "Nhắn Zalo 0768 759 419 để được tư vấn theo số lượng."], ["Giao tận nơi người nhận được không?", "Có, giao toàn quốc, người nhận được kiểm hàng."]]
   },
   {
     id: 313, slug: "gio-qua-hoang-gia-qtg13", dm: "qua-tet",
@@ -78,7 +78,7 @@ module.exports = [
     body: `<p>Hoàng Gia là mẫu quà Tết cao cấp nhất của Phát Lộc, gồm 150gr yến sào (100gr rút lông đắp tổ và 50gr tinh chế) cùng 50gr đông trùng hạ thảo. Dành cho đối tác chiến lược, lãnh đạo hoặc người thân đặc biệt.</p>
 <h2>Đặt số lượng cho doanh nghiệp</h2><p>Chiết khấu từ 20 giỏ, xuất hóa đơn điện tử. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>.</p>
 <h2>Giấy tờ</h2><p>${YEN_GIAY_TO}</p>`,
-    faq: [["Tổng lượng yến trong giỏ là bao nhiêu?", "150gr yến khô (100gr rút lông đắp tổ, 50gr tinh chế) và 3 hũ yến chưng."], ["Đặt trước bao lâu?", "Nên đặt trước 3–5 ngày; đơn số lượng trước 15/12/2026."], ["Có xuất hóa đơn không?", "Có, xuất hóa đơn điện tử theo thông tin công ty."]]
+    faq: [["Tổng lượng yến trong giỏ là bao nhiêu?", "150gr yến khô (100gr rút lông đắp tổ, 50gr tinh chế) và 3 hũ yến chưng."], ["Đặt trước bao lâu?", "Nên đặt trước 3–5 ngày; đơn số lượng nhận đặt từ 22/10/2026, đặt sớm để giữ hàng."], ["Có xuất hóa đơn không?", "Có, xuất hóa đơn điện tử theo thông tin công ty."]]
   },
   {
     id: 338, slug: "hop-qua-yen-sao-cao-cap-qth24", dm: "qua-tet",
@@ -97,7 +97,7 @@ module.exports = [
     points: ["10 hũ yến chưng sẵn, 5 vị", "Kèm muỗng vàng nhỏ", "Hộp giấy cứng, túi giấy", "Hợp quà khách hàng, nhân viên"],
     body: `<p>An Lạc là hộp quà Tết dưới 600.000đ với 10 hũ yến chưng sẵn 5 vị, người nhận dùng ngay không cần chế biến. Hợp tặng khách hàng và nhân viên số lượng lớn.</p>
 <h2>Đặt số lượng</h2><p>Chiết khấu từ 20 hộp, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>, hoặc xem bài <a href="../../kien-thuc/qua-tet-doanh-nghiep-theo-ngan-sach.html">Chọn quà Tết doanh nghiệp theo ngân sách</a>.</p>`,
-    faq: [["5 vị gồm những vị nào?", "Nhắn Zalo 0768 759 419 để được báo các vị đang có tại thời điểm đặt."], ["Đặt 100 hộp mất bao lâu?", "Thường 3–7 ngày tùy thời điểm; nên đặt trước 15/12/2026."], ["Bảo quản thế nào?", "Để nơi khô mát, tránh nắng; ngon hơn khi để lạnh."]]
+    faq: [["5 vị gồm những vị nào?", "Nhắn Zalo 0768 759 419 để được báo các vị đang có tại thời điểm đặt."], ["Đặt 100 hộp mất bao lâu?", "Thường 3–7 ngày tùy thời điểm; nhận đặt từ 22/10/2026, nên đặt sớm trước cao điểm Tết."], ["Bảo quản thế nào?", "Để nơi khô mát, tránh nắng; ngon hơn khi để lạnh."]]
   },
   {
     id: 347, slug: "tui-qua-xuan-sac-qtt05", dm: "qua-tet",
