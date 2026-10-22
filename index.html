@@ -2,6 +2,9 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RCR6X471QS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RCR6X471QS');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Phát Lộc Natural Food: tổ yến thô, yến tinh chế, yến hũ chưng, đông trùng hạ thảo, táo đỏ Tân Cương và 59 mẫu hộp quà Tết 2027 cho gia đình, doanh nghiệp. Cửa hàng tại Tân Đông Hiệp, TP.HCM, giao toàn quốc. Gọi/Zalo 0768 759 419.">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -845,6 +848,7 @@ Ghi chú: ${v("o-note") || "không"}`;
   });
   try {
     await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body });
+    try { gtag("event", "generate_lead", { form: "dat_hang", item_name: p[2] + " " + p[3], value: p[4] * q, currency: "VND" }); } catch {}
     msg.textContent = "Đã nhận đơn. Nhân viên sẽ gọi lại xác nhận giá và phí giao.";
     document.getElementById("form").reset();
   } catch {
@@ -866,11 +870,14 @@ document.getElementById("b2b-form").addEventListener("submit", async e => {
     await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body: new URLSearchParams({
       name: v("b-name") + " - " + v("b-company"), phone: v("b-phone"), addr: v("b-company") + " (báo giá doanh nghiệp, chưa có địa chỉ giao)",
       product: "Báo giá quà Tết doanh nghiệp", spec: v("b-budget"), qty: v("b-qty") || "1", total: 0, note, website: v("b-web") }) });
+    try { gtag("event", "generate_lead", { form: "bao_gia_doanh_nghiep", quantity: +v("b-qty") || 0 }); } catch {}
     msg.textContent = "Đã nhận yêu cầu. Phát Lộc sẽ gọi lại báo giá trong ngày làm việc.";
     e.target.reset();
   } catch { msg.textContent = "Chưa gửi được. Anh/chị vui lòng nhắn Zalo 0768 759 419."; }
   btn.disabled = false;
 });
+// Đo lượt bấm Zalo / gọi điện trong Google Analytics.
+document.addEventListener("click", e => { const a = e.target.closest('a[href*="zalo.me"], a[href^="tel:"]'); if (a) try { gtag("event", a.href.includes("zalo") ? "click_zalo" : "click_call"); } catch {} });
 // Hồ sơ pháp lý: mỗi giấy tờ mở trong khung xem ảnh, đủ các trang.
 const pages = (n, c, t) => Array.from({length: c}, (_, i) => [`ho-so/trang/${n}-${i + 1}.jpg`, `${t} (trang ${i + 1}/${c})`]);
 const DOCS = { cn: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn2: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], kn: [["ho-so/chung-nhan-2.jpg", "Kết quả thử nghiệm Eurofins Sắc Ký Hải Đăng"]],
