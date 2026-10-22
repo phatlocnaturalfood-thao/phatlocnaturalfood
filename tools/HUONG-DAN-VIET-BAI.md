@@ -4,6 +4,15 @@ Mỗi lần chạy viết **đúng 1 bài**, lấy bài đầu tiên có `"trang
 (bỏ qua `cho_anh_xac_nhan`). Hết bài trong lịch thì tự chọn chủ đề mới cùng các nhóm (quà Tết, yến sào,
 đông trùng, táo đỏ, nha đam, mỹ phẩm), không trùng bài đã có trong `kien-thuc/`.
 
+## Làm bù khi lỡ lịch (yêu cầu của anh Việt)
+
+Việc này chạy mỗi giờ. Mỗi lần chạy:
+1. Tính số bài **đáng lẽ đã đăng**: mỗi ngày 2 bài (mốc 6:40 và 18:40, giờ Việt Nam) kể từ 23/10/2026
+   đến thời điểm hiện tại. So với số bài `da_dang` trong `tools/lich-bai.json`.
+2. Nếu đã đủ: dừng ngay, **không** gửi thông báo, không commit gì.
+3. Nếu thiếu (do mất kết nối, lỗi lần trước…): đăng bù ngay các bài còn thiếu theo thứ tự lịch, tối đa 3 bài
+   mỗi lần chạy, mỗi bài một PR riêng. Thông báo ghi rõ "Đăng bù" và số bài còn nợ (nếu còn).
+
 ## Các bước
 
 1. Đọc bài cần viết trong `tools/lich-bai.json`: `tieu_de`, `tu_khoa`, `link_ve`.
