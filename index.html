@@ -5,6 +5,9 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCR6X471QS"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RCR6X471QS');</script>
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2473332736488165');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2473332736488165&ev=PageView&noscript=1" alt=""></noscript>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Phát Lộc Natural Food: tổ yến thô, yến tinh chế, yến hũ chưng, đông trùng hạ thảo, táo đỏ Tân Cương và 59 mẫu hộp quà Tết 2027 cho gia đình, doanh nghiệp. Cửa hàng tại Tân Đông Hiệp, TP.HCM, giao toàn quốc. Gọi/Zalo 0768 759 419.">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -848,6 +851,7 @@ Ghi chú: ${v("o-note") || "không"}`;
   });
   try {
     await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body });
+    try { fbq("track", "Lead", { content_name: p[2] + " " + p[3], value: p[4] * q, currency: "VND" }); } catch {}
     try { gtag("event", "generate_lead", { form: "dat_hang", item_name: p[2] + " " + p[3], value: p[4] * q, currency: "VND" }); } catch {}
     msg.textContent = "Đã nhận đơn. Nhân viên sẽ gọi lại xác nhận giá và phí giao.";
     document.getElementById("form").reset();
@@ -870,6 +874,7 @@ document.getElementById("b2b-form").addEventListener("submit", async e => {
     await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body: new URLSearchParams({
       name: v("b-name") + " - " + v("b-company"), phone: v("b-phone"), addr: v("b-company") + " (báo giá doanh nghiệp, chưa có địa chỉ giao)",
       product: "Báo giá quà Tết doanh nghiệp", spec: v("b-budget"), qty: v("b-qty") || "1", total: 0, note, website: v("b-web") }) });
+    try { fbq("track", "Lead", { content_name: "Báo giá quà Tết doanh nghiệp" }); } catch {}
     try { gtag("event", "generate_lead", { form: "bao_gia_doanh_nghiep", quantity: +v("b-qty") || 0 }); } catch {}
     msg.textContent = "Đã nhận yêu cầu. Phát Lộc sẽ gọi lại báo giá trong ngày làm việc.";
     e.target.reset();
@@ -877,7 +882,7 @@ document.getElementById("b2b-form").addEventListener("submit", async e => {
   btn.disabled = false;
 });
 // Đo lượt bấm Zalo / gọi điện trong Google Analytics.
-document.addEventListener("click", e => { const a = e.target.closest('a[href*="zalo.me"], a[href^="tel:"]'); if (a) try { gtag("event", a.href.includes("zalo") ? "click_zalo" : "click_call"); } catch {} });
+document.addEventListener("click", e => { const a = e.target.closest('a[href*="zalo.me"], a[href^="tel:"]'); if (a) { try { gtag("event", a.href.includes("zalo") ? "click_zalo" : "click_call"); } catch {} try { fbq("track", "Contact"); } catch {} } });
 // Hồ sơ pháp lý: mỗi giấy tờ mở trong khung xem ảnh, đủ các trang.
 const pages = (n, c, t) => Array.from({length: c}, (_, i) => [`ho-so/trang/${n}-${i + 1}.jpg`, `${t} (trang ${i + 1}/${c})`]);
 const DOCS = { cn: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn2: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], kn: [["ho-so/chung-nhan-2.jpg", "Kết quả thử nghiệm Eurofins Sắc Ký Hải Đăng"]],
