@@ -36,7 +36,7 @@ Mỗi lần chạy viết **đúng 1 bài**, lấy bài đầu tiên có `"trang
   bà bầu, trẻ em, người bệnh phải có câu: "Thông tin mang tính tham khảo. Thực phẩm này không phải là thuốc
   và không có tác dụng thay thế thuốc chữa bệnh." và khuyên hỏi bác sĩ.
 - Không bịa số liệu, chứng nhận, giải thưởng, nhận xét khách hàng, "bán chạy nhất", số lượng đã bán.
-- Không hứa chính sách chưa có trên web (giá sỉ, cộng tác viên, miễn phí giao hàng, quà tặng…).
+- Không hứa chính sách chưa có trên web (miễn phí giao hàng, quà tặng, mức chiết khấu cụ thể…).
   Chính sách có sẵn: giao toàn quốc (TP.HCM 1–2 ngày, tỉnh 2–5 ngày), kiểm hàng khi nhận, COD/chuyển khoản,
   hóa đơn điện tử, chiết khấu quà Tết doanh nghiệp từ 20 hộp, đổi trả trong 03 ngày theo chính sách.
   Có chính sách **giá sỉ cho đại lý** và **cộng tác viên** (anh Việt xác nhận 22/10/2026), nhưng chưa có mức
