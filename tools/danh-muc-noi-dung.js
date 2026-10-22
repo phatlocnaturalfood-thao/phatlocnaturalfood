@@ -30,9 +30,9 @@ module.exports = [
         <li><b>Phái đẹp:</b> túi quà mỹ phẩm yến T'Beauty (QTT05, QTT09, QTT15–QTT17).</li>
       </ul>
       <h2>Đặt quà Tết số lượng cho doanh nghiệp</h2>
-      <p>Từ 20 hộp có chiết khấu theo số lượng, xuất hóa đơn điện tử và giao tận nơi theo danh sách. Gửi yêu cầu tại <a href="../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>, Phát Lộc báo giá trong ngày. Xem thêm bài ${L("qua-tet-doanh-nghiep-theo-ngan-sach", "Chọn quà Tết doanh nghiệp 2027 theo ngân sách")}.</p>`,
+      <p><b>Nhận đặt quà Tết doanh nghiệp từ 22/10/2026.</b> Từ 20 hộp có chiết khấu theo số lượng, xuất hóa đơn điện tử và giao tận nơi theo danh sách. Gửi yêu cầu tại <a href="../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>, Phát Lộc báo giá trong ngày. Xem thêm bài ${L("qua-tet-doanh-nghiep-theo-ngan-sach", "Chọn quà Tết doanh nghiệp 2027 theo ngân sách")}.</p>`,
     faq: [
-      ["Đặt quà Tết 2027 trước bao lâu?", "Đơn lẻ nên đặt trước 3–5 ngày. Đơn doanh nghiệp từ 20 hộp nên đặt trước 15/12/2026 để kịp đóng gói và giao trước Tết."],
+      ["Đặt quà Tết 2027 trước bao lâu?", "Đơn lẻ nên đặt trước 3–5 ngày. Phát Lộc nhận đặt quà Tết doanh nghiệp từ 22/10/2026; đơn số lượng nên đặt càng sớm càng chủ động mẫu và lịch giao trước Tết."],
       ["Có xuất hóa đơn điện tử không?", "Có. Phát Lộc xuất hóa đơn điện tử cho đơn quà Tết doanh nghiệp theo thông tin công ty cung cấp."],
       ["Đặt nhiều hộp có được giảm giá không?", "Có chiết khấu từ 20 hộp, tăng theo mốc 50 và 100 hộp. Gửi số lượng và ngân sách để nhận báo giá trong ngày."],
       ["Có giao quà tận nơi cho từng người nhận không?", "Có. Giao toàn quốc; với đơn doanh nghiệp có thể giao theo danh sách địa chỉ người nhận. Khách được kiểm hàng khi nhận."],
