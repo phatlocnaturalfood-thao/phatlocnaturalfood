@@ -146,6 +146,21 @@ section.block { padding-block: 56px; }
 
 /* trust */
 .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.budget { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: -6px 0 18px; font-size: 13px; color: var(--muted); }
+.budget .chip { padding: 5px 12px; }
+.b2b { background: var(--emerald); color: var(--on-emerald); }
+.b2b .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; padding-block: 52px; align-items: start; }
+.b2b h2 { font-size: clamp(30px, 4vw, 44px); color: var(--gold); }
+.b2b ul { padding-left: 18px; display: grid; gap: 6px; }
+.b2b .f { background: var(--paper); color: var(--ink); border-radius: 16px; padding: 22px; }
+.b2b .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+.b2b .tiers div { border: 1px solid var(--gold); border-radius: 12px; padding: 12px; text-align: center; }
+.b2b .tiers b { display: block; font-size: 20px; color: var(--gold); }
+.b2b .row { grid-template-columns: 1fr 1fr; }
+@media (max-width: 760px) { .b2b .wrap { grid-template-columns: 1fr; } }
+.trust.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .trust.four { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .trust.four { grid-template-columns: 1fr; } }
 .trust div { border-top: 2px solid var(--gold); padding-top: 14px; }
 .trust h3 { font-size: 22px; color: var(--emerald-2); margin-bottom: 6px; }
 .trust p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -198,6 +213,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
     <nav class="menu" aria-label="Chính">
       <a href="#san-pham">Sản phẩm</a>
       <a href="#qua-tet">Quà Tết</a>
+      <a href="#doanh-nghiep">Doanh nghiệp</a>
       <a href="#cam-ket">Cam kết</a>
       <a href="kien-thuc/">Kiến thức</a>
       <a href="#dat-hang">Đặt hàng</a>
@@ -232,6 +248,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
       <div><div class="eyebrow">Bảng giá</div><h2>Sản phẩm</h2></div>
       <div class="chips" id="chips" role="group" aria-label="Lọc theo nhóm"></div>
     </div>
+    <div class="budget" id="budget" role="group" aria-label="Lọc theo ngân sách" hidden></div>
     <div class="grid" id="grid"></div>
     <p style="margin:16px 0 0;font-size:13px;color:var(--muted)">Khuyến mãi: một số sản phẩm có quà tặng kèm như ghi trên ảnh sản phẩm, ví dụ tặng 500gr táo đỏ khi mua yến sào, tặng 200gr táo đỏ khi mua nấm đông trùng hạ thảo. Áp dụng đến khi hết quà tặng; nhân viên xác nhận quà tặng khi gọi lại xác nhận đơn.</p>
   </div>
@@ -248,7 +265,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
         <li>Nhận làm theo ngân sách, đặt số lượng cho doanh nghiệp có chiết khấu riêng</li>
         <li>Đặt sớm từ tháng 11 để giữ hàng mùa Tết</li>
       </ul>
-      <button class="btn btn-line" type="button" data-showcat="Quà Tết" style="margin-top:8px">Xem 59 mẫu quà Tết</button>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px"><button class="btn btn-line" type="button" data-showcat="Quà Tết">Xem 59 mẫu, lọc theo ngân sách</button><a class="btn btn-gold" href="#doanh-nghiep">Báo giá cho doanh nghiệp</a></div>
     </div>
     <div class="box">
       <div class="eyebrow">Gợi ý · QTH24</div>
@@ -260,13 +277,51 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
   </div>
 </section>
 
+<section class="b2b" id="doanh-nghiep">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--gold-soft)">Quà Tết doanh nghiệp 2027</div>
+      <h2>Đặt quà Tết số lượng cho công ty</h2>
+      <ul>
+        <li>Chọn trong 59 mẫu giỏ, hộp, khay quà, hoặc gửi ngân sách để Phát Lộc gợi ý mẫu phù hợp.</li>
+        <li>Chiết khấu riêng theo số lượng, báo giá trong ngày làm việc.</li>
+        <li>Xuất hóa đơn điện tử theo thông tin công ty.</li>
+        <li>Giao tận nơi tại TP.HCM và khu vực lân cận, gửi đi các tỉnh qua đơn vị vận chuyển.</li>
+        <li>Thanh toán chuyển khoản vào tài khoản đứng tên công ty Phát Lộc.</li>
+      </ul>
+      <div class="tiers"><div><b>Từ 20 hộp</b>chiết khấu</div><div><b>Từ 50 hộp</b>giá tốt hơn</div><div><b>Từ 100 hộp</b>giá riêng</div></div>
+      <p style="font-size:13px;opacity:.8;margin-top:12px">Mức chiết khấu cụ thể báo theo mẫu và số lượng. Đặt sớm từ tháng 11 để giữ hàng.</p>
+    </div>
+    <form class="f" id="b2b-form" novalidate>
+      <h3 style="font-size:24px;color:var(--emerald-2);margin:0 0 6px">Nhận báo giá</h3>
+      <label for="b-company">Tên công ty<input id="b-company" required autocomplete="organization"></label>
+      <div class="row">
+        <label for="b-name">Người liên hệ<input id="b-name" required autocomplete="name"></label>
+        <label for="b-phone">Số điện thoại<input id="b-phone" required inputmode="tel" autocomplete="tel"></label>
+      </div>
+      <div class="row">
+        <label for="b-qty">Số lượng hộp<input id="b-qty" type="number" min="1" value="20"></label>
+        <label for="b-budget">Ngân sách mỗi hộp<select id="b-budget"><option>Dưới 500 nghìn</option><option selected>500 nghìn – 1 triệu</option><option>1 – 2 triệu</option><option>Trên 2 triệu</option><option>Chưa xác định</option></select></label>
+      </div>
+      <label for="b-date">Ngày cần nhận hàng<input id="b-date" type="date"></label>
+      <label for="b-note">Mẫu quan tâm, yêu cầu khác<textarea id="b-note" rows="2" placeholder="Ví dụ: QTH24, cần thiệp chúc Tết, giao 2 địa chỉ"></textarea></label>
+      <input id="b-web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+      <p id="b-err" style="color:var(--sale);margin:0;font-size:13px" hidden>Vui lòng điền tên công ty, người liên hệ và số điện thoại.</p>
+      <button class="btn btn-gold" type="submit" id="b-btn">Gửi yêu cầu báo giá</button>
+      <p id="b-ok" style="color:var(--emerald-2);margin:0;font-weight:600" hidden></p>
+      <a class="btn btn-zalo" href="https://zalo.me/0768759419" target="_blank" rel="noopener" style="justify-self:start">Hoặc nhắn Zalo 0768 759 419</a>
+    </form>
+  </div>
+</section>
+
 <section class="block" id="cam-ket">
   <div class="wrap">
     <div class="head"><div><div class="eyebrow">Vì sao chọn Phát Lộc</div><h2>Cam kết</h2></div></div>
-    <div class="trust">
+    <div class="trust four">
       <div><h3>Đủ giấy tờ</h3><p>Sản phẩm có bản tự công bố và phiếu kiểm nghiệm. Khách cần xem, chúng tôi gửi bản chụp.</p></div>
       <div><h3>Hàng chính hãng</h3><p>Phân phối theo ủy quyền của Công ty TNHH TM-DV Việt Cường Nhân, chủ thương hiệu Yến sào Việt Cường Nhân.</p></div>
       <div><h3>Tư vấn cách dùng</h3><p>Hướng dẫn ngâm, chưng và bảo quản cho từng loại yến trước khi giao hàng.</p></div>
+      <div><h3>Kiểm hàng, đổi trả</h3><p>Được kiểm hàng trước khi thanh toán. Giao sai, hư hỏng, hết hạn: đổi mới hoặc hoàn tiền, Phát Lộc chịu phí. <a href="chinh-sach/doi-tra.html">Xem chính sách</a></p></div>
     </div>
   </div>
 </section>
@@ -695,8 +750,16 @@ const ORDER = ["Tổ Yến Thô", "Tổ Yến Đã Nhặt Sạch Lông", "Yến 
 const cats = ["Tất cả", ...ORDER.filter(c => P.some(p => p[1] === c)), ...[...new Set(P.map(p => p[1]))].filter(c => !ORDER.includes(c))];
 const grid = document.getElementById("grid"), chips = document.getElementById("chips"), sel = document.getElementById("o-prod");
 let cur = "Tất cả";
+// Lọc quà Tết theo ngân sách (chỉ hiện khi đang xem nhóm Quà Tết).
+const BUDGETS = [["Mọi mức giá", 0, Infinity], ["Dưới 500.000đ", 0, 500000], ["500.000đ – 1 triệu", 500000, 1000000], ["1 – 2 triệu", 1000000, 2000000], ["Trên 2 triệu", 2000000, Infinity]];
+let bud = 0;
 function draw() {
-  grid.innerHTML = P.filter(p => cur === "Tất cả" || p[1] === cur).map(p => `
+  const [, lo, hi] = BUDGETS[cur === "Quà Tết" ? bud : 0];
+  const list = P.filter(p => (cur === "Tất cả" || p[1] === cur) && (!(hi < Infinity || lo > 0) || (p[4] >= lo && p[4] < hi)));
+  const bx = document.getElementById("budget");
+  bx.hidden = cur !== "Quà Tết";
+  bx.innerHTML = "<span>Ngân sách:</span>" + BUDGETS.map((b, i) => `<button class="chip" type="button" aria-pressed="${i === bud}" data-bud="${i}">${b[0]}</button>`).join("") + `<span>${list.length} mẫu</span>`;
+  grid.innerHTML = list.map(p => `
     <article class="card">
       ${IMG[p[0]] ? `<button class="ph" type="button" data-gal="${p[0]}" aria-label="Xem ảnh ${p[2]}"><img src="${thumb(IMG[p[0]][0])}" alt="${p[2]} ${p[3]}" loading="lazy" width="480" height="480">${IMG[p[0]].length > 1 ? `<span class="count">${IMG[p[0]].length} ảnh</span>` : ""}</button>` : `<div class="ph"><strong>${p[2]}</strong><em>Ảnh sản phẩm đang cập nhật</em></div>`}
       <div class="body">
@@ -733,7 +796,8 @@ document.addEventListener("click", e => {
   if (g) { const p = P.find(x => String(x[0]) === g.dataset.gal); lbOpen(IMG[p[0]].map(f => [f, p[2]]), 0); return; }
   const st = e.target.closest("[data-set]");
   if (st) { lbOpen(SETS, +st.dataset.set); return; }
-  const c = e.target.closest("[data-cat]"); if (c) { cur = c.dataset.cat; draw(); return; }
+  const bd = e.target.closest("[data-bud]"); if (bd) { bud = +bd.dataset.bud; draw(); return; }
+  const c = e.target.closest("[data-cat]"); if (c) { cur = c.dataset.cat; bud = 0; draw(); return; }
   const sc = e.target.closest("[data-showcat]"); if (sc) { cur = sc.dataset.showcat; draw(); document.getElementById("san-pham").scrollIntoView({behavior: "smooth"}); return; }
   const k = e.target.closest("[data-pick]");
   if (k) { sel.value = k.dataset.pick; document.getElementById("dat-hang").scrollIntoView({behavior: "smooth"}); }
@@ -770,6 +834,25 @@ Ghi chú: ${v("o-note") || "không"}`;
   } catch {
     msg.textContent = "Chưa gửi được đơn. Anh/chị vui lòng bấm Gửi đơn qua Zalo bên dưới.";
   }
+  btn.disabled = false;
+});
+// Form báo giá quà Tết doanh nghiệp: gửi cùng địa chỉ nhận đơn, vào Pancake như một đơn chờ báo giá.
+document.getElementById("b2b-form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const ok = v("b-company") && v("b-name") && v("b-phone");
+  document.getElementById("b-err").hidden = !!ok;
+  if (!ok) return;
+  const msg = document.getElementById("b-ok"), btn = document.getElementById("b-btn");
+  btn.disabled = true; msg.hidden = false; msg.textContent = "Đang gửi...";
+  const note = `BÁO GIÁ QUÀ TẾT DOANH NGHIỆP\nCông ty: ${v("b-company")}\nSố lượng: ${v("b-qty")} hộp\nNgân sách/hộp: ${v("b-budget")}\nNgày nhận: ${v("b-date") || "chưa chọn"}\nYêu cầu: ${v("b-note") || "không"}`;
+  try {
+    await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body: new URLSearchParams({
+      name: v("b-name") + " - " + v("b-company"), phone: v("b-phone"), addr: v("b-company") + " (báo giá doanh nghiệp, chưa có địa chỉ giao)",
+      product: "Báo giá quà Tết doanh nghiệp", spec: v("b-budget"), qty: v("b-qty") || "1", total: 0, note, website: v("b-web") }) });
+    msg.textContent = "Đã nhận yêu cầu. Phát Lộc sẽ gọi lại báo giá trong ngày làm việc.";
+    e.target.reset();
+  } catch { msg.textContent = "Chưa gửi được. Anh/chị vui lòng nhắn Zalo 0768 759 419."; }
   btn.disabled = false;
 });
 document.getElementById("o-zalo").addEventListener("click", async e => {
