@@ -16,7 +16,16 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Store","name":"Phát Lộc Natural Food","legalName":"Công ty TNHH Sản xuất Phát Lộc Natural Food","url":"https://phatlocnaturalfood.com/","logo":"https://phatlocnaturalfood.com/logo.jpg","image":"https://phatlocnaturalfood.com/logo.jpg","telephone":"+84768759419","email":"phatlocnaturalfood@gmail.com","taxID":"3703421984","address":{"@type":"PostalAddress","streetAddress":"511/9 Bùi Thị Xuân, Phường Tân Đông Hiệp","addressLocality":"TP. Hồ Chí Minh","addressCountry":"VN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:30","closes":"21:00"}],"sameAs":["https://www.facebook.com/1415830271609330"]}
 </script>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}/* Nút liên hệ nổi: Zalo + gọi điện, góc phải dưới */
+.fab { position: fixed; right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 10px; z-index: 50; }
+.fab a { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.22); text-decoration: none; font: 700 13px var(--font-body); }
+.fab .z { background: #0068ff; color: #fff; }
+.fab .t { background: var(--gold); color: #1b1404; }
+.fab svg { width: 26px; height: 26px; }
+.contact .acts { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 14px; }
+.btn-zalo { background: #0068ff; color: #fff; }
+@media (max-width: 640px) { footer .wrap { padding-right: 76px; } }
+</style>
 <title>Phát Lộc Natural Food</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -260,7 +269,11 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
       <div class="eyebrow">Đặt hàng</div>
       <h2 style="font-size:40px;color:var(--emerald-2);margin-bottom:12px">Gọi hoặc nhắn Zalo</h2>
       <p class="big">0768 759 419</p>
-      <p>Điền đơn bên cạnh rồi bấm <b>Gửi đơn</b>, hoặc chép nội dung đơn gửi qua Zalo số trên. Nhân viên sẽ gọi lại xác nhận giá và phí giao.</p>
+      <div class="acts">
+        <a class="btn btn-zalo" href="https://zalo.me/0768759419" target="_blank" rel="noopener">Nhắn Zalo ngay</a>
+        <a class="btn btn-line" href="tel:0768759419">Gọi 0768 759 419</a>
+      </div>
+      <p>Điền đơn bên cạnh rồi bấm <b>Gửi đơn</b>, hoặc bấm <b>Nhắn Zalo ngay</b> để được tư vấn. Nhân viên sẽ gọi lại xác nhận giá và phí giao.</p>
       <p style="color:var(--muted);font-size:13px">Email: phatlocnaturalfood@gmail.com</p>
     </div>
     <form class="f" id="form" novalidate>
@@ -279,7 +292,10 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
       <p id="o-ok" style="color:var(--emerald-2);margin:0;font-weight:600" hidden></p>
       <div id="o-out" hidden>
         <div class="summary" id="o-sum"></div>
-        <button class="btn btn-line" type="button" id="o-copy" style="margin-top:8px">Chép nội dung đơn</button>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+          <button class="btn btn-zalo" type="button" id="o-zalo">Gửi đơn qua Zalo</button>
+          <button class="btn btn-line" type="button" id="o-copy">Chép nội dung đơn</button>
+        </div>
       </div>
     </form>
   </div>
@@ -304,6 +320,11 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
     </div>
   </div>
 </footer>
+
+<div class="fab" aria-label="Liên hệ nhanh">
+  <a class="z" href="https://zalo.me/0768759419" target="_blank" rel="noopener" aria-label="Nhắn Zalo Phát Lộc 0768 759 419">Zalo</a>
+  <a class="t" href="tel:0768759419" aria-label="Gọi 0768 759 419"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+</div>
 
 <dialog class="lb" id="lb" aria-label="Ảnh sản phẩm">
   <img id="lb-img" alt="">
@@ -734,9 +755,14 @@ Ghi chú: ${v("o-note") || "không"}`;
     msg.textContent = "Đã nhận đơn. Nhân viên sẽ gọi lại xác nhận giá và phí giao.";
     document.getElementById("form").reset();
   } catch {
-    msg.textContent = "Chưa gửi được đơn. Anh/chị vui lòng chép nội dung bên dưới gửi Zalo 0768 759 419.";
+    msg.textContent = "Chưa gửi được đơn. Anh/chị vui lòng bấm Gửi đơn qua Zalo bên dưới.";
   }
   btn.disabled = false;
+});
+document.getElementById("o-zalo").addEventListener("click", async e => {
+  // Zalo không cho điền sẵn tin nhắn: chép nội dung đơn rồi mở Zalo để khách dán vào.
+  try { await navigator.clipboard.writeText(document.getElementById("o-sum").textContent); e.target.textContent = "Đã chép đơn, dán vào Zalo"; } catch {}
+  window.open("https://zalo.me/0768759419", "_blank", "noopener");
 });
 document.getElementById("o-copy").addEventListener("click", async e => {
   const t = document.getElementById("o-sum");
