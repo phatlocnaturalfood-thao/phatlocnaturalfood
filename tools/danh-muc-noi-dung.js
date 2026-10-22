@@ -141,5 +141,79 @@ module.exports = [
       ["Bảo quản đông trùng sấy khô thế nào?", "Đậy kín, để nơi khô ráo hoặc ngăn mát tủ lạnh, tránh ẩm để nấm không mềm và mất màu."],
       ["Có làm quà biếu đông trùng không?", "Có. Đông trùng 10gr–50gr có trong nhiều mẫu <a href=\"../qua-tet/\">quà Tết 2027</a> kèm yến sào và táo đỏ."]
     ]
+  },
+  {
+    slug: "tao-do",
+    menu: "Táo đỏ",
+    crumb: "Táo đỏ Tân Cương",
+    eyebrow: "Táo đỏ sấy khô",
+    cats: ["Táo Đỏ Tân Cương"],
+    title: "Táo đỏ Tân Cương sấy khô – size trung, đại, thượng hạng | Phát Lộc",
+    h1: "Táo đỏ Tân Cương sấy khô",
+    desc: "Táo đỏ Tân Cương sấy khô size trung, đại, thượng hạng túi 1kg và hộp 350gr, táo đỏ Nhược Khương. Giá từ 45.000đ. Dùng chưng yến, nấu chè, pha trà. Giao toàn quốc.",
+    lede: `<p>Táo đỏ Tân Cương quả to, thịt dày, ngọt tự nhiên, là nguyên liệu quen thuộc khi chưng yến, nấu chè, hầm gà hay pha trà. Phát Lộc có 3 size theo số quả mỗi kg (trung 100–120 quả, đại 80–100 quả, thượng hạng 70–80 quả), đóng túi 1kg hoặc hộp 350gr, giá từ 45.000đ.</p>
+<p>Táo Nhược Khương quả nhỏ hơn, vị ngọt đậm, giá mềm, hợp dùng hằng ngày.</p>`,
+    guide: `      <h2>Chọn size táo đỏ</h2>
+      <ul>
+        <li><b>Thượng hạng (70–80 quả/kg):</b> quả to đều, đẹp, hợp làm quà và ăn trực tiếp.</li>
+        <li><b>Size đại (80–100 quả/kg):</b> cân bằng giữa giá và độ to, dùng nấu chè, hầm.</li>
+        <li><b>Size trung (100–120 quả/kg):</b> giá tốt, hợp chưng yến, pha trà hằng ngày.</li>
+      </ul>
+      <p>Chưng yến với 2–3 quả táo đỏ bổ đôi, bỏ hạt cho vị ngọt thanh; xem bài ${L("cach-chung-yen-sao", "Cách chưng yến sào đường phèn tại nhà")}.</p>`,
+    faq: [
+      ["Bảo quản táo đỏ sấy khô thế nào?", "Đậy kín, để nơi khô thoáng; mùa nồm nên để ngăn mát tủ lạnh để táo không bị ẩm, mốc."],
+      ["Táo đỏ hộp 350gr và túi 1kg khác gì?", "Cùng loại táo; hộp 350gr tiện dùng thử hoặc làm quà, túi 1kg tiết kiệm hơn cho gia đình dùng thường xuyên."],
+      ["Mua táo đỏ kèm yến có quà tặng không?", "Một số sản phẩm yến sào có tặng kèm táo đỏ như ghi trên ảnh sản phẩm; nhân viên xác nhận quà tặng khi gọi xác nhận đơn."]
+    ]
+  },
+  {
+    slug: "nha-dam",
+    menu: "Nha đam",
+    crumb: "Thạch nha đam",
+    eyebrow: "Nha đam Tây Nguyên",
+    cats: ["Thạch Nha Đam"],
+    title: "Thạch nha đam Tây Nguyên có đường, không đường – túi, hũ 1kg | Phát Lộc",
+    h1: "Thạch nha đam Tây Nguyên",
+    desc: "Thạch nha đam Tây Nguyên đã sơ chế, có đường và không đường, túi 1kg 59.000đ, hũ 1kg 69.000đ. Giòn, không đắng, dùng làm chè, sữa chua, nước giải khát.",
+    lede: `<p>Thạch nha đam Tây Nguyên đã gọt vỏ, cắt hạt lựu và xử lý hết nhớt đắng, mở ra là dùng. Có loại có đường và không đường, đóng túi 1kg (59.000đ) hoặc hũ 1kg (69.000đ).</p>
+<p>Loại không đường hợp người hạn chế đường hoặc muốn tự nêm; loại có đường dùng ngay cho chè, sữa chua, trà trái cây.</p>`,
+    guide: `      <h2>Gợi ý dùng thạch nha đam</h2>
+      <ul>
+        <li><b>Sữa chua nha đam:</b> trộn 2–3 muỗng thạch với một hũ sữa chua, để lạnh.</li>
+        <li><b>Chè, trà trái cây:</b> thêm thạch nha đam vào cuối để giữ độ giòn.</li>
+        <li><b>Nước nha đam hạt chia:</b> thạch nha đam, hạt chia, đường phèn, đá.</li>
+      </ul>
+      <p>Muốn tự sơ chế lá nha đam tươi, xem bài ${L("so-che-nha-dam", "Sơ chế nha đam không đắng, không nhớt")}.</p>`,
+    faq: [
+      ["Thạch nha đam để được bao lâu?", "Chưa mở để ngăn mát tủ lạnh theo hạn ghi trên bao bì; đã mở nên đậy kín, dùng trong vài ngày."],
+      ["Nên chọn túi hay hũ?", "Cùng thạch bên trong; hũ tiện đậy lại sau khi mở, túi giá tốt hơn cho quán hoặc gia đình dùng nhiều."],
+      ["Có giao nha đam đi tỉnh không?", "Có, giao toàn quốc; khách được kiểm hàng khi nhận."]
+    ]
+  },
+  {
+    slug: "my-pham",
+    menu: "Mỹ phẩm",
+    crumb: "Mỹ phẩm",
+    eyebrow: "Chăm sóc da và tóc",
+    cats: ["Mỹ Phẩm"],
+    title: "Mỹ phẩm T'Beauty, mặt nạ yến, dầu gội nhân sâm Hàn Quốc | Phát Lộc",
+    h1: "Mỹ phẩm chăm sóc da và tóc",
+    desc: "Nước tẩy trang, sữa rửa mặt, toner, serum, kem dưỡng, kem chống nắng, mặt nạ T'Beauty và dầu gội, kem ủ nhân sâm Hàn Quốc. Có phiếu công bố mỹ phẩm của Cục Quản lý Dược.",
+    lede: `<p>Phát Lộc có 14 sản phẩm chăm sóc da và tóc, từ 126.000đ đến 550.000đ: bộ chăm sóc da T'Beauty (tẩy trang, sữa rửa mặt, toner, serum, kem dưỡng, gel tẩy da chết, kem chống nắng, mặt nạ) và dòng chăm sóc tóc nhân sâm Hàn Quốc.</p>
+<p>Các sản phẩm có phiếu công bố mỹ phẩm của Cục Quản lý Dược, đăng công khai ở mục <a href="../#ho-so">Hồ sơ pháp lý</a>.</p>`,
+    guide: `      <h2>Thứ tự chăm sóc da cơ bản</h2>
+      <ol>
+        <li>Tẩy trang, rồi rửa mặt bằng sữa rửa mặt.</li>
+        <li>Toner cân bằng da.</li>
+        <li>Serum, sau đó kem dưỡng ẩm.</li>
+        <li>Ban ngày: kem chống nắng là bước cuối.</li>
+        <li>2–3 lần mỗi tuần: tẩy da chết và đắp mặt nạ.</li>
+      </ol>
+      <p>Muốn làm quà, xem các túi quà mỹ phẩm trong trang <a href="../qua-tet/">Quà Tết 2027</a> (QTT05, QTT09, QTT15–QTT17).</p>`,
+    faq: [
+      ["Mỹ phẩm có giấy công bố không?", "Có. Các sản phẩm có phiếu công bố mỹ phẩm của Cục Quản lý Dược và chứng nhận xuất xứ, xem tại mục <a href=\"../#ho-so\">Hồ sơ pháp lý</a>."],
+      ["Da nhạy cảm dùng được không?", "Nên thử trước một lượng nhỏ ở vùng da sau tai hoặc cổ tay trong 24 giờ; ngưng dùng nếu thấy đỏ, ngứa."],
+      ["Có túi quà mỹ phẩm không?", "Có, các túi quà Tết mỹ phẩm từ 440.000đ đến 1.388.000đ trong trang <a href=\"../qua-tet/\">Quà Tết 2027</a>."]
+    ]
   }
 ];

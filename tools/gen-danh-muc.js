@@ -12,7 +12,8 @@ new Function("ctx", code.replace(/\bconst (P|IMG|R|AN_XA_BONG)\b/g, "var $1") + 
 const { P, IMG } = ctx;
 
 const IMG_V = "?v=8";
-const thumb = f => "images/san-pham/" + (/^(catalog|that|tet)\//.test(f) ? f + IMG_V : "nho/" + f + (/^khung\//.test(f) ? IMG_V : ""));
+const thumb = f => "images/san-pham/nho/" + f.replace(/\.jpg$/, ".webp") + (/^(catalog|that|khung|tet)\//.test(f) ? IMG_V : "");
+const jpg = f => "images/san-pham/" + f;
 const vnd = n => n ? n.toLocaleString("vi-VN").replace(/,/g, ".") + "đ" : "Liên hệ";
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 const QT = /\b(QT[GHKT]\d{2})\b/;
@@ -23,13 +24,14 @@ const headTop = tpl.slice(0, tpl.indexOf('<meta name="description"'));
 const footer = tpl.slice(tpl.indexOf("<footer>"));
 
 const PAGES = require("./danh-muc-noi-dung.js");
+const SP = Object.fromEntries(require("./san-pham-noi-dung.js").map(x => [x.id, x.slug]));
 
 function card(p) {
   const img = IMG[p[0]] ? IMG[p[0]][0] : null;
   return `      <article class="card">
         ${img ? `<img src="../${thumb(img)}" alt="${esc(p[2] + " " + p[3])}" loading="lazy" width="480" height="480">` : ""}
         <div class="body">
-          <h3>${esc(p[2])}</h3>
+          <h3>${SP[p[0]] ? `<a href="../san-pham/${SP[p[0]]}/">${esc(p[2])}</a>` : esc(p[2])}</h3>
           <p class="spec">${esc(p[3])}</p>
           <p class="price"><b>${vnd(p[4])}</b>${p[5] ? ` <s>${vnd(p[5])}</s>` : ""}</p>
           <a class="btn btn-line" href="${orderLink(p)}">Đặt mua</a>
@@ -50,13 +52,13 @@ function build(pg) {
     { "@context": "https://schema.org", "@type": "CollectionPage", name: pg.h1, description: pg.desc, url,
       mainEntity: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((p, i) => ({
         "@type": "ListItem", position: i + 1, item: {
-          "@type": "Product", name: p[2] + " " + p[3], image: IMG[p[0]] ? SITE + thumb(IMG[p[0]][0]) : undefined,
-          brand: { "@type": "Brand", name: /Mỹ Phẩm|T'Beauty/.test(p[2]) ? "T'Beauty" : "Việt Cường Nhân" },
+          "@type": "Product", name: p[2] + " " + p[3], image: IMG[p[0]] ? SITE + jpg(IMG[p[0]][0]) : undefined,
+          brand: /Yến|Đông Trùng|Quà Tết/.test(p[1]) ? { "@type": "Brand", name: "Việt Cường Nhân" } : undefined,
           offers: { "@type": "Offer", price: p[4], priceCurrency: "VND", availability: "https://schema.org/InStock", url: SITE + orderLink(p).slice(3) } } })) } },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: pg.faq.map(([q, a]) => ({
       "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a.replace(/<[^>]+>/g, "") } })) }
   ];
-  const og = items[0] && IMG[items[0][0]] ? SITE + thumb(IMG[items[0][0]][0]) : SITE + "logo.jpg";
+  const og = items[0] && IMG[items[0][0]] ? SITE + jpg(IMG[items[0][0]][0]) : SITE + "logo.jpg";
   const out = headTop + `<meta name="description" content="${esc(pg.desc)}">
 <title>${esc(pg.title)}</title>
 <link rel="canonical" href="${url}">
@@ -82,7 +84,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
       <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
     </a>
     <nav class="menu" aria-label="Chính">
-${PAGES.map(x => `      <a href="../${x.slug}/"${x.slug === pg.slug ? ' aria-current="page"' : ""}>${x.menu}</a>`).join("\n")}
+${PAGES.slice(0, 5).map(x => `      <a href="../${x.slug}/"${x.slug === pg.slug ? ' aria-current="page"' : ""}>${x.menu}</a>`).join("\n")}
       <a href="../kien-thuc/">Kiến thức</a>
     </nav>
     <a class="btn btn-line" href="../#dat-hang">Đặt hàng</a>
