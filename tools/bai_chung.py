@@ -1,5 +1,6 @@
 # Hàm dùng chung cho các script sinh bài kiến thức: bảng giá P, link sản phẩm, khung trang bài.
-import json, subprocess, os
+import json, subprocess, os, datetime
+NGAY = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=7)).strftime("%Y-%m-%d")
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 js = r'''const fs=require("fs");const h=fs.readFileSync(process.argv[1],"utf8");
 const code=h.slice(h.indexOf("const P = ["),h.indexOf("const DIR ="));const c={};
@@ -25,7 +26,7 @@ foot = src[src.index('</main>'):]
 
 def page(slug, desc, title, crumb, h1, body, cta, faq=None):
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": desc,
-          "datePublished": "2026-10-22", "inLanguage": "vi",
+          "datePublished": NGAY, "inLanguage": "vi",
           "author": {"@type": "Organization", "name": "Phát Lộc Natural Food"},
           "publisher": {"@type": "Organization", "name": "Phát Lộc Natural Food",
                         "logo": {"@type": "ImageObject", "url": "https://phatlocnaturalfood.com/logo.jpg"}},
