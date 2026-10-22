@@ -224,28 +224,22 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
   <div class="wrap">
     <div>
       <div class="eyebrow">Tết Đinh Mùi 2027</div>
-      <h2>Hộp quà yến sào và đông trùng hạ thảo</h2>
+      <h2>Quà Tết yến sào Việt Cường Nhân</h2>
       <ul>
-        <li>Set Quà Biếu Tặng Cao Cấp: 100g yến tinh chế, kèm táo đỏ và đường phèn</li>
-        <li>Set Hộp Quà Tặng Đông Trùng Hạ Thảo</li>
+        <li>59 mẫu giỏ, hộp, khay, túi quà, giá từ 260.000đ đến 5.202.000đ</li>
+        <li>Yến sào, đông trùng hạ thảo, táo đỏ, hồng sâm, yến hũ chưng sẵn</li>
+        <li>Nhận làm theo ngân sách, đặt số lượng cho doanh nghiệp có chiết khấu riêng</li>
         <li>Đặt sớm từ tháng 11 để giữ hàng mùa Tết</li>
       </ul>
+      <button class="btn btn-line" type="button" data-showcat="Quà Tết" style="margin-top:8px">Xem 59 mẫu quà Tết</button>
     </div>
     <div class="box">
-      <div class="eyebrow">Hộp quà Tết</div>
-      <h3 style="font-size:26px">Set Quà Biếu Tặng Cao Cấp</h3>
-      <p style="margin:0;color:var(--muted)">100g yến tinh chế, kèm táo đỏ và đường phèn</p>
-      <div class="price"><b>2.689.000đ</b><s>4.599.000đ</s></div>
-      <button class="btn btn-gold" type="button" data-pick="15">Đặt hộp quà này</button>
+      <div class="eyebrow">Gợi ý · QTH24</div>
+      <h3 style="font-size:26px">Hộp Quà Yến Sào Cao Cấp</h3>
+      <p style="margin:0;color:var(--muted)">Yến tinh chế 100gr (hộp bát giác), đường phèn, táo đỏ, hộp quà đỏ khay vàng kèm túi</p>
+      <div class="price"><b>2.798.000đ</b></div>
+      <button class="btn btn-gold" type="button" data-pick="338">Đặt hộp quà này</button>
     </div>
-  </div>
-</section>
-
-<section class="sets" id="mau-hop-qua">
-  <div class="wrap">
-    <div class="head"><div><div class="eyebrow">Mẫu hộp quà</div><h2>Set quà tặng cao cấp</h2></div></div>
-    <p class="note">Bấm vào ảnh để xem lớn. Giá từng set vui lòng gọi hoặc nhắn Zalo 0768 759 419.</p>
-    <div class="row" id="sets"></div>
   </div>
 </section>
 
@@ -319,105 +313,162 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
 <script>
 // Bảng giá theo catalog Việt Cường Nhân (11/9). Dữ liệu gốc và ảnh: catalog/products.json trong thư mục dự án.
 const P = [
-  [101,"Yến thô","Yến Thô Tổ AB Ít Lông","100gr",2150000],
-  [102,"Yến thô","Yến Thô Nguyên Tổ Giá Mềm","100gr",1880000],
-  [103,"Yến thô","Yến Thô Bể Nứt Nhẹ Ít Lông","100gr",1900000],
-  [104,"Yến thô","Yến Thô Bể Nứt Nhẹ","100gr",1590000],
-  [105,"Yến thô","Chân Rìa Thô","100gr",1869000],
-  [106,"Yến tinh chế","Yến Tinh Chế Vụn Đắp Tổ","100gr",1680000],
-  [107,"Yến tinh chế","Yến Tinh Chế Vụn Baby","100gr",1680000],
-  [108,"Yến tinh chế","Yến Tinh Chế Sợi Ngắn, Đầu Chân","100gr",1999000],
-  [109,"Yến tinh chế","Yến Tinh Chế 1 Lớp Sợi Vừa","100gr",2090000],
-  [110,"Yến tinh chế","Yến Tinh Chế 1 Lớp Sợi 10 Tai","100gr",2390000],
-  [111,"Yến tinh chế","Yến Tinh Chế 1 Lớp Sợi 18-20 Tai","100gr",2390000],
-  [112,"Yến tinh chế","Yến Tinh Chế 2 Lớp Sợi","100gr",2690000],
-  [113,"Yến tinh chế","Yến Rút Lông Đắp Tổ","100gr",2899000],
-  [114,"Yến tinh chế","Yến Rút Lông Định Hình","100gr",3380000],
-  [115,"Yến tinh chế","Yến Rút Lông Xương","100gr",3490000],
-  [116,"Yến tinh chế","Yến Rút Lông Khô","100gr",4169000],
-  [117,"Yến tinh chế","Yến Rút Lông Khô Ép Miếng","100gr",3850000],
-  [118,"Yến tinh chế","Chân Tua Sạch Loại 1","100gr",2890000],
-  [119,"Yến tinh chế","Chân Tua Sạch Loại 2","100gr",2680000],
-  [120,"Yến tinh chế","Viên Baby Mix Sẵn Phụ Gia","10 gói",299000],
-  [121,"Yến tinh chế","Viên Baby Mix Sẵn Phụ Gia","10 hũ",350000],
-  [122,"Yến tinh chế","Đắp Miếng Sợi Vuông","100gr",3630000],
-  [123,"Yến tinh chế","Vuông Miếng Lớn","100gr",1890000],
-  [124,"Nước yến chưng thủ công","Nước Yến Chưng Thủ Công 12gr Yến Tươi","Hũ 70ml",60000],
-  [125,"Nước yến chưng thủ công","Nước Yến Chưng Thủ Công 36gr Yến Tươi","Hũ 200ml",160000],
-  [126,"Nước yến chưng VCN Nest","Nước Yến VCN Nest 0.3gr Tổ Yến Thô","Hũ",35000],
-  [127,"Nước yến chưng VCN Nest","Nước Yến VCN Nest 0.8gr Tổ Yến Thô","Hũ",55000],
-  [128,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest","Loại 0.3gr",180000],
-  [129,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest","Loại 0.8gr",300000],
-  [130,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest","Loại 0.3gr",300000],
-  [131,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest","Loại 0.8gr",500000],
-  [132,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest (Có Hộp)","Loại 0.3gr",230000],
-  [133,"Nước yến chưng VCN Nest","Lốc 6 Hũ Yến VCN Nest (Có Hộp)","Loại 0.8gr",350000],
-  [134,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest (Có Hộp)","Loại 0.3gr",350000],
-  [135,"Nước yến chưng VCN Nest","Lốc 10 Hũ Yến VCN Nest (Có Hộp)","Loại 0.8gr",550000],
-  [136,"Đông trùng hạ thảo","Nấm Đông Trùng Hạ Thảo Loại Cây","100gr",599000],
-  [137,"Đông trùng hạ thảo","Nấm Đông Trùng Hạ Thảo Loại Cây","50gr",350000],
-  [138,"Đông trùng hạ thảo","Nấm Đông Trùng Hạ Thảo Loại Gãy","100gr",299000],
-  [139,"Đông trùng hạ thảo","Đông Trùng Tươi","Hũ",99000],
-  [140,"Đông trùng hạ thảo","Đông Trùng Hạ Thảo 10gr","Hũ 10gr",99000],
-  [141,"Đông trùng hạ thảo","Đông Trùng Hạ Thảo 20gr","20gr",189000],
-  [142,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Trung","1kg (100-120 quả/kg)",169000],
-  [143,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Đại","1kg (80-100 quả/kg)",189000],
-  [144,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Thượng Hạng","1kg (70-80 quả/kg)",219000],
-  [145,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Trung","Hộp 350gr",65000],
-  [146,"Táo đỏ Tân Cương","Táo Đỏ Tân Cương Size Đại","Hộp 350gr",75000],
-  [147,"Táo đỏ Tân Cương","Táo Đỏ Nhược Khương","Hộp 350gr",45000],
-  [148,"Nha đam Tây Nguyên","Nha Đam Có Đường","Túi 1kg",59000],
-  [149,"Nha đam Tây Nguyên","Nha Đam Không Đường","Túi 1kg",59000],
-  [150,"Nha đam Tây Nguyên","Nha Đam Có Đường","Hũ 1kg",69000],
-  [151,"Nha đam Tây Nguyên","Nha Đam Không Đường","Hũ 1kg",69000],
-  [14,"Quà Tết","Set Hộp Quà Tặng Đông Trùng Hạ Thảo","Hộp quà",729000,1150000],
-  [15,"Quà Tết","Set Quà Biếu Tặng Cao Cấp","100g yến tinh chế, kèm táo đỏ và đường phèn",2689000,4599000],
-  [201,"Xà bông tắm hình vuông","Xà Bông Hương Trà Xanh","Cục 110g",69000],
-  [202,"Xà bông tắm hình vuông","Xà Bông Hương Bạc Hà","Cục 110g",69000],
-  [203,"Xà bông tắm hình vuông","Xà Bông Hương Cherry","Cục 110g",69000],
-  [204,"Xà bông tắm hình vuông","Xà Bông Hương Chuối","Cục 110g",69000],
-  [205,"Xà bông tắm hình vuông","Xà Bông Hương Dứa","Cục 110g",69000],
-  [206,"Xà bông tắm hình vuông","Xà Bông Hương Dừa","Cục 110g",69000],
-  [207,"Xà bông tắm hình vuông","Xà Bông Hương Gạo Rang","Cục 110g",69000],
-  [208,"Xà bông tắm hình vuông","Xà Bông Hương Lyly","Cục 110g",69000],
-  [209,"Xà bông tắm hình vuông","Xà Bông Hương Lan","Cục 110g",69000],
-  [210,"Xà bông tắm hình vuông","Xà Bông Hương Măng Cụt","Cục 110g",69000],
-  [211,"Xà bông tắm hình vuông","Xà Bông Hương Sen","Cục 110g",69000],
-  [212,"Xà bông tắm hình vuông","Xà Bông Hương Vani","Cục 110g",69000],
-  [213,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Mẫu Đơn","Cục 133g",103000],
-  [214,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Nho","Cục 84g",85000],
-  [215,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bắp","Cục 81g",85000],
-  [216,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bưởi","Cục 100g",77000],
-  [217,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Cam","Cục 81g",77000],
-  [218,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Chuối","Cục 80g",85000],
-  [219,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Dâu","Cục 99g",85000],
-  [220,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Dừa","Cục 67g",93000],
-  [221,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Dứa","Cục 75g",85000],
-  [222,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Hồng","Cục 140g",103000],
-  [223,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Hướng Dương","Cục 111g",93000],
-  [224,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Lan","Cục 95g",93000],
-  [225,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Măng Cụt","Cục 84g",77000],
-  [226,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Mật Ong","Cục 80g",77000],
-  [227,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Hoa Sứ","Cục 97g",103000],
-  [228,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Xoài","Cục 74g",85000],
-  [229,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bông Bưởi","Cục 100g",77000],
-  [230,"Xà bông tắm hình hoa và trái cây","Xà Bông Hương Bông Cà Phê","Cục 71g",77000],
-  [231,"Mỹ phẩm","Nước Tẩy Trang","Chai",200000],
-  [232,"Mỹ phẩm","Sữa Rửa Mặt","Tuýp",190000],
-  [233,"Mỹ phẩm","Toner","Chai",200000],
-  [234,"Mỹ phẩm","Serum Trắng Da, Giảm Nếp Nhăn","Chai",290000],
-  [235,"Mỹ phẩm","Kem Dưỡng Ẩm, Trắng Da","Hũ",260000],
-  [236,"Mỹ phẩm","Gel Tẩy Da Chết","Tuýp",230000],
-  [237,"Mỹ phẩm","Kem Chống Nắng","Tuýp",290000],
-  [238,"Mỹ phẩm","Mặt Nạ","Hộp 10 miếng",189000],
-  [239,"Mỹ phẩm","Dầu Gội Nhân Sâm Hàn Quốc","Chai",550000],
-  [240,"Mỹ phẩm","Tinh Chất Dưỡng Tóc Nhân Sâm Hàn Quốc","Chai",350000],
-  [241,"Mỹ phẩm","Kem Ủ Tóc Nhân Sâm Hàn Quốc","Tuýp",320000],
-  [242,"Mỹ phẩm","Mặt Nạ Hồng / Nâu / Xanh Nâng Tone","Hộp 10 miếng",360000],
-  [243,"Chăm sóc cơ thể","Dầu Gội Trái Nhàu","Chai",344000],
-  [244,"Chăm sóc cơ thể","Xà Bông Tắm Giảm Mụn","Cục",120000],
-  [245,"Chăm sóc cơ thể","Nước Rửa Tay Khô","Chai",126000],
-  [246,"Chăm sóc cơ thể","Combo Quà 3 Xà Bông Tắm","Hộp",207000]
+  [101,"Tổ Yến Thô","Yến Thô Tổ AB Ít Lông","100gr",2150000],
+  [102,"Tổ Yến Thô","Yến Thô Nguyên Tổ Giá Mềm","100gr",1880000],
+  [103,"Tổ Yến Thô","Yến Thô Bể Nứt Nhẹ Ít Lông","100gr",1900000],
+  [104,"Tổ Yến Thô","Yến Thô Bể Nứt Nhẹ","100gr",1590000],
+  [105,"Tổ Yến Thô","Chân Rìa Thô","100gr",1869000],
+  [106,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế Vụn Đắp Tổ","100gr",1680000],
+  [107,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế Vụn Baby","100gr",1680000],
+  [108,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế Sợi Ngắn, Đầu Chân","100gr",1999000],
+  [109,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế 1 Lớp Sợi Vừa","100gr",2090000],
+  [110,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế 1 Lớp Sợi 10 Tai","100gr",2390000],
+  [111,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế 1 Lớp Sợi 18-20 Tai","100gr",2390000],
+  [112,"Tổ Yến Đã Nhặt Sạch Lông","Yến Tinh Chế 2 Lớp Sợi","100gr",2690000],
+  [113,"Tổ Yến Đã Nhặt Sạch Lông","Yến Rút Lông Đắp Tổ","100gr",2899000],
+  [114,"Tổ Yến Đã Nhặt Sạch Lông","Yến Rút Lông Định Hình","100gr",3380000],
+  [115,"Tổ Yến Đã Nhặt Sạch Lông","Yến Rút Lông Xương","100gr",3490000],
+  [116,"Tổ Yến Đã Nhặt Sạch Lông","Yến Rút Lông Khô","100gr",4169000],
+  [117,"Tổ Yến Đã Nhặt Sạch Lông","Yến Rút Lông Khô Ép Miếng","100gr",3850000],
+  [118,"Tổ Yến Đã Nhặt Sạch Lông","Chân Tua Sạch Loại 1","100gr",2890000],
+  [119,"Tổ Yến Đã Nhặt Sạch Lông","Chân Tua Sạch Loại 2","100gr",2680000],
+  [120,"Tổ Yến Đã Nhặt Sạch Lông","Viên Baby Mix Sẵn Phụ Gia","10 gói",299000],
+  [121,"Tổ Yến Đã Nhặt Sạch Lông","Viên Baby Mix Sẵn Phụ Gia","10 hũ",350000],
+  [122,"Tổ Yến Đã Nhặt Sạch Lông","Đắp Miếng Sợi Vuông","100gr",3630000],
+  [123,"Tổ Yến Đã Nhặt Sạch Lông","Vuông Miếng Lớn","100gr",1890000],
+  [124,"Yến Hũ Chưng Tiệt Trùng","Nước Yến Chưng Thủ Công 12gr Yến Tươi","Hũ 70ml",60000],
+  [125,"Yến Hũ Chưng Tiệt Trùng","Nước Yến Chưng Thủ Công 36gr Yến Tươi","Hũ 200ml",160000],
+  [126,"Yến Hũ Chưng Tiệt Trùng","Nước Yến VCN Nest 0.3gr Tổ Yến Thô","Hũ",35000],
+  [127,"Yến Hũ Chưng Tiệt Trùng","Nước Yến VCN Nest 0.8gr Tổ Yến Thô","Hũ",55000],
+  [128,"Yến Hũ Chưng Tiệt Trùng","Lốc 6 Hũ Yến VCN Nest","Loại 0.3gr",180000],
+  [129,"Yến Hũ Chưng Tiệt Trùng","Lốc 6 Hũ Yến VCN Nest","Loại 0.8gr",300000],
+  [130,"Yến Hũ Chưng Tiệt Trùng","Lốc 10 Hũ Yến VCN Nest","Loại 0.3gr",300000],
+  [131,"Yến Hũ Chưng Tiệt Trùng","Lốc 10 Hũ Yến VCN Nest","Loại 0.8gr",500000],
+  [132,"Yến Hũ Chưng Tiệt Trùng","Lốc 6 Hũ Yến VCN Nest (Có Hộp)","Loại 0.3gr",230000],
+  [133,"Yến Hũ Chưng Tiệt Trùng","Lốc 6 Hũ Yến VCN Nest (Có Hộp)","Loại 0.8gr",350000],
+  [134,"Yến Hũ Chưng Tiệt Trùng","Lốc 10 Hũ Yến VCN Nest (Có Hộp)","Loại 0.3gr",350000],
+  [135,"Yến Hũ Chưng Tiệt Trùng","Lốc 10 Hũ Yến VCN Nest (Có Hộp)","Loại 0.8gr",550000],
+  [136,"Nấm Đông Trùng Hạ Thảo","Nấm Đông Trùng Hạ Thảo Loại Cây","100gr",599000],
+  [137,"Nấm Đông Trùng Hạ Thảo","Nấm Đông Trùng Hạ Thảo Loại Cây","50gr",350000],
+  [138,"Nấm Đông Trùng Hạ Thảo","Nấm Đông Trùng Hạ Thảo Loại Gãy","100gr",299000],
+  [139,"Nấm Đông Trùng Hạ Thảo","Đông Trùng Tươi","Hũ",99000],
+  [140,"Nấm Đông Trùng Hạ Thảo","Đông Trùng Hạ Thảo 10gr","Hũ 10gr",99000],
+  [141,"Nấm Đông Trùng Hạ Thảo","Đông Trùng Hạ Thảo 20gr","20gr",189000],
+  [142,"Táo Đỏ Tân Cương","Táo Đỏ Tân Cương Size Trung","1kg (100-120 quả/kg)",169000],
+  [143,"Táo Đỏ Tân Cương","Táo Đỏ Tân Cương Size Đại","1kg (80-100 quả/kg)",189000],
+  [144,"Táo Đỏ Tân Cương","Táo Đỏ Tân Cương Size Thượng Hạng","1kg (70-80 quả/kg)",219000],
+  [145,"Táo Đỏ Tân Cương","Táo Đỏ Tân Cương Size Trung","Hộp 350gr",65000],
+  [146,"Táo Đỏ Tân Cương","Táo Đỏ Tân Cương Size Đại","Hộp 350gr",75000],
+  [147,"Táo Đỏ Tân Cương","Táo Đỏ Nhược Khương","Hộp 350gr",45000],
+  [148,"Thạch Nha Đam","Nha Đam Có Đường","Túi 1kg",59000],
+  [149,"Thạch Nha Đam","Nha Đam Không Đường","Túi 1kg",59000],
+  [150,"Thạch Nha Đam","Nha Đam Có Đường","Hũ 1kg",69000],
+  [151,"Thạch Nha Đam","Nha Đam Không Đường","Hũ 1kg",69000],
+  [301,"Quà Tết","Giỏ Quà Rạng Ngời QTG01","Nước tẩy trang, sữa rửa mặt, kem chống nắng, serum, gel tẩy tế bào chết, kem dưỡng T'Beauty, 4 miếng mặt nạ yến, hộp kẹo Sweet Gift",1509000],
+  [302,"Quà Tết","Giỏ Quà Tươi Xinh QTG02","Nước tẩy trang, sữa rửa mặt T'Beauty, 1 hộp mặt nạ yến (10 miếng), 4 miếng mặt nạ yến, hộp kẹo Sweet Gift",813000],
+  [303,"Quà Tết","Giỏ Quà Phúc Khang QTG03","Nấm đông trùng 20gr, táo đỏ hộp lớn, 4 hũ yến chưng, hộp kẹo Sweet Gift",542000],
+  [304,"Quà Tết","Giỏ Quà An Khang QTG04","12 hũ yến chưng",564000],
+  [305,"Quà Tết","Giỏ Quà Lan Phúc QTG05","15 hũ yến chưng",646000],
+  [306,"Quà Tết","Giỏ Quà Phú Quý Đại Cát QTG06","Yến rút lông đắp tổ 100gr, đông trùng 20gr, táo đỏ hộp tròn, 4 hũ yến chưng",3813000],
+  [307,"Quà Tết","Giỏ Quà Kim Lộc QTG07","Yến tinh chế 50gr 18-20 tai, đông trùng 20gr, kỷ tử, đường phèn, táo đỏ",1803000],
+  [308,"Quà Tết","Giỏ Quà Sâm Yến Thịnh Vượng QTG08","Yến rút lông đắp tổ 100gr, 2 hộp nước hồng sâm, táo đỏ hộp tròn, đông trùng 20gr, 4 hũ yến chưng",4027000],
+  [309,"Quà Tết","Giỏ Quà Yến Hũ Phúc Lộc QTG09","Hộp nước hồng sâm Gold, 8 hũ yến chưng, hộp giấy Tổ Yến Chưng Sẵn",564000],
+  [310,"Quà Tết","Giỏ Quà Hồng Phúc QTG10","Yến tinh chế 50gr 18-20 tai, đông trùng 20gr, táo đỏ, kỷ tử, đường phèn",1803000],
+  [311,"Quà Tết","Giỏ Quà Trường Thọ QTG11","Yến tinh chế 50gr 18-20 tai, hộp nước hồng sâm, hộp kẹo sâm, đông trùng Master 10gr",1780000],
+  [312,"Quà Tết","Giỏ Quà Yến Hũ Bình An QTG12","9 hũ yến chưng",481000],
+  [313,"Quà Tết","Giỏ Quà Hoàng Gia QTG13","Yến rút lông đắp tổ 100gr, yến tinh chế 50gr 18-20 tai, đông trùng 50gr, táo đỏ hộp tròn, 3 hũ yến chưng",5202000],
+  [314,"Quà Tết","Giỏ Quà Vinh Hoa QTG14","Yến tinh chế 25gr, đông trùng 20gr, táo nhược khương, kỷ tử",1091000],
+  [315,"Quà Tết","Giỏ Quà Sâm Yến An Khang QTG15","Yến tinh chế 25gr, hộp nước hồng sâm, gói kẹo sâm, 3 hũ yến chưng",1120000],
+  [316,"Quà Tết","Giỏ Quà An Phú QTG16","Hộp nước hồng sâm Gold, yến vụn sạch 25gr, đông trùng 20gr, táo đỏ, đường phèn",968000],
+  [317,"Quà Tết","Giỏ Quà Phúc Lộc Thọ QTG17","Yến tinh chế 25gr, đông trùng 50gr, táo đỏ hộp tròn, hộp kẹo sâm, 4 hũ yến chưng",1370000],
+  [318,"Quà Tết","Hộp Quà Phúc Lộc QTH01","25gr yến vụn, 10gr nấm đông trùng, 1 hộp đường phèn, hộp giấy cứng, túi giấy",738000],
+  [319,"Quà Tết","Hộp Quà Kim Phúc QTH02","25gr yến tinh chế, 10gr nấm đông trùng, 1 hộp đường phèn, hộp giấy cứng, túi giấy",968000],
+  [320,"Quà Tết","Hộp Quà An Khang Thịnh Vượng QTH03","25gr yến vụn, 10gr nấm đông trùng, 6 hũ yến chưng, 1 hộp đường phèn, hộp giấy cứng, túi giấy",904000],
+  [321,"Quà Tết","Hộp Quà Vạn Sự Như Ý QTH04","25gr yến tinh chế, 10gr nấm đông trùng, 6 hũ yến chưng, 1 hộp đường phèn, hộp giấy cứng, túi giấy",1134000],
+  [322,"Quà Tết","Hộp Quà Phúc Thọ QTH05","50gr yến tinh chế (10 tai), 1 hộp kỷ tử, 1 hộp đường phèn, hộp giấy cứng, túi giấy",1612000],
+  [323,"Quà Tết","Hộp Quà An Lạc QTH06","10 hũ yến chưng sẵn (5 vị), 1 muỗng vàng nhỏ, hộp giấy cứng, túi giấy",524000],
+  [324,"Quà Tết","Hộp Quà Phú Quý QTH07","50gr yến tinh chế (10 tai), 20gr nấm đông trùng, 1 hộp đường phèn, 1 hộp kỷ tử, 1 hộp táo nhược khương, hộp giấy cứng, túi giấy",1749000],
+  [325,"Quà Tết","Hộp Quà Khang Thịnh QTH08","50gr yến tinh chế (10 tai), 20gr nấm đông trùng, 5 hũ yến chưng, hộp giấy cứng, túi giấy",1757000],
+  [326,"Quà Tết","Hộp Quà An Phúc QTH09","25gr yến tinh chế (5 tai), 10gr nấm đông trùng, 1 hộp đường phèn, hộp giấy cứng, túi giấy",968000],
+  [327,"Quà Tết","Hộp Quà Thịnh Vượng QTH10","25gr yến tinh chế (5 tai), 20gr nấm đông trùng, 1 hộp đường phèn, 1 hộp kỷ tử, 1 hộp táo nhược khương, hộp giấy cứng, túi giấy",1106000],
+  [328,"Quà Tết","Hộp Quà Phúc Khang QTH11","25gr yến tinh chế (5 tai), 20gr nấm đông trùng, 5 hũ yến chưng, hộp giấy cứng, túi giấy",1114000],
+  [329,"Quà Tết","Hộp Quà An Khang QTH12","25gr yến vụn (5 tai), 1 hộp kỷ tử, 1 hộp đường phèn, hộp giấy cứng, túi giấy",738000],
+  [330,"Quà Tết","Hộp Quà Phú Lộc QTH13","25gr yến vụn (5 tai), 20gr nấm đông trùng, 1 hộp đường phèn, 1 hộp kỷ tử, 1 hộp táo nhược khương, hộp giấy cứng, túi giấy",876000],
+  [331,"Quà Tết","Hộp Quà An Thịnh QTH14","25gr yến vụn (5 tai), 20gr nấm đông trùng, 5 hũ yến chưng, hộp giấy cứng, túi giấy",884000],
+  [332,"Quà Tết","Hộp Quà Kim Lộc QTH15","25gr yến tinh chế (5 tai), 5 hũ yến chưng, 1 hộp táo đỏ, hộp giấy cứng, túi giấy",1075000],
+  [333,"Quà Tết","Hộp Quà Phúc An QTH16","25gr yến vụn (5 tai), 5 hũ yến chưng, 1 hộp táo đỏ, hộp giấy cứng, túi giấy",846000],
+  [334,"Quà Tết","Hộp Quà Yến Chưng Cao Cấp QTH17","6 hũ yến chưng, hộp quà, túi",352000],
+  [335,"Quà Tết","Hộp Xách Yến Sào QTH18","6 hũ yến chưng, hộp giấy có tay xách",260000],
+  [336,"Quà Tết","Hộp Quà Thịnh Vượng QTH21","Yến tinh chế 50gr 18-20 tai, đông trùng 20gr, táo đỏ hộp tròn, hộp nước hồng sâm Gold, hộp gỗ Tân Niên Vạn Phúc",1841000],
+  [337,"Quà Tết","Tháp Quà Đại Lộc QTH23","Rượu vang The Land Shiraz, nấm đông trùng 15gr, táo đỏ hộp tròn, hộp nước hồng sâm, 6 hũ yến chưng, tháp mica",973000],
+  [338,"Quà Tết","Hộp Quà Yến Sào Cao Cấp QTH24","Yến tinh chế 100gr (hộp bát giác), đường phèn hộp nhỏ, táo đỏ hộp nhỏ, hộp quà đỏ, khay vàng, túi",2798000],
+  [339,"Quà Tết","Hộp Gỗ Vinh Hoa QTK01","Rượu vang The Land Shiraz, 20gr yến vụn (4 tai), 20gr nấm đông trùng, hộp gỗ Tân Niên Vạn Phúc",991000],
+  [340,"Quà Tết","Khay Quà An Khang QTK02","Yến tinh chế 25gr, đông trùng 50gr, táo đỏ hộp tròn, kỷ tử, khay Happy New Year",1160000],
+  [341,"Quà Tết","Khay Quà Phúc Thọ QTK03","Yến vụn sạch 20gr, đông trùng 20gr, táo đỏ, đường phèn, khay Happy New Year",685000],
+  [342,"Quà Tết","Khay Quà Đại Phúc QTK04","Yến rút lông đắp tổ 100gr, đông trùng 15gr, táo đỏ hộp tròn, kỷ tử, đường phèn, khay Happy New Year",3687000],
+  [343,"Quà Tết","Túi Quà An Nhiên QTT01","Nấm đông trùng, táo đỏ hộp lớn, 2 hũ yến chưng, 2 hộp giấy xanh, 1 gói kẹo sâm",420000],
+  [344,"Quà Tết","Túi Quà Hồng Phúc QTT02","Nấm đông trùng, táo đỏ hộp lớn, 6 chai nước hồng sâm, 1 gói kẹo sâm",425000],
+  [345,"Quà Tết","Túi Quà Sâm Yến QTT03","6 hũ yến chưng, 4 hộp giấy xanh, 4 chai nước hồng sâm, 1 gói kẹo sâm",398000],
+  [346,"Quà Tết","Túi Quà Phúc An Khang QTT04","Hộp nước hồng sâm (6 gói), 1 gói kẹo sâm, táo đỏ hộp lớn, 2 hũ yến chưng, 2 hộp giấy xanh",401000],
+  [347,"Quà Tết","Túi Quà Xuân Sắc QTT05","1 hộp mặt nạ yến T'Beauty (10 miếng), sữa rửa mặt, nước tẩy trang T'Beauty",608000],
+  [348,"Quà Tết","Túi Quà An Nhiên Yến QTT06","Yến vụn sạch 20gr, đông trùng 15gr, đường phèn, táo đỏ",639000],
+  [349,"Quà Tết","Túi Quà Cát Tường QTT07","Yến vụn sạch 25gr, táo nhược khương, chai nước hồng sâm, kỷ tử",650000],
+  [350,"Quà Tết","Túi Quà Yến Hũ Sum Vầy QTT08","3 hũ yến chưng, chai nước hồng sâm, gói kẹo sâm, hộp giấy Tổ Yến Chưng Sẵn",260000],
+  [351,"Quà Tết","Túi Quà Rạng Rỡ Xuân QTT09","Serum, kem chống nắng, kem dưỡng, nước tẩy trang, sữa rửa mặt, gel tẩy tế bào chết T'Beauty, 5 miếng mặt nạ Soothing",1388000],
+  [352,"Quà Tết","Túi Quà Sâm Hàn Dưỡng Tóc QTT10","Dầu gội nhân sâm K-Ginseng 720ml, kem ủ tóc nhân sâm 200ml",835000],
+  [353,"Quà Tết","Túi Quà Hồng Phát QTT11","Nấm đông trùng 15gr, 6 hũ yến chưng, túi mica hồng",383000],
+  [354,"Quà Tết","Túi Quà Xuân An QTT12","Táo đỏ 300gr, 6 hũ yến chưng, túi mica hồng",368000],
+  [355,"Quà Tết","Túi Quà Như Ý QTT13","Yến vụn sạch 20gr, 6 hũ yến chưng, túi mica hồng",636000],
+  [356,"Quà Tết","Túi Quà Bảo Ngọc QTT14","Yến tinh chế 1 lớp sợi 20gr, 6 hũ yến chưng, túi mica hồng",816000],
+  [357,"Quà Tết","Túi Quà Tinh Khiết QTT15","Nước tẩy trang, sữa rửa mặt T'Beauty, túi mica hồng",455000],
+  [358,"Quà Tết","Túi Quà Rạng Rỡ QTT16","Sữa rửa mặt T'Beauty, hộp mặt nạ T'Beauty HA cấp ẩm, túi mica hồng",440000],
+  [359,"Quà Tết","Túi Quà Xuân Xinh QTT17","Serum, kem dưỡng T'Beauty, túi mica hồng",561000],
+  [201,"Mỹ Phẩm","Xà Bông Hương Trà Xanh","Cục 110g",69000],
+  [202,"Mỹ Phẩm","Xà Bông Hương Bạc Hà","Cục 110g",69000],
+  [203,"Mỹ Phẩm","Xà Bông Hương Cherry","Cục 110g",69000],
+  [204,"Mỹ Phẩm","Xà Bông Hương Chuối","Cục 110g",69000],
+  [205,"Mỹ Phẩm","Xà Bông Hương Dứa","Cục 110g",69000],
+  [206,"Mỹ Phẩm","Xà Bông Hương Dừa","Cục 110g",69000],
+  [207,"Mỹ Phẩm","Xà Bông Hương Gạo Rang","Cục 110g",69000],
+  [208,"Mỹ Phẩm","Xà Bông Hương Lyly","Cục 110g",69000],
+  [209,"Mỹ Phẩm","Xà Bông Hương Lan","Cục 110g",69000],
+  [210,"Mỹ Phẩm","Xà Bông Hương Măng Cụt","Cục 110g",69000],
+  [211,"Mỹ Phẩm","Xà Bông Hương Sen","Cục 110g",69000],
+  [212,"Mỹ Phẩm","Xà Bông Hương Vani","Cục 110g",69000],
+  [213,"Mỹ Phẩm","Xà Bông Hương Hoa Mẫu Đơn","Cục 133g",103000],
+  [214,"Mỹ Phẩm","Xà Bông Hương Nho","Cục 84g",85000],
+  [215,"Mỹ Phẩm","Xà Bông Hương Bắp","Cục 81g",85000],
+  [216,"Mỹ Phẩm","Xà Bông Hương Bưởi","Cục 100g",77000],
+  [217,"Mỹ Phẩm","Xà Bông Hương Cam","Cục 81g",77000],
+  [218,"Mỹ Phẩm","Xà Bông Hương Chuối","Cục 80g",85000],
+  [219,"Mỹ Phẩm","Xà Bông Hương Dâu","Cục 99g",85000],
+  [220,"Mỹ Phẩm","Xà Bông Hương Dừa","Cục 67g",93000],
+  [221,"Mỹ Phẩm","Xà Bông Hương Dứa","Cục 75g",85000],
+  [222,"Mỹ Phẩm","Xà Bông Hương Hoa Hồng","Cục 140g",103000],
+  [223,"Mỹ Phẩm","Xà Bông Hương Hoa Hướng Dương","Cục 111g",93000],
+  [224,"Mỹ Phẩm","Xà Bông Hương Hoa Lan","Cục 95g",93000],
+  [225,"Mỹ Phẩm","Xà Bông Hương Măng Cụt","Cục 84g",77000],
+  [226,"Mỹ Phẩm","Xà Bông Hương Mật Ong","Cục 80g",77000],
+  [227,"Mỹ Phẩm","Xà Bông Hương Hoa Sứ","Cục 97g",103000],
+  [228,"Mỹ Phẩm","Xà Bông Hương Xoài","Cục 74g",85000],
+  [229,"Mỹ Phẩm","Xà Bông Hương Bông Bưởi","Cục 100g",77000],
+  [230,"Mỹ Phẩm","Xà Bông Hương Bông Cà Phê","Cục 71g",77000],
+  [231,"Mỹ Phẩm","Nước Tẩy Trang","Chai",200000],
+  [232,"Mỹ Phẩm","Sữa Rửa Mặt","Tuýp",190000],
+  [233,"Mỹ Phẩm","Toner","Chai",200000],
+  [234,"Mỹ Phẩm","Serum Trắng Da, Giảm Nếp Nhăn","Chai",290000],
+  [235,"Mỹ Phẩm","Kem Dưỡng Ẩm, Trắng Da","Hũ",260000],
+  [236,"Mỹ Phẩm","Gel Tẩy Da Chết","Tuýp",230000],
+  [237,"Mỹ Phẩm","Kem Chống Nắng","Tuýp",290000],
+  [238,"Mỹ Phẩm","Mặt Nạ","Hộp 10 miếng",189000],
+  [239,"Mỹ Phẩm","Dầu Gội Nhân Sâm Hàn Quốc","Chai",550000],
+  [240,"Mỹ Phẩm","Tinh Chất Dưỡng Tóc Nhân Sâm Hàn Quốc","Chai",350000],
+  [241,"Mỹ Phẩm","Kem Ủ Tóc Nhân Sâm Hàn Quốc","Tuýp",320000],
+  [242,"Mỹ Phẩm","Mặt Nạ Hồng / Nâu / Xanh Nâng Tone","Hộp 10 miếng",360000],
+  [243,"Mỹ Phẩm","Dầu Gội Trái Nhàu","Chai",344000],
+  [244,"Mỹ Phẩm","Xà Bông Tắm Giảm Mụn","Cục",120000],
+  [245,"Mỹ Phẩm","Nước Rửa Tay Khô","Chai",126000],
+  [246,"Mỹ Phẩm","Combo Quà 3 Xà Bông Tắm","Hộp",207000]
 ];
 // Tạm ẩn các mặt hàng xà bông (20/10/2026). Muốn hiện lại: đổi AN_XA_BONG thành false.
 const AN_XA_BONG = true;
@@ -522,7 +573,66 @@ const IMG = {
   243: ["khung/243.jpg", "catalog/dau-goi-trai-nhau.jpg"],
   244: ["catalog/xa-bong-giam-mun.jpg"],
   245: ["khung/245.jpg", "catalog/nuoc-rua-tay-kho.jpg"],
-  246: ["catalog/combo-3-xa-bong.jpg"]
+  246: ["catalog/combo-3-xa-bong.jpg"],
+  301: ["tet/QTG01.jpg"],
+  302: ["tet/QTG02.jpg"],
+  303: ["tet/QTG03.jpg"],
+  304: ["tet/QTG04.jpg"],
+  305: ["tet/QTG05.jpg"],
+  306: ["tet/QTG06.jpg"],
+  307: ["tet/QTG07.jpg"],
+  308: ["tet/QTG08.jpg"],
+  309: ["tet/QTG09.jpg"],
+  310: ["tet/QTG10.jpg"],
+  311: ["tet/QTG11.jpg"],
+  312: ["tet/QTG12.jpg"],
+  313: ["tet/QTG13.jpg"],
+  314: ["tet/QTG14.jpg"],
+  315: ["tet/QTG15.jpg"],
+  316: ["tet/QTG16.jpg"],
+  317: ["tet/QTG17.jpg"],
+  318: ["tet/QTH01.jpg"],
+  319: ["tet/QTH02.jpg"],
+  320: ["tet/QTH03.jpg"],
+  321: ["tet/QTH04.jpg"],
+  322: ["tet/QTH05.jpg"],
+  323: ["tet/QTH06.jpg"],
+  324: ["tet/QTH07.jpg"],
+  325: ["tet/QTH08.jpg"],
+  326: ["tet/QTH09.jpg"],
+  327: ["tet/QTH10.jpg"],
+  328: ["tet/QTH11.jpg"],
+  329: ["tet/QTH12.jpg"],
+  330: ["tet/QTH13.jpg"],
+  331: ["tet/QTH14.jpg"],
+  332: ["tet/QTH15.jpg"],
+  333: ["tet/QTH16.jpg"],
+  334: ["tet/QTH17.jpg"],
+  335: ["tet/QTH18.jpg"],
+  336: ["tet/QTH21.jpg"],
+  337: ["tet/QTH23.jpg"],
+  338: ["tet/QTH24.jpg"],
+  339: ["tet/QTK01.jpg"],
+  340: ["tet/QTK02.jpg"],
+  341: ["tet/QTK03.jpg"],
+  342: ["tet/QTK04.jpg"],
+  343: ["tet/QTT01.jpg"],
+  344: ["tet/QTT02.jpg"],
+  345: ["tet/QTT03.jpg"],
+  346: ["tet/QTT04.jpg"],
+  347: ["tet/QTT05.jpg"],
+  348: ["tet/QTT06.jpg"],
+  349: ["tet/QTT07.jpg"],
+  350: ["tet/QTT08.jpg"],
+  351: ["tet/QTT09.jpg"],
+  352: ["tet/QTT10.jpg"],
+  353: ["tet/QTT11.jpg"],
+  354: ["tet/QTT12.jpg"],
+  355: ["tet/QTT13.jpg"],
+  356: ["tet/QTT14.jpg"],
+  357: ["tet/QTT15.jpg"],
+  358: ["tet/QTT16.jpg"],
+  359: ["tet/QTT17.jpg"]
 };
 const SETS = [
   ["set-qua-yen-tinh-che-50g-1.jpg", "Set quà yến tinh chế sợi ngắn 50g"],
@@ -536,8 +646,8 @@ const SETS = [
 const DIR = "images/san-pham/";
 // Đổi số phiên bản khi thay ảnh catalog để trình duyệt tải ảnh mới thay vì ảnh cũ đã lưu.
 const IMG_V = "?v=8";
-const full = f => DIR + f + (/^(catalog|that|khung)\//.test(f) ? IMG_V : "");
-const thumb = f => /^(catalog|that)\//.test(f) ? full(f) : DIR + "nho/" + f + (/^khung\//.test(f) ? IMG_V : "");
+const full = f => DIR + f + (/^(catalog|that|khung|tet)\//.test(f) ? IMG_V : "");
+const thumb = f => /^(catalog|that|tet)\//.test(f) ? full(f) : DIR + "nho/" + f + (/^khung\//.test(f) ? IMG_V : "");
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
 let gal = [], gi = 0;
 function lbShow() { lbImg.src = full(gal[gi][0]); lbImg.alt = gal[gi][1]; document.getElementById("lb-n").textContent = gal.length > 1 ? `${gi + 1}/${gal.length}` : gal[gi][1]; }
@@ -546,9 +656,9 @@ document.getElementById("lb-prev").onclick = () => { gi = (gi + gal.length - 1) 
 document.getElementById("lb-next").onclick = () => { gi = (gi + 1) % gal.length; lbShow(); };
 document.getElementById("lb-x").onclick = () => lb.close();
 lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
-document.getElementById("sets").innerHTML = SETS.map((s, i) => `<figure><button type="button" data-set="${i}" aria-label="Xem ảnh ${s[1]}"><img src="${DIR}nho/${s[0]}" alt="${s[1]}" loading="lazy" width="480" height="480"></button><figcaption>${s[1]}</figcaption></figure>`).join("");
 const vnd = n => n ? n.toLocaleString("vi-VN") + "đ" : "Liên hệ báo giá";
-const cats = ["Tất cả", ...new Set(P.map(p => p[1]))];
+const ORDER = ["Tổ Yến Thô", "Tổ Yến Đã Nhặt Sạch Lông", "Yến Hũ Chưng Tiệt Trùng", "Nấm Đông Trùng Hạ Thảo", "Táo Đỏ Tân Cương", "Thạch Nha Đam", "Mỹ Phẩm", "Quà Tết"];
+const cats = ["Tất cả", ...ORDER.filter(c => P.some(p => p[1] === c)), ...[...new Set(P.map(p => p[1]))].filter(c => !ORDER.includes(c))];
 const grid = document.getElementById("grid"), chips = document.getElementById("chips"), sel = document.getElementById("o-prod");
 let cur = "Tất cả";
 function draw() {
@@ -575,6 +685,7 @@ document.addEventListener("click", e => {
   const st = e.target.closest("[data-set]");
   if (st) { lbOpen(SETS, +st.dataset.set); return; }
   const c = e.target.closest("[data-cat]"); if (c) { cur = c.dataset.cat; draw(); return; }
+  const sc = e.target.closest("[data-showcat]"); if (sc) { cur = sc.dataset.showcat; draw(); document.getElementById("san-pham").scrollIntoView({behavior: "smooth"}); return; }
   const k = e.target.closest("[data-pick]");
   if (k) { sel.value = k.dataset.pick; document.getElementById("dat-hang").scrollIntoView({behavior: "smooth"}); }
 });
