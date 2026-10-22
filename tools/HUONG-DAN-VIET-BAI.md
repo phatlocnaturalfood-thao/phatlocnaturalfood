@@ -39,6 +39,9 @@ Mỗi lần chạy viết **đúng 1 bài**, lấy bài đầu tiên có `"trang
 - Không hứa chính sách chưa có trên web (giá sỉ, cộng tác viên, miễn phí giao hàng, quà tặng…).
   Chính sách có sẵn: giao toàn quốc (TP.HCM 1–2 ngày, tỉnh 2–5 ngày), kiểm hàng khi nhận, COD/chuyển khoản,
   hóa đơn điện tử, chiết khấu quà Tết doanh nghiệp từ 20 hộp, đổi trả trong 03 ngày theo chính sách.
+  Có chính sách **giá sỉ cho đại lý** và **cộng tác viên** (anh Việt xác nhận 22/10/2026), nhưng chưa có mức
+  chiết khấu, điều kiện cụ thể: chỉ viết là có chính sách và mời liên hệ Zalo 0768 759 419 để nhận bảng giá sỉ /
+  điều kiện cộng tác viên; không tự đặt con số, phần trăm hay quyền lợi.
 - Không sửa trang chủ, giá, trang danh mục, trang sản phẩm trong lần chạy viết bài.
 - Không đăng lên Facebook, Zalo hay kênh khác.
 
