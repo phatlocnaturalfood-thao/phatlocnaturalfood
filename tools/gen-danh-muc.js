@@ -35,7 +35,7 @@ function card(p) {
           <h3>${SP[p[0]] ? `<a href="../san-pham/${SP[p[0]]}/">${esc(p[2])}</a>` : esc(p[2])}</h3>
           <p class="spec">${esc(p[3])}</p>
           <p class="price"><b>${vnd(p[4])}</b>${p[5] ? ` <s>${vnd(p[5])}</s>` : ""}</p>
-          ${HET_HANG.includes(p[0]) ? `<span class="btn btn-line" aria-disabled="true" style="opacity:.55">Hết hàng</span>` : `<a class="btn btn-line" href="${orderLink(p)}">Đặt mua</a>`}
+          ${HET_HANG.includes(p[0]) ? `<span class="btn btn-line" aria-disabled="true" style="opacity:.55">Hết hàng</span>` : `<a class="btn btn-line" href="https://zalo.me/0768759419" target="_blank" rel="noopener">Liên hệ</a>`}
         </div>
       </article>`;
 }

@@ -123,7 +123,7 @@ ${related.map(r => { const f = (IMG[r[0]] || [])[0]; const own = SP.find(x => x.
           <h3>${esc(r[2])}</h3>
           <p class="spec">${esc(r[3])}</p>
           <p class="price"><b>${vnd(r[4])}</b></p>
-          <a class="btn btn-line" href="${own ? "../" + own.slug + "/" : "../../" + orderHash(r)}">${own ? "Xem chi tiết" : "Đặt mua"}</a>
+          <a class="btn btn-line" href="${own ? "../" + own.slug + "/" : "https://zalo.me/0768759419"}"${own ? "" : ' target="_blank" rel="noopener"'}>${own ? "Xem chi tiết" : "Liên hệ"}</a>
         </div>
       </article>`; }).join("\n")}
     </div>
