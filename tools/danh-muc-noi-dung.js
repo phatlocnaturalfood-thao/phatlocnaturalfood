@@ -172,10 +172,10 @@ module.exports = [
     crumb: "Thạch nha đam",
     eyebrow: "Nha đam Tây Nguyên",
     cats: ["Thạch Nha Đam"],
-    title: "Thạch nha đam Tây Nguyên có đường, không đường – túi, hũ 1kg | Phát Lộc",
+    title: "Thạch nha đam Tây Nguyên có đường, không đường – túi 1kg | Phát Lộc",
     h1: "Thạch nha đam Tây Nguyên",
-    desc: "Thạch nha đam Tây Nguyên đã sơ chế, có đường và không đường, túi 1kg 59.000đ, hũ 1kg 69.000đ. Giòn, không đắng, dùng làm chè, sữa chua, nước giải khát.",
-    lede: `<p>Thạch nha đam Tây Nguyên đã gọt vỏ, cắt hạt lựu và xử lý hết nhớt đắng, mở ra là dùng. Có loại có đường và không đường, đóng túi 1kg (59.000đ) hoặc hũ 1kg (69.000đ).</p>
+    desc: "Thạch nha đam Tây Nguyên đã sơ chế, có đường và không đường, túi 1kg 59.000đ. Giòn, không đắng, dùng làm chè, sữa chua, nước giải khát.",
+    lede: `<p>Thạch nha đam Tây Nguyên đã gọt vỏ, cắt hạt lựu và xử lý hết nhớt đắng, mở ra là dùng. Có loại có đường và không đường, đóng túi 1kg (59.000đ).</p>
 <p>Loại không đường hợp người hạn chế đường hoặc muốn tự nêm; loại có đường dùng ngay cho chè, sữa chua, trà trái cây.</p>`,
     guide: `      <h2>Gợi ý dùng thạch nha đam</h2>
       <ul>
@@ -186,7 +186,6 @@ module.exports = [
       <p>Muốn tự sơ chế lá nha đam tươi, xem bài ${L("so-che-nha-dam", "Sơ chế nha đam không đắng, không nhớt")}.</p>`,
     faq: [
       ["Thạch nha đam để được bao lâu?", "Chưa mở để ngăn mát tủ lạnh theo hạn ghi trên bao bì; đã mở nên đậy kín, dùng trong vài ngày."],
-      ["Nên chọn túi hay hũ?", "Cùng thạch bên trong; hũ tiện đậy lại sau khi mở, túi giá tốt hơn cho quán hoặc gia đình dùng nhiều."],
       ["Có giao nha đam đi tỉnh không?", "Có, giao toàn quốc; khách được kiểm hàng khi nhận."]
     ]
   },
