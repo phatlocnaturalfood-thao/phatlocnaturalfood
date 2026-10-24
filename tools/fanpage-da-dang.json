@@ -1,11 +1,112 @@
 [
- {"ngay": "2026-10-23 11:00", "dang": "Chia sẻ bài web", "tieu_de": "Cách chọn giỏ quà Tết yến sào không bị \"hớ\"", "link": "/kien-thuc/chon-gio-qua-tet-yen-sao.html", "ghi_chu": "lên lịch bù 9:58 (máy nhà mất kết nối lúc 8:40, 9:40)"},
- {"ngay": "2026-10-23 19:30", "dang": "Quà Tết DN", "tieu_de": "Quà Tết 2027 yến sào theo ngân sách", "link": "/#qua-tet"},
- {"ngay": "2026-10-24 11:00", "dang": "Chia sẻ bài web", "tieu_de": "Yến sào Việt Cường Nhân là của công ty nào, có tốt không", "link": "/kien-thuc/yen-sao-viet-cuong-nhan.html", "ghi_chu": "lên lịch bù 10:35 (lần chạy 8:40, 9:40 không lên được)"},
- {"ngay": "2026-10-24 19:30", "dang": "Kiến thức", "tieu_de": "Cách phân biệt yến sào thật – giả: 4 bước", "link": "/kien-thuc/phan-biet-yen-sao-that-gia.html"},
- {"ngay": "2026-10-25 19:30", "dang": "Uy tín", "tieu_de": "Yến sào chính hãng có đủ giấy tờ", "link": "/#ho-so"},
- {"ngay": "2026-10-26 19:30", "dang": "Quà Tết DN", "tieu_de": "Quà Tết doanh nghiệp 2027 – báo giá trong ngày", "link": "/#doanh-nghiep"},
- {"ngay": "2026-10-27 19:30", "dang": "Mẫu quà", "tieu_de": "Giỏ Quà Phú Quý Đại Cát QTG06", "link": "/#qtg06"},
- {"ngay": "2026-10-28 19:30", "dang": "Công thức", "tieu_de": "Cách chưng yến sào đường phèn – 3 bước", "link": "/kien-thuc/cach-chung-yen-sao.html"},
- {"ngay": "2026-10-29 19:30", "dang": "Mẫu quà", "tieu_de": "Túi Quà Xuân Sắc QTT05 cho phái đẹp", "link": "/#qtt05"}
+  {
+    "ngay": "2026-10-23 11:00",
+    "dang": "Chia sẻ bài web",
+    "tieu_de": "Cách chọn giỏ quà Tết yến sào không bị \"hớ\"",
+    "link": "/kien-thuc/chon-gio-qua-tet-yen-sao.html",
+    "ghi_chu": "lên lịch bù 9:58 (máy nhà mất kết nối lúc 8:40, 9:40)"
+  },
+  {
+    "ngay": "2026-10-23 19:30",
+    "dang": "Quà Tết DN",
+    "tieu_de": "Quà Tết 2027 yến sào theo ngân sách",
+    "link": "/#qua-tet"
+  },
+  {
+    "ngay": "2026-10-24 11:00",
+    "dang": "Chia sẻ bài web",
+    "tieu_de": "Yến sào Việt Cường Nhân là của công ty nào, có tốt không",
+    "link": "/kien-thuc/yen-sao-viet-cuong-nhan.html",
+    "ghi_chu": "lên lịch bù 10:35 (lần chạy 8:40, 9:40 không lên được)"
+  },
+  {
+    "ngay": "2026-10-24 19:30",
+    "dang": "Kiến thức",
+    "tieu_de": "Cách phân biệt yến sào thật – giả: 4 bước",
+    "link": "/kien-thuc/phan-biet-yen-sao-that-gia.html"
+  },
+  {
+    "ngay": "2026-10-25 11:00",
+    "dang": "Quà Tết",
+    "tieu_de": "Hộp quà Tết dưới 1 triệu – 8 mẫu yến sào",
+    "link": "/kien-thuc/hop-qua-tet-duoi-1-trieu.html"
+  },
+  {
+    "ngay": "2026-10-25 19:30",
+    "dang": "Uy tín",
+    "tieu_de": "Yến sào chính hãng có đủ giấy tờ",
+    "link": "/#ho-so"
+  },
+  {
+    "ngay": "2026-10-26 11:00",
+    "dang": "Kiến thức",
+    "tieu_de": "Yến tinh chế, rút lông, yến thô khác nhau thế nào",
+    "link": "/kien-thuc/yen-tinh-che-rut-long-yen-tho-khac-nhau.html"
+  },
+  {
+    "ngay": "2026-10-26 19:30",
+    "dang": "Quà Tết DN",
+    "tieu_de": "Quà Tết doanh nghiệp 2027 – báo giá trong ngày",
+    "link": "/#doanh-nghiep"
+  },
+  {
+    "ngay": "2026-10-27 11:00",
+    "dang": "Kiến thức",
+    "tieu_de": "Giá yến sào 100gr mới nhất và cách đọc nhãn",
+    "link": "/kien-thuc/gia-yen-sao-100gr.html"
+  },
+  {
+    "ngay": "2026-10-27 19:30",
+    "dang": "Mẫu quà",
+    "tieu_de": "Giỏ Quà Phú Quý Đại Cát QTG06",
+    "link": "/#qtg06"
+  },
+  {
+    "ngay": "2026-10-28 11:00",
+    "dang": "Doanh nghiệp",
+    "tieu_de": "Quà Tết cho nhân viên dưới 500.000đ",
+    "link": "/kien-thuc/qua-tet-cho-nhan-vien-duoi-500k.html"
+  },
+  {
+    "ngay": "2026-10-28 19:30",
+    "dang": "Công thức",
+    "tieu_de": "Cách chưng yến sào đường phèn – 3 bước",
+    "link": "/kien-thuc/cach-chung-yen-sao.html"
+  },
+  {
+    "ngay": "2026-10-29 11:00",
+    "dang": "Quà Tết",
+    "tieu_de": "Quà Tết biếu sếp 2027 theo ngân sách",
+    "link": "/kien-thuc/qua-tet-bieu-sep.html"
+  },
+  {
+    "ngay": "2026-10-29 19:30",
+    "dang": "Mẫu quà",
+    "tieu_de": "Túi Quà Xuân Sắc QTT05 cho phái đẹp",
+    "link": "/#qtt05"
+  },
+  {
+    "ngay": "2026-10-30 11:00",
+    "dang": "Quà Tết",
+    "tieu_de": "10 mẫu giỏ quà Tết yến sào 2027",
+    "link": "/kien-thuc/mau-gio-qua-tet-yen-sao-2027.html"
+  },
+  {
+    "ngay": "2026-10-30 18:00",
+    "dang": "Doanh nghiệp",
+    "tieu_de": "Quà Tết cho đối tác theo mức độ quan hệ",
+    "link": "/kien-thuc/qua-tet-cho-doi-tac.html"
+  },
+  {
+    "ngay": "2026-10-31 11:00",
+    "dang": "Doanh nghiệp",
+    "tieu_de": "Chọn quà Tết doanh nghiệp 2027 theo ngân sách",
+    "link": "/kien-thuc/qua-tet-doanh-nghiep-theo-ngan-sach.html"
+  },
+  {
+    "ngay": "2026-10-31 18:00",
+    "dang": "Kiến thức",
+    "tieu_de": "Cách dùng đông trùng hạ thảo sấy khô tại nhà",
+    "link": "/kien-thuc/cach-dung-dong-trung-ha-thao.html"
+  }
 ]
