@@ -12,7 +12,7 @@ new Function("ctx", code.replace(/\bconst (P|IMG|R|AN_XA_BONG)\b/g, "var $1") + 
 const { P, IMG } = ctx;
 const HET_HANG = ((html.match(/const HET_HANG = \[([^\]]*)\]/) || [])[1] || "").split(",").filter(Boolean).map(Number);
 
-const IMG_V = "?v=8";
+const IMG_V = "?v=10";
 const thumb = f => "images/san-pham/nho/" + f.replace(/\.jpg$/, ".webp") + (/^(catalog|that|khung|tet)\//.test(f) ? IMG_V : "");
 const jpg = f => "images/san-pham/" + f;
 const vnd = n => n ? n.toLocaleString("vi-VN").replace(/,/g, ".") + "đ" : "Liên hệ";
