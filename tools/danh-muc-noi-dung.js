@@ -20,7 +20,7 @@ module.exports = [
       ["Trên 2 triệu", B(2000000, Infinity)]
     ],
     lede: `<p>Phát Lộc có 59 mẫu quà Tết 2027 chia theo 4 mức ngân sách, từ hộp xách 6 hũ yến chưng 260.000đ đến giỏ quà Hoàng Gia 5.202.000đ. Thành phần chính là yến sào Việt Cường Nhân (nhà máy đạt ISO 22000, HACCP, GMP), kèm đông trùng hạ thảo, táo đỏ Tân Cương, kỷ tử, đường phèn hoặc nước hồng sâm.</p>
-<p>Mỗi mẫu có mã riêng (QTG giỏ quà, QTH hộp quà, QTK khay quà, QTT túi quà). Bấm <b>Đặt mua</b> để chọn sẵn mẫu trong form đặt hàng, hoặc nhắn Zalo 0768 759 419 để được tư vấn theo người nhận.</p>`,
+<p>Mỗi mẫu có mã riêng (QTG giỏ quà, QTH hộp quà, QTK khay quà, QTT túi quà). Bấm <b>Liên hệ</b> ở mẫu anh/chị thích để nhắn Zalo 0768 759 419, Phát Lộc tư vấn theo người nhận.</p>`,
     guide: `      <h2>Chọn quà Tết yến sào theo người nhận</h2>
       <ul>
         <li><b>Nhân viên, phát đồng loạt:</b> hộp xách hoặc túi quà dưới 500.000đ, có yến chưng sẵn dùng ngay.</li>
