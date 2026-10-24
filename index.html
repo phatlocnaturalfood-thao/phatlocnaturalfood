@@ -635,7 +635,7 @@ const IMG = {
   146: ["khung/146.jpg", "catalog/tao-do-size-dai-hop.jpg"],
   147: ["khung/147.jpg", "catalog/tao-do-nhuoc-khuong-hop.jpg"],
   148: ["khung/148.jpg", "catalog/nha-dam-co-duong-tui.jpg"],
-  149: ["khung/149.jpg", "catalog/nha-dam-khong-duong-tui.jpg"],
+  149: ["khung/149.jpg", "that/nha-dam-khong-duong-tui-that-1.jpg"],
   150: ["khung/150.jpg", "catalog/nha-dam-co-duong-hu.jpg"],
   151: ["khung/151.jpg", "catalog/nha-dam-khong-duong-hu.jpg"],
   14: R("set-qua-dong-trung-ha-thao", [1,5,2,4,3,6,7]),
@@ -759,7 +759,7 @@ const SETS = [
 const HET_HANG = [233];
 const DIR = "images/san-pham/";
 // Đổi số phiên bản khi thay ảnh catalog để trình duyệt tải ảnh mới thay vì ảnh cũ đã lưu.
-const IMG_V = "?v=11";
+const IMG_V = "?v=12";
 // Ảnh hiển thị dùng bản WebP (nhẹ hơn ~40%); bản .jpg gốc giữ lại cho dữ liệu SEO và chia sẻ.
 const webp = f => f.replace(/\.jpg$/, ".webp");
 const full = f => DIR + webp(f) + (/^(catalog|that|khung|tet)\//.test(f) ? IMG_V : "");
