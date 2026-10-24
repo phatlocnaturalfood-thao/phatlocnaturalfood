@@ -10,6 +10,7 @@ const code = html.slice(html.indexOf("const P = ["), html.indexOf("const DIR =")
 const ctx = {};
 new Function("ctx", code.replace(/\bconst (P|IMG|R|AN_XA_BONG)\b/g, "var $1") + "; ctx.P = P; ctx.IMG = IMG;")(ctx);
 const { P, IMG } = ctx;
+const HET_HANG = ((html.match(/const HET_HANG = \[([^\]]*)\]/) || [])[1] || "").split(",").filter(Boolean).map(Number);
 
 const IMG_V = "?v=8";
 const web = f => f.replace(/\.jpg$/, ".webp");
@@ -37,7 +38,7 @@ for (const s of SP) {
     { "@context": "https://schema.org", "@type": "Product", name, description: s.desc, sku: String(p[0]),
       image: imgs.map(f => SITE + fullJpg(f)),
       brand: /Mỹ Phẩm/.test(p[1]) || /T'Beauty/.test(p[3]) ? { "@type": "Brand", name: "T'Beauty" } : { "@type": "Brand", name: "Việt Cường Nhân" },
-      offers: { "@type": "Offer", price: p[4], priceCurrency: "VND", availability: "https://schema.org/InStock", url,
+      offers: { "@type": "Offer", price: p[4], priceCurrency: "VND", availability: HET_HANG.includes(p[0]) ? "https://schema.org/OutOfStock" : "https://schema.org/InStock", url,
         seller: { "@type": "Organization", name: "Phát Lộc Natural Food" } } },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: "Trang chủ", item: SITE },

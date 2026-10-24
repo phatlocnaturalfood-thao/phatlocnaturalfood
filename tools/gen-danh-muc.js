@@ -10,6 +10,7 @@ const code = html.slice(html.indexOf("const P = ["), html.indexOf("const DIR =")
 const ctx = {};
 new Function("ctx", code.replace(/\bconst (P|IMG|R|AN_XA_BONG)\b/g, "var $1") + "; ctx.P = P; ctx.IMG = IMG;")(ctx);
 const { P, IMG } = ctx;
+const HET_HANG = ((html.match(/const HET_HANG = \[([^\]]*)\]/) || [])[1] || "").split(",").filter(Boolean).map(Number);
 
 const IMG_V = "?v=8";
 const thumb = f => "images/san-pham/nho/" + f.replace(/\.jpg$/, ".webp") + (/^(catalog|that|khung|tet)\//.test(f) ? IMG_V : "");
@@ -34,7 +35,7 @@ function card(p) {
           <h3>${SP[p[0]] ? `<a href="../san-pham/${SP[p[0]]}/">${esc(p[2])}</a>` : esc(p[2])}</h3>
           <p class="spec">${esc(p[3])}</p>
           <p class="price"><b>${vnd(p[4])}</b>${p[5] ? ` <s>${vnd(p[5])}</s>` : ""}</p>
-          <a class="btn btn-line" href="${orderLink(p)}">Đặt mua</a>
+          ${HET_HANG.includes(p[0]) ? `<span class="btn btn-line" aria-disabled="true" style="opacity:.55">Hết hàng</span>` : `<a class="btn btn-line" href="${orderLink(p)}">Đặt mua</a>`}
         </div>
       </article>`;
 }
@@ -54,7 +55,7 @@ function build(pg) {
         "@type": "ListItem", position: i + 1, item: {
           "@type": "Product", name: p[2] + " " + p[3], image: IMG[p[0]] ? SITE + jpg(IMG[p[0]][0]) : undefined,
           brand: /Yến|Đông Trùng|Quà Tết/.test(p[1]) ? { "@type": "Brand", name: "Việt Cường Nhân" } : undefined,
-          offers: { "@type": "Offer", price: p[4], priceCurrency: "VND", availability: "https://schema.org/InStock", url: SITE + orderLink(p).slice(3) } } })) } },
+          offers: { "@type": "Offer", price: p[4], priceCurrency: "VND", availability: HET_HANG.includes(p[0]) ? "https://schema.org/OutOfStock" : "https://schema.org/InStock", url: SITE + orderLink(p).slice(3) } } })) } },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: pg.faq.map(([q, a]) => ({
       "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a.replace(/<[^>]+>/g, "") } })) }
   ];
