@@ -7,9 +7,10 @@ Mỗi lần chạy viết **đúng 1 bài**, lấy bài đầu tiên có `"trang
 ## Làm bù khi lỡ lịch (yêu cầu của anh Việt)
 
 Việc này chạy mỗi giờ. Mỗi lần chạy:
-1. Tính số bài **đáng lẽ đã đăng**: mỗi ngày 2 bài (mốc 6:40 và 18:40, giờ Việt Nam) kể từ 23/10/2026
-   đến thời điểm hiện tại. So với số bài `da_dang` trong `tools/lich-bai.json`.
-2. Nếu đã đủ: dừng ngay, **không** gửi thông báo, không commit gì.
+1. Chạy `python3 tools/dem-bai-thieu.py` để biết số bài còn thiếu (`thieu=`). Script tự tính theo **giờ Việt Nam**
+   (mỗi ngày 2 bài, mốc 6:40 và 18:40, từ 23/10/2026). KHÔNG tự đếm bằng giờ máy: máy chạy tự động dùng giờ UTC
+   (chậm 7 tiếng), đếm sai sẽ bỏ sót bài 18:40 (lỗi ngày 25–27/10/2026).
+2. Nếu `thieu=0`: dừng ngay, **không** gửi thông báo, không commit gì.
 3. Nếu thiếu (do mất kết nối, lỗi lần trước…): đăng bù ngay các bài còn thiếu theo thứ tự lịch, tối đa 3 bài
    mỗi lần chạy, mỗi bài một PR riêng. Thông báo ghi rõ "Đăng bù" và số bài còn nợ (nếu còn).
 
