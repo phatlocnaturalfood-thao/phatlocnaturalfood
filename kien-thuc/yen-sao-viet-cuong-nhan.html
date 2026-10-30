@@ -21,7 +21,7 @@
 <link rel="icon" href="../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="kt.css">
 </head>
 <body>
@@ -30,15 +30,16 @@
   <div class="wrap">
     <a class="brand" href="../index.html" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
-      <a href="../index.html#san-pham">Sản phẩm</a>
-      <a href="../index.html#qua-tet">Quà Tết</a>
-      <a href="./" aria-current="page">Kiến thức</a>
-      <a href="../index.html#dat-hang">Đặt hàng</a>
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="../gioi-thieu/">Giới thiệu</a>
+      <a href="../#san-pham">Sản phẩm</a>
+      <a href="../chung-nhan/">Chứng nhận &amp; Cam kết</a>
+      <a href="../kien-thuc/" aria-current="page">Kiến thức</a>
     </nav>
-    <a class="btn btn-line" href="../index.html#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="../index.html#dat-hang">Liên hệ</a>
   </div>
 </header>
 
@@ -49,7 +50,7 @@
   <p class="lede">Yến sào Việt Cường Nhân là thương hiệu của <b>Công ty TNHH TM-DV Việt Cường Nhân</b>. Sản phẩm được làm tại nhà máy ở 511/9 Bùi Thị Xuân, Phường Tân Đông Hiệp, TP. Hồ Chí Minh, đạt ISO 22000:2018, HACCP, GMP; có bản tự công bố và phiếu kiểm nghiệm Eurofins. "Tốt hay không" bạn nên tự đối chiếu bằng giấy tờ và tình trạng yến khi nhận. Bài này chỉ cách làm.</p>
 
   <h2>Việt Cường Nhân là của công ty nào?</h2>
-  <p>Chủ thương hiệu là Công ty TNHH TM-DV Việt Cường Nhân. Phát Lộc Natural Food là đơn vị phân phối theo <b>giấy ủy quyền phân phối và bán hàng</b> của công ty. Bạn xem được bản scan giấy ủy quyền ở mục <a href="../#ho-so">Hồ sơ pháp lý</a> trên trang chủ.</p>
+  <p>Chủ thương hiệu là Công ty TNHH TM-DV Việt Cường Nhân. Phát Lộc Natural Food là đơn vị phân phối theo <b>giấy ủy quyền phân phối và bán hàng</b> của công ty. Bạn xem được bản scan giấy ủy quyền ở mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a> trên trang chủ.</p>
   <p>Khi mua yến của bất kỳ thương hiệu nào, bạn nên hỏi ba điều:</p>
   <ul>
     <li>Ai là chủ thương hiệu, có tên công ty rõ ràng không.</li>
@@ -105,14 +106,14 @@
   <p>Đại lý, cộng tác viên muốn lấy hàng có chính sách giá riêng, vui lòng nhắn Zalo 0768 759 419 để được tư vấn.</p>
   <h2>Câu hỏi thường gặp</h2>
   <h3>Yến sào Việt Cường Nhân của công ty nào?</h3>
-  <p>Thương hiệu thuộc Công ty TNHH TM-DV Việt Cường Nhân. Phát Lộc Natural Food phân phối theo giấy ủy quyền, xem ở mục <a href="../#ho-so">Hồ sơ pháp lý</a>.</p>
+  <p>Thương hiệu thuộc Công ty TNHH TM-DV Việt Cường Nhân. Phát Lộc Natural Food phân phối theo giấy ủy quyền, xem ở mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.</p>
   <h3>Yến Việt Cường Nhân có giấy tờ gì?</h3>
   <p>Nhà máy đạt ISO 22000:2018, HACCP, GMP; sản phẩm có bản tự công bố và phiếu kiểm nghiệm Eurofins, đăng công khai trên trang chủ.</p>
   <h3>Mua yến Việt Cường Nhân có được kiểm hàng không?</h3>
   <p>Có. Phát Lộc giao toàn quốc, cho kiểm hàng khi nhận, thanh toán COD hoặc chuyển khoản, đổi trả trong 03 ngày theo chính sách.</p>
   <div class="cta">
     <a class="btn btn-gold" href="../yen-tinh-che/">Xem yến tinh chế</a>
-    <a class="btn btn-line" href="../#ho-so">Xem hồ sơ pháp lý</a>
+    <a class="btn btn-line" href="../chung-nhan/#ho-so">Xem hồ sơ pháp lý</a>
     <a class="btn btn-line" href="./">Xem bài khác</a>
   </div>
 </main>

@@ -10,7 +10,7 @@
 .dm h2 { font-size: 30px; margin: 36px 0 14px; color: var(--ink); }
 .dm h2.grp small { font: 500 13px var(--font-body); color: var(--muted); margin-left: 6px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
-.card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.card { background: var(--paper); border: 2px solid var(--logo-gold, #e8cf55); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
 .card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: #fff; }
 .card .body { padding: 12px 14px 14px; display: grid; gap: 6px; align-content: start; }
 .card h3 { font: 600 15px/1.35 var(--font-body); }

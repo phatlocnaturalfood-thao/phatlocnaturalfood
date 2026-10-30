@@ -72,7 +72,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
 <link rel="icon" href="../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../kien-thuc/kt.css">
 <link rel="stylesheet" href="../danh-muc.css">
 </head>
@@ -82,7 +82,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
   <div class="wrap">
     <a class="brand" href="../" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
     <nav class="menu" aria-label="Chính">
 ${PAGES.slice(0, 5).map(x => `      <a href="../${x.slug}/"${x.slug === pg.slug ? ' aria-current="page"' : ""}>${x.menu}</a>`).join("\n")}
@@ -112,7 +112,7 @@ ${pg.faq.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p>
     <div class="cta">
       <a class="btn btn-gold" href="https://zalo.me/0768759419" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','click_zalo');if(window.fbq)fbq('track','Contact')">Nhắn Zalo 0768 759 419</a>
       <a class="btn btn-line" href="tel:0768759419" onclick="if(window.gtag)gtag('event','click_call');if(window.fbq)fbq('track','Contact')">Gọi 0768 759 419</a>
-      <a class="btn btn-line" href="../#ho-so">Xem hồ sơ pháp lý</a>
+      <a class="btn btn-line" href="../chung-nhan/#ho-so">Xem hồ sơ pháp lý</a>
     </div>
     <p class="also">Xem thêm: ${PAGES.filter(x => x.slug !== pg.slug).map(x => `<a href="../${x.slug}/">${x.menu}</a>`).join(" · ")}</p>
   </div>

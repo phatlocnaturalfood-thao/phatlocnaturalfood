@@ -36,7 +36,7 @@ Việc này chạy mỗi giờ. Mỗi lần chạy:
 - `body` là HTML: mở đầu `<p class="lede">` trả lời ngay câu hỏi của tiêu đề; 3–5 mục `<h2>`;
   danh sách `<ul>/<ol>`; bảng so sánh dùng `<table class="cmp">`.
 - Link: ít nhất 1 link tới trang trong cột `link_ve` (đường dẫn tương đối từ `kien-thuc/`,
-  vd `../qua-tet/`, `../san-pham/<slug>/`, `../#ho-so`, `../#doanh-nghiep`) và 1–2 bài kiến thức cũ.
+  vd `../qua-tet/`, `../san-pham/<slug>/`, `../chung-nhan/#ho-so`, `../doanh-nghiep/`) và 1–2 bài kiến thức cũ.
 - `faq`: 3 câu hỏi – đáp ngắn đúng ý tìm kiếm của người dùng.
 - `cta`: 1–2 nút, dạng `    <a class="btn btn-gold" href="../qua-tet/">Xem quà Tết 2027</a>`.
 

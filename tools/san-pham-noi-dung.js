@@ -1,5 +1,5 @@
 // Nội dung 10 trang sản phẩm chủ lực. Giá, quy cách, ảnh lấy tự động từ index.html theo id.
-const YEN_GIAY_TO = "Yến sào Việt Cường Nhân sản xuất tại nhà máy đạt ISO 22000, HACCP, GMP; có bản tự công bố sản phẩm và phiếu kiểm nghiệm Eurofins, xem tại mục <a href=\"../../#ho-so\">Hồ sơ pháp lý</a>.";
+const YEN_GIAY_TO = "Yến sào Việt Cường Nhân sản xuất tại nhà máy đạt ISO 22000, HACCP, GMP; có bản tự công bố sản phẩm và phiếu kiểm nghiệm Eurofins, xem tại mục <a href=\"../../chung-nhan/#ho-so\">Hồ sơ pháp lý</a>.";
 const CHUNG = "Xem cách làm chi tiết trong bài <a href=\"../../kien-thuc/cach-chung-yen-sao.html\">Cách chưng yến sào đường phèn tại nhà</a>.";
 
 module.exports = [
@@ -66,7 +66,7 @@ module.exports = [
     desc: "Giỏ quà Tết 2027 Phú Quý Đại Cát QTG06: yến rút lông đắp tổ 100gr, đông trùng hạ thảo 20gr, táo đỏ hộp tròn, 4 hũ yến chưng. Quà biếu sếp, đối tác, cha mẹ.",
     points: ["Yến rút lông đắp tổ 100gr Việt Cường Nhân", "Nấm đông trùng hạ thảo 20gr", "Táo đỏ hộp tròn", "4 hũ yến chưng sẵn"],
     body: `<p>Phú Quý Đại Cát là giỏ quà Tết cao cấp với thành phần chính là 100gr yến rút lông đắp tổ, kèm đông trùng hạ thảo, táo đỏ và yến chưng sẵn. Phù hợp biếu sếp, đối tác quan trọng hoặc cha mẹ, ông bà dịp Tết Đinh Mùi 2027.</p>
-<h2>Đặt số lượng cho doanh nghiệp</h2><p>Từ 20 giỏ có chiết khấu, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>.</p>
+<h2>Đặt số lượng cho doanh nghiệp</h2><p>Từ 20 giỏ có chiết khấu, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>.</p>
 <h2>Giấy tờ</h2><p>${YEN_GIAY_TO}</p>`,
     faq: [["Đặt trước bao lâu?", "Đơn lẻ trước 3–5 ngày; đơn doanh nghiệp nhận đặt từ 22/10/2026, nên đặt sớm để chủ động lịch giao."], ["Có thiệp và in logo công ty không?", "Nhắn Zalo 0768 759 419 để được tư vấn theo số lượng."], ["Giao tận nơi người nhận được không?", "Có, giao toàn quốc, người nhận được kiểm hàng."]]
   },
@@ -76,7 +76,7 @@ module.exports = [
     desc: "Giỏ quà Tết 2027 Hoàng Gia QTG13: yến rút lông đắp tổ 100gr, yến tinh chế 50gr 18–20 tai, đông trùng hạ thảo 50gr, táo đỏ, 3 hũ yến chưng. Mẫu quà Tết cao cấp nhất.",
     points: ["Yến rút lông đắp tổ 100gr", "Yến tinh chế 50gr 18–20 tai", "Nấm đông trùng hạ thảo 50gr", "Táo đỏ hộp tròn và 3 hũ yến chưng"],
     body: `<p>Hoàng Gia là mẫu quà Tết cao cấp nhất của Phát Lộc, gồm 150gr yến sào (100gr rút lông đắp tổ và 50gr tinh chế) cùng 50gr đông trùng hạ thảo. Dành cho đối tác chiến lược, lãnh đạo hoặc người thân đặc biệt.</p>
-<h2>Đặt số lượng cho doanh nghiệp</h2><p>Chiết khấu từ 20 giỏ, xuất hóa đơn điện tử. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>.</p>
+<h2>Đặt số lượng cho doanh nghiệp</h2><p>Chiết khấu từ 20 giỏ, xuất hóa đơn điện tử. Gửi yêu cầu tại <a href="../../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>.</p>
 <h2>Giấy tờ</h2><p>${YEN_GIAY_TO}</p>`,
     faq: [["Tổng lượng yến trong giỏ là bao nhiêu?", "150gr yến khô (100gr rút lông đắp tổ, 50gr tinh chế) và 3 hũ yến chưng."], ["Đặt trước bao lâu?", "Nên đặt trước 3–5 ngày; đơn số lượng nhận đặt từ 22/10/2026, đặt sớm để giữ hàng."], ["Có xuất hóa đơn không?", "Có, xuất hóa đơn điện tử theo thông tin công ty."]]
   },
@@ -86,7 +86,7 @@ module.exports = [
     desc: "Hộp quà Tết yến sào cao cấp QTH24: yến tinh chế 100gr hộp bát giác, đường phèn, táo đỏ, hộp quà đỏ khay vàng kèm túi. Quà biếu Tết 2027 sang trọng.",
     points: ["Yến tinh chế 100gr trong hộp bát giác", "Kèm đường phèn và táo đỏ hộp nhỏ", "Hộp quà đỏ, khay vàng, túi xách", "Gọn, sang, dễ mang đi biếu"],
     body: `<p>QTH24 là hộp quà tập trung vào 100gr yến tinh chế, đóng hộp bát giác đặt trên khay vàng trong hộp đỏ. Mẫu quà gọn, sang, hợp biếu sếp, khách hàng lớn hoặc người lớn tuổi.</p>
-<h2>Đặt số lượng</h2><p>Chiết khấu từ 20 hộp, xuất hóa đơn điện tử. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>.</p>
+<h2>Đặt số lượng</h2><p>Chiết khấu từ 20 hộp, xuất hóa đơn điện tử. Gửi yêu cầu tại <a href="../../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>.</p>
 <h2>Giấy tờ</h2><p>${YEN_GIAY_TO}</p>`,
     faq: [["Yến trong hộp là loại nào?", "Yến tinh chế Việt Cường Nhân 100gr."], ["Có túi xách kèm không?", "Có, hộp quà kèm túi."], ["Giao tỉnh được không?", "Có, giao toàn quốc, kiểm hàng khi nhận."]]
   },
@@ -96,7 +96,7 @@ module.exports = [
     desc: "Hộp quà Tết An Lạc QTH06: 10 hũ yến chưng sẵn vị đường phèn hoặc đông trùng hạ thảo, muỗng vàng nhỏ, hộp giấy cứng, túi giấy. Giá 524.000đ, hợp quà cho khách hàng, nhân viên.",
     points: ["10 hũ yến chưng sẵn, vị đường phèn hoặc đông trùng", "Kèm muỗng vàng nhỏ", "Hộp giấy cứng, túi giấy", "Hợp quà khách hàng, nhân viên"],
     body: `<p>An Lạc là hộp quà Tết dưới 600.000đ với 10 hũ yến chưng sẵn vị đường phèn hoặc đông trùng hạ thảo, người nhận dùng ngay không cần chế biến. Hợp tặng khách hàng và nhân viên số lượng lớn.</p>
-<h2>Đặt số lượng</h2><p>Chiết khấu từ 20 hộp, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>, hoặc xem bài <a href="../../kien-thuc/qua-tet-doanh-nghiep-theo-ngan-sach.html">Chọn quà Tết doanh nghiệp theo ngân sách</a>.</p>`,
+<h2>Đặt số lượng</h2><p>Chiết khấu từ 20 hộp, xuất hóa đơn điện tử, giao theo danh sách. Gửi yêu cầu tại <a href="../../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>, hoặc xem bài <a href="../../kien-thuc/qua-tet-doanh-nghiep-theo-ngan-sach.html">Chọn quà Tết doanh nghiệp theo ngân sách</a>.</p>`,
     faq: [["Hộp có những vị nào?", "Yến chưng vị đường phèn hoặc vị đông trùng hạ thảo. Khi đặt, nhắn Zalo 0768 759 419 để chọn vị hoặc tỷ lệ hai vị trong hộp."], ["Đặt 100 hộp mất bao lâu?", "Thường 3–7 ngày tùy thời điểm; nhận đặt từ 22/10/2026, nên đặt sớm trước cao điểm Tết."], ["Bảo quản thế nào?", "Để nơi khô mát, tránh nắng; ngon hơn khi để lạnh."]]
   },
   {
@@ -105,7 +105,7 @@ module.exports = [
     desc: "Túi quà Tết cho phái đẹp Xuân Sắc QTT05: 1 hộp mặt nạ yến T'Beauty 10 miếng, sữa rửa mặt, nước tẩy trang. Có phiếu công bố mỹ phẩm. Giá 608.000đ.",
     points: ["1 hộp mặt nạ yến T'Beauty (10 miếng)", "Sữa rửa mặt T'Beauty", "Nước tẩy trang T'Beauty", "Có phiếu công bố của Cục Quản lý Dược"],
     body: `<p>Xuân Sắc là túi quà Tết dành cho mẹ, vợ, chị em hoặc nhân viên nữ: bộ làm sạch da (tẩy trang, sữa rửa mặt) và một hộp mặt nạ yến T'Beauty dùng 2–3 lần mỗi tuần.</p>
-<h2>Giấy tờ</h2><p>Mỹ phẩm T'Beauty có phiếu công bố mỹ phẩm của Cục Quản lý Dược, xem tại mục <a href="../../#ho-so">Hồ sơ pháp lý</a>. Xem thêm sản phẩm lẻ ở trang <a href="../../my-pham/">Mỹ phẩm</a>.</p>`,
+<h2>Giấy tờ</h2><p>Mỹ phẩm T'Beauty có phiếu công bố mỹ phẩm của Cục Quản lý Dược, xem tại mục <a href="../../chung-nhan/#ho-so">Hồ sơ pháp lý</a>. Xem thêm sản phẩm lẻ ở trang <a href="../../my-pham/">Mỹ phẩm</a>.</p>`,
     faq: [["Da nhạy cảm dùng được không?", "Nên thử một lượng nhỏ trước 24 giờ; ngưng nếu đỏ, ngứa."], ["Đặt số lượng tặng nhân viên nữ được không?", "Được, chiết khấu từ 20 túi, xuất hóa đơn điện tử."], ["Có túi quà mỹ phẩm khác không?", "Có QTT09, QTT15–QTT17, xem trang <a href=\"../../qua-tet/\">Quà Tết 2027</a>."]]
   }
 ];

@@ -21,7 +21,7 @@
 <link rel="icon" href="../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="kt.css">
 </head>
 <body>
@@ -30,15 +30,16 @@
   <div class="wrap">
     <a class="brand" href="../index.html" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
-      <a href="../index.html#san-pham">Sản phẩm</a>
-      <a href="../index.html#qua-tet">Quà Tết</a>
-      <a href="./" aria-current="page">Kiến thức</a>
-      <a href="../index.html#dat-hang">Đặt hàng</a>
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="../gioi-thieu/">Giới thiệu</a>
+      <a href="../#san-pham">Sản phẩm</a>
+      <a href="../chung-nhan/">Chứng nhận &amp; Cam kết</a>
+      <a href="../kien-thuc/" aria-current="page">Kiến thức</a>
     </nav>
-    <a class="btn btn-line" href="../index.html#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="../index.html#dat-hang">Liên hệ</a>
   </div>
 </header>
 
@@ -73,7 +74,7 @@
   <ul>
     <li>Tận mắt so sánh yến thô, yến tinh chế, yến rút lông trước khi mua. Đọc trước: <a href="yen-tinh-che-rut-long-yen-tho-khac-nhau.html">Yến thô, yến tinh chế, yến rút lông khác nhau thế nào</a>.</li>
     <li>Được tư vấn chọn loại theo nhu cầu: dùng trong nhà, biếu tặng hay quà doanh nghiệp.</li>
-    <li>Xem bản tự công bố, phiếu kiểm nghiệm, chứng nhận nhà máy ISO 22000, HACCP, GMP (mục <a href="../#ho-so">Hồ sơ pháp lý</a>).</li>
+    <li>Xem bản tự công bố, phiếu kiểm nghiệm, chứng nhận nhà máy ISO 22000, HACCP, GMP (mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>).</li>
   </ul>
 
   <h2>Không tiện ghé? Đặt giao tận nơi</h2>
@@ -85,7 +86,7 @@
   <p>Mua số lượng lớn, đại lý, cộng tác viên: Phát Lộc có chính sách riêng, vui lòng liên hệ Zalo 0768 759 419 để được tư vấn.</p>
 
   <h2>Mua yến làm quà Tết ở Dĩ An</h2>
-  <p>Mùa Tết, nhiều khách ở Dĩ An, Thuận An, Thủ Đức ghé cửa hàng để chọn quà biếu. Bạn có thể xem trước mẫu trên website, nhắn Zalo giữ hàng rồi ghé lấy, hoặc nhờ giao thẳng đến nhà người nhận kèm thiệp. Doanh nghiệp trong khu vực đặt quà cho nhân viên, đối tác có chiết khấu từ 20 hộp và hóa đơn điện tử, xem mục <a href="../#doanh-nghiep">Quà Tết doanh nghiệp</a>.</p>
+  <p>Mùa Tết, nhiều khách ở Dĩ An, Thuận An, Thủ Đức ghé cửa hàng để chọn quà biếu. Bạn có thể xem trước mẫu trên website, nhắn Zalo giữ hàng rồi ghé lấy, hoặc nhờ giao thẳng đến nhà người nhận kèm thiệp. Doanh nghiệp trong khu vực đặt quà cho nhân viên, đối tác có chiết khấu từ 20 hộp và hóa đơn điện tử, xem mục <a href="../doanh-nghiep/">Quà Tết doanh nghiệp</a>.</p>
 
   <h2>Mẹo khi đến cửa hàng</h2>
   <ul>

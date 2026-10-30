@@ -30,13 +30,13 @@ module.exports = [
         <li><b>Phái đẹp:</b> túi quà mỹ phẩm yến T'Beauty (QTT05, QTT09, QTT15–QTT17).</li>
       </ul>
       <h2>Đặt quà Tết số lượng cho doanh nghiệp</h2>
-      <p><b>Nhận đặt quà Tết doanh nghiệp từ 22/10/2026.</b> Từ 20 hộp có chiết khấu theo số lượng, xuất hóa đơn điện tử và giao tận nơi theo danh sách. Gửi yêu cầu tại <a href="../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>, Phát Lộc báo giá trong ngày. Xem thêm bài ${L("qua-tet-doanh-nghiep-theo-ngan-sach", "Chọn quà Tết doanh nghiệp 2027 theo ngân sách")}.</p>`,
+      <p><b>Nhận đặt quà Tết doanh nghiệp từ 22/10/2026.</b> Từ 20 hộp có chiết khấu theo số lượng, xuất hóa đơn điện tử và giao tận nơi theo danh sách. Gửi yêu cầu tại <a href="../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>, Phát Lộc báo giá trong ngày. Xem thêm bài ${L("qua-tet-doanh-nghiep-theo-ngan-sach", "Chọn quà Tết doanh nghiệp 2027 theo ngân sách")}.</p>`,
     faq: [
       ["Đặt quà Tết 2027 trước bao lâu?", "Đơn lẻ nên đặt trước 3–5 ngày. Phát Lộc nhận đặt quà Tết doanh nghiệp từ 22/10/2026; đơn số lượng nên đặt càng sớm càng chủ động mẫu và lịch giao trước Tết."],
       ["Có xuất hóa đơn điện tử không?", "Có. Phát Lộc xuất hóa đơn điện tử cho đơn quà Tết doanh nghiệp theo thông tin công ty cung cấp."],
       ["Đặt nhiều hộp có được giảm giá không?", "Có chiết khấu từ 20 hộp, tăng theo mốc 50 và 100 hộp. Gửi số lượng và ngân sách để nhận báo giá trong ngày."],
       ["Có giao quà tận nơi cho từng người nhận không?", "Có. Giao toàn quốc; với đơn doanh nghiệp có thể giao theo danh sách địa chỉ người nhận. Khách được kiểm hàng khi nhận."],
-      ["Yến sào trong giỏ quà có giấy tờ không?", "Có. Yến sào Việt Cường Nhân có bản tự công bố, phiếu kiểm nghiệm Eurofins và chứng nhận ISO 22000, HACCP, GMP, đăng công khai ở mục <a href=\"../#ho-so\">Hồ sơ pháp lý</a>."]
+      ["Yến sào trong giỏ quà có giấy tờ không?", "Có. Yến sào Việt Cường Nhân có bản tự công bố, phiếu kiểm nghiệm Eurofins và chứng nhận ISO 22000, HACCP, GMP, đăng công khai ở mục <a href=\"../chung-nhan/#ho-so\">Hồ sơ pháp lý</a>."]
     ]
   },
   {
@@ -199,7 +199,7 @@ module.exports = [
     h1: "Mỹ phẩm chăm sóc da và tóc",
     desc: "Nước tẩy trang, sữa rửa mặt, toner, serum, kem dưỡng, kem chống nắng, mặt nạ T'Beauty và dầu gội, kem ủ nhân sâm Hàn Quốc. Có phiếu công bố mỹ phẩm của Cục Quản lý Dược.",
     lede: `<p>Phát Lộc có 14 sản phẩm chăm sóc da và tóc, từ 126.000đ đến 550.000đ: bộ chăm sóc da T'Beauty (tẩy trang, sữa rửa mặt, toner, serum, kem dưỡng, gel tẩy da chết, kem chống nắng, mặt nạ) và dòng chăm sóc tóc nhân sâm Hàn Quốc.</p>
-<p>Các sản phẩm có phiếu công bố mỹ phẩm của Cục Quản lý Dược, đăng công khai ở mục <a href="../#ho-so">Hồ sơ pháp lý</a>.</p>`,
+<p>Các sản phẩm có phiếu công bố mỹ phẩm của Cục Quản lý Dược, đăng công khai ở mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.</p>`,
     guide: `      <h2>Thứ tự chăm sóc da cơ bản</h2>
       <ol>
         <li>Tẩy trang, rồi rửa mặt bằng sữa rửa mặt.</li>
@@ -210,7 +210,7 @@ module.exports = [
       </ol>
       <p>Muốn làm quà, xem các túi quà mỹ phẩm trong trang <a href="../qua-tet/">Quà Tết 2027</a> (QTT05, QTT09, QTT15–QTT17).</p>`,
     faq: [
-      ["Mỹ phẩm có giấy công bố không?", "Có. Các sản phẩm có phiếu công bố mỹ phẩm của Cục Quản lý Dược và chứng nhận xuất xứ, xem tại mục <a href=\"../#ho-so\">Hồ sơ pháp lý</a>."],
+      ["Mỹ phẩm có giấy công bố không?", "Có. Các sản phẩm có phiếu công bố mỹ phẩm của Cục Quản lý Dược và chứng nhận xuất xứ, xem tại mục <a href=\"../chung-nhan/#ho-so\">Hồ sơ pháp lý</a>."],
       ["Da nhạy cảm dùng được không?", "Nên thử trước một lượng nhỏ ở vùng da sau tai hoặc cổ tay trong 24 giờ; ngưng dùng nếu thấy đỏ, ngứa."],
       ["Có túi quà mỹ phẩm không?", "Có, các túi quà Tết mỹ phẩm từ 440.000đ đến 1.388.000đ trong trang <a href=\"../qua-tet/\">Quà Tết 2027</a>."]
     ]

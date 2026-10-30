@@ -23,7 +23,7 @@
 <link rel="icon" href="../../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../../kien-thuc/kt.css">
 <link rel="stylesheet" href="../../danh-muc.css">
 </head>
@@ -33,17 +33,16 @@
   <div class="wrap">
     <a class="brand" href="../../" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="../../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
-      <a href="../../qua-tet/">Quà Tết 2027</a>
-      <a href="../../yen-tinh-che/">Yến tinh chế</a>
-      <a href="../../yen-tho/">Yến thô</a>
-      <a href="../../nuoc-yen/">Nước yến</a>
-      <a href="../../dong-trung-ha-thao/">Đông trùng hạ thảo</a>
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="../../gioi-thieu/">Giới thiệu</a>
+      <a href="../../#san-pham">Sản phẩm</a>
+      <a href="../../chung-nhan/">Chứng nhận &amp; Cam kết</a>
       <a href="../../kien-thuc/">Kiến thức</a>
     </nav>
-    <a class="btn btn-line" href="../../#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="../../#dat-hang">Liên hệ</a>
   </div>
 </header>
 
@@ -78,7 +77,7 @@
 <h2>Cách dùng</h2>
 <ol><li>Ngâm 1 tổ trong nước sạch 1–2 giờ cho nở mềm.</li><li>Xé nhẹ theo thớ, để ráo.</li><li>Chưng cách thủy 20–30 phút, cho đường phèn ở 5 phút cuối.</li></ol>
 <p>Xem cách làm chi tiết trong bài <a href="../../kien-thuc/cach-chung-yen-sao.html">Cách chưng yến sào đường phèn tại nhà</a>.</p>
-<h2>Giấy tờ</h2><p>Yến sào Việt Cường Nhân sản xuất tại nhà máy đạt ISO 22000, HACCP, GMP; có bản tự công bố sản phẩm và phiếu kiểm nghiệm Eurofins, xem tại mục <a href="../../#ho-so">Hồ sơ pháp lý</a>.</p>
+<h2>Giấy tờ</h2><p>Yến sào Việt Cường Nhân sản xuất tại nhà máy đạt ISO 22000, HACCP, GMP; có bản tự công bố sản phẩm và phiếu kiểm nghiệm Eurofins, xem tại mục <a href="../../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.</p>
     </section>
     <section class="faq">
       <h2>Câu hỏi thường gặp</h2>

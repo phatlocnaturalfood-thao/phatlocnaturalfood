@@ -43,42 +43,51 @@
 <title>Yến Sào, Đông Trùng Hạ Thảo &amp; Quà Tết 2027 | Phát Lộc Natural Food</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <style>
 /* Layout: a narrow shop column; one emerald band carries the brand promise, everything else sits on ivory with gold hairlines. */
 :root {
   --ivory: #fbfaf5;
   --paper: #ffffff;
-  --ink: #17261d;
-  --muted: #5d6b61;
-  --emerald: #0d4a2c;
-  --emerald-2: #135f39;
+  --ink: #2a1a1b;
+  --muted: #6b5a5b;
+  --emerald: #a81d24;
+  --emerald-2: #c9252c;
   --gold: #b8892b;
   --gold-soft: #e9d9b0;
   --line: #e4dfcf;
   --on-emerald: #f6efd9;
   --sale: #a3321f;
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --logo-gold: #e8cf55;
+  --font-display: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
   --font-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ivory: #0d1712; --paper: #13211a; --ink: #eee9da; --muted: #a9b5ab;
-    --emerald: #0f3b25; --emerald-2: #1b6b42; --gold: #d8b05a; --gold-soft: #4a3e22;
-    --line: #2a3a30; --on-emerald: #f3ead0; --sale: #ef8a74; color-scheme: dark;
+    --ivory: #1a0d0e; --paper: #241315; --ink: #eee9da; --muted: #c4b0b1;
+    --emerald: #5c1216; --emerald-2: #e2565c; --gold: #d8b05a; --gold-soft: #4a3e22;
+    --line: #3d2426; --on-emerald: #f3ead0; --sale: #ef8a74; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --ivory: #0d1712; --paper: #13211a; --ink: #eee9da; --muted: #a9b5ab;
-  --emerald: #0f3b25; --emerald-2: #1b6b42; --gold: #d8b05a; --gold-soft: #4a3e22;
-  --line: #2a3a30; --on-emerald: #f3ead0; --sale: #ef8a74; color-scheme: dark;
+  --ivory: #1a0d0e; --paper: #241315; --ink: #eee9da; --muted: #c4b0b1;
+  --emerald: #5c1216; --emerald-2: #e2565c; --gold: #d8b05a; --gold-soft: #4a3e22;
+  --line: #3d2426; --on-emerald: #f3ead0; --sale: #ef8a74; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { background: var(--ivory); color: var(--ink); font: 400 15px/1.6 var(--font-body); }
 a { color: inherit; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; letter-spacing: -.01em; text-wrap: balance; margin: 0; }
 .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.hero .eyebrow { font-size: 18px; letter-spacing: .1em; font-weight: 700; color: var(--logo-gold); line-height: 1.5; margin-bottom: 6px; }
+.hero .eyebrow span { white-space: nowrap; }
+.hero .seals { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0 0; }
+.hero .seal-c { width: 104px; height: 104px; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 50%; filter: drop-shadow(0 6px 14px rgb(0 0 0 / .3)); transition: transform .2s; }
+.hero .seal-c:hover { transform: translateY(-3px) rotate(-3deg); }
+.hero .seal-c svg { width: 100%; height: 100%; font-family: var(--font-body); }
+@media (max-width: 760px) { .hero .seal-c { width: 88px; height: 88px; } }
+
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
 /* header */
@@ -87,7 +96,7 @@ header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; b
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand .mark { width: 52px; height: 52px; border-radius: 10px; background: #fff; display: grid; place-items: center; border: 1px solid var(--gold-soft); }
 .brand .mark img { width: 42px; }
-.brand b { font-family: var(--font-display); font-size: 22px; letter-spacing: .02em; color: var(--emerald-2); display: block; line-height: 1; }
+.brand b { font-family: var(--font-display); font-size: 19px; font-weight: 800; letter-spacing: .01em; color: var(--emerald-2); display: block; line-height: 1; }
 .brand small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 nav.menu { display: flex; gap: 22px; font-size: 14px; }
 nav.menu a { text-decoration: none; color: var(--muted); }
@@ -96,21 +105,53 @@ nav.menu a:hover { color: var(--ink); }
 .btn-gold { background: var(--gold); color: #1b1404; }
 .btn-ghost { background: transparent; color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--gold); }
 .btn-line { background: transparent; color: var(--emerald-2); box-shadow: inset 0 0 0 1px var(--line); }
+nav.menu a { white-space: nowrap; }
+.brand b, .brand small, header .btn { white-space: nowrap; }
+@media (max-width: 1260px) { .fs-pill.on { display: none !important; } }
+@media (max-width: 1120px) { .brand small { display: none; } nav.menu { gap: 14px; font-size: 14px; } }
+@media (max-width: 900px) { nav.menu { display: none; } }
+@media (max-width: 430px) { .brand b { font-size: 15px; } }
+@media (max-width: 340px) { .brand b { font-size: 12px; } header .btn { padding: 7px 10px; font-size: 13px; } }
+@media (max-width: 380px) { .brand { gap: 8px; } .brand b { font-size: 14px; } header .btn { padding: 8px 12px; } .brand .mark { width: 38px; height: 38px; } .nav-t { width: 38px; height: 38px; } }
 @media (max-width: 760px) { nav.menu { display: none; } }
+/* Nút menu ☰ cho điện thoại: bấm mở danh sách mục bên dưới đầu trang. */
+.nav-t { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 0; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+.nav-t span { display: block; width: 18px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
+header.open .nav-t span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+header.open .nav-t span:nth-child(2) { opacity: 0; }
+header.open .nav-t span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .top .wrap { flex-wrap: wrap; }
+  .top .wrap { column-gap: 8px; }
+  .brand { min-width: 0; flex: 1 1 0; }
+  .brand > span:last-child { min-width: 0; overflow: hidden; }
+  .brand b { overflow: hidden; text-overflow: ellipsis; }
+  .top .wrap > .btn { order: 1; margin-left: auto; }
+  .nav-t { display: flex; order: 2; }
+  header.top nav.menu { order: 3; flex-basis: 100%; flex-direction: column; gap: 0; font-size: 16px; display: none; }
+  header.top.open nav.menu { display: flex; }
+  header.top nav.menu a { padding: 13px 4px; border-top: 1px solid var(--line); color: var(--ink); }
+}
 
 /* hero */
 .hero { background: var(--emerald); color: var(--on-emerald); position: relative; overflow: hidden; }
 .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at 85% 20%, rgba(216,176,90,.18), transparent 70%); pointer-events: none; }
 .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; padding-block: 56px; position: relative; z-index: 1; }
-.hero h1 { font-size: clamp(36px, 5.6vw, 64px); font-style: italic; font-weight: 500; }
-.hero h1 span { display: block; font-style: normal; font-weight: 700; color: var(--gold); }
+.hero h1 { font-size: clamp(19px, 5.8vw, 46px); white-space: nowrap; font-weight: 800; color: var(--logo-gold); }
+.hero h1 span { display: block; font-style: normal; font-weight: 800; color: #2a52a9; -webkit-text-stroke: 2px #fff; paint-order: stroke fill; text-shadow: 0 3px 10px rgb(0 0 0 / .25); }
 .hero p { max-width: 52ch; color: color-mix(in srgb, var(--on-emerald) 82%, transparent); margin: 18px 0 26px; }
 .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero .seal { justify-self: center; width: min(320px, 100%); aspect-ratio: 1; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 0 0 10px rgba(216,176,90,.25), 0 30px 60px rgba(0,0,0,.35); }
+.hero .seal { justify-self: center; width: min(320px, 100%); aspect-ratio: 1; border-radius: 50%; background: #fff; display: grid; place-items: center; border: 10px solid transparent; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(160deg, #f6e27a, #e8cf55 45%, #c9a232) border-box; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
 .hero .seal img { width: 78%; }
 .facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 30px; font-size: 13px; }
 .facts div { border-left: 1px solid var(--gold); padding-left: 10px; }
 .facts b { display: block; color: var(--gold); font-weight: 600; }
+.hero .wrap > div:first-child { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.hero .seals, .hero .facts { justify-content: center; }
+.hero .flash { width: 100%; justify-content: center; text-align: center; }
+.hero .flash .cd { justify-content: center; }
+.hero .facts div { text-align: left; }
+
 @media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; } .hero .seal { width: 200px; order: -1; } }
 
 /* products */
@@ -123,23 +164,24 @@ section.block { padding-block: 56px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
 .card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
 .ph { aspect-ratio: 1/1; max-width: 100%; background: linear-gradient(140deg, var(--emerald), var(--emerald-2)); color: var(--on-emerald); display: grid; place-items: center; text-align: center; position: relative; }
-.ph strong { font: italic 600 26px var(--font-display); color: var(--gold); padding: 0 12px; }
+.ph strong { font: 700 22px var(--font-display); color: var(--gold); padding: 0 12px; }
 .ph em { position: absolute; bottom: 8px; left: 0; right: 0; font-style: normal; font-size: 11px; opacity: .7; }
 .card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
 .card .cat { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
 .card h3 { font: 600 15px/1.4 var(--font-body); }
 .card .spec { font-size: 13px; color: var(--muted); }
 .price { display: flex; align-items: baseline; gap: 8px; margin-top: auto; padding-top: 8px; font-variant-numeric: tabular-nums; }
-.price b { font: 700 22px var(--font-display); color: var(--sale); }
+.price b { font: 700 20px var(--font-display); color: var(--sale); }
 .price s { font-size: 13px; color: var(--muted); }
 .card .btn { justify-content: center; margin-top: 8px; }
 /* product cards sit on the hero green so the whole tile reads as one green block */
-.grid .card { background: linear-gradient(160deg, var(--emerald), var(--emerald-2)); border-color: var(--emerald-2); color: var(--on-emerald); }
+.grid .card { background: linear-gradient(160deg, #7e1218, var(--emerald)); border: 2px solid var(--logo-gold); color: var(--on-emerald); }
+.grid .card .cat { color: var(--logo-gold); }
 .grid .card .spec { color: color-mix(in srgb, var(--on-emerald) 72%, transparent); }
-.grid .card .price b { color: var(--gold); }
+.grid .card .price b { color: var(--logo-gold); }
 .grid .card .price s { color: color-mix(in srgb, var(--on-emerald) 60%, transparent); }
-.grid .card .btn-line { color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--gold); }
-.grid .card .btn-line:hover { background: var(--gold); color: #1b1404; }
+.grid .card .btn-line { color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--logo-gold); }
+.grid .card .btn-line:hover { background: var(--logo-gold); color: #3a0a0d; }
 
 /* gift band */
 .gift { background: var(--paper); border-block: 1px solid var(--line); }
@@ -151,6 +193,29 @@ section.block { padding-block: 56px; }
 @media (max-width: 760px) { .gift .wrap { grid-template-columns: 1fr; } }
 
 /* trust */
+.about .lead { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; }
+.about .lead p { margin: 0 0 12px; color: var(--muted); font-size: 15.5px; }
+.about blockquote { margin: 0; padding: 18px 20px; border-left: 4px solid var(--logo-gold); background: var(--paper); border-radius: 0 12px 12px 0; font-weight: 700; font-size: 18px; color: var(--emerald-2); }
+.about blockquote small { display: block; margin-top: 6px; font-weight: 500; font-size: 13px; color: var(--muted); }
+.about .vmv { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.about .vmv div { background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--emerald-2); border-radius: 12px; padding: 16px 18px; }
+.about .vmv h3 { font-size: 18px; color: var(--emerald-2); margin-bottom: 8px; }
+.about .vmv p, .about .vmv li { margin: 0; color: var(--muted); font-size: 14px; }
+.about .vmv ul { margin: 0; padding-left: 18px; }
+.about h3.sub { font-size: 22px; color: var(--emerald-2); margin: 34px 0 14px; }
+.tl { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.tl div { border-top: 3px solid var(--logo-gold); padding-top: 10px; }
+.tl b { display: block; font-size: 22px; font-weight: 800; color: var(--emerald-2); }
+.tl p { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); }
+.facil { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.facil button { border: 2px solid var(--logo-gold); border-radius: 12px; padding: 0; overflow: hidden; background: var(--emerald); cursor: zoom-in; font: inherit; text-align: left; }
+.facil img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.facil span { display: block; padding: 8px 10px; color: var(--on-emerald); font-weight: 600; font-size: 13.5px; }
+.market { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.market div { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+.market h4 { margin: 0 0 6px; font-size: 16px; color: var(--emerald-2); }
+.market p { margin: 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 760px) { .about .lead, .about .vmv, .market { grid-template-columns: 1fr; } .tl { grid-template-columns: 1fr 1fr; } .facil { grid-template-columns: 1fr 1fr; } }
 .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .budget { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: -6px 0 18px; font-size: 13px; color: var(--muted); }
 .budget .chip { padding: 5px 12px; }
@@ -166,7 +231,7 @@ section.block { padding-block: 56px; }
 @media (max-width: 760px) { .b2b .wrap { grid-template-columns: 1fr; } }
 .docs { margin-top: 34px; }
 .docs h3 { font-size: 26px; color: var(--emerald-2); margin: 0 0 4px; }
-.docs .grid-d { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; }
+.docs .grid-d { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
 .docs .grid-d button { border: 1px solid var(--line); border-radius: 12px; background: var(--paper); padding: 0; cursor: zoom-in; overflow: hidden; text-align: left; font: inherit; color: inherit; }
 .docs .grid-d img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; }
 .docs .grid-d span { display: block; padding: 8px 10px; font-size: 13px; font-weight: 600; color: var(--emerald-2); }
@@ -184,13 +249,14 @@ section.block { padding-block: 56px; }
 
 /* order */
 .order { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-form.f { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: grid; gap: 12px; }
-.f label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+form.f { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: grid; gap: 12px; align-content: start; align-self: start; }
+form.f .btn { justify-content: center; }
+.f label { display: grid; gap: 6px; align-content: start; font-size: 13px; color: var(--muted); }
 .f input, .f select, .f textarea { font: 15px var(--font-body); padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--ivory); color: var(--ink); width: 100%; }
 .f .row { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
 .summary { white-space: pre-wrap; background: var(--ivory); border: 1px dashed var(--gold); border-radius: 10px; padding: 12px; font-size: 14px; }
 .contact p { margin: 0 0 10px; }
-.contact .big { font: 700 30px var(--font-display); color: var(--emerald-2); user-select: all; }
+.contact .big { font: 700 28px var(--font-display); color: var(--emerald-2); user-select: all; }
 @media (max-width: 760px) { .order { grid-template-columns: 1fr; } .f .row { grid-template-columns: 1fr; } }
 
 footer { background: var(--emerald); color: var(--on-emerald); font-size: 13px; }
@@ -199,7 +265,7 @@ footer b { color: var(--gold); }
 footer .policy-links a { color: var(--on-emerald); }
 footer p { margin: 0 0 6px; opacity: .9; }
 @media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
-@media (prefers-reduced-motion: no-preference) { .card { transition: transform .2s, box-shadow .2s; } .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(13,74,44,.12); } }
+@media (prefers-reduced-motion: no-preference) { .card { transition: transform .2s, box-shadow .2s; } .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(168,29,36,.12); } }
 /* product photos */
 button.ph { border: 0; padding: 0; width: 100%; cursor: zoom-in; font: inherit; }
 .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -216,13 +282,14 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
 .lb img { width: 100%; border-radius: 12px; display: block; }
 .lb .bar { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px; color: #fff; font-size: 14px; }
 .lb .bar button { background: rgba(255,255,255,.14); color: #fff; border: 0; border-radius: 999px; padding: 8px 14px; font: 600 14px var(--font-body); cursor: pointer; }
-.flash { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; margin: 0 0 20px; padding: 14px 18px; border-radius: 14px; background: linear-gradient(100deg, #b4261a, #e0562b); color: #fff; box-shadow: 0 6px 18px rgb(180 38 26 / .25); }
-.flash.off { background: var(--paper); color: var(--ink); box-shadow: inset 0 0 0 1px var(--gold-soft); }
-.flash h3 { margin: 0; font: 700 20px var(--font-display); letter-spacing: .02em; }
-.flash p { margin: 2px 0 0; font-size: 13px; opacity: .9; }
+.flash { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; margin: 22px 0 6px; padding: 14px 18px; border-radius: 14px; background: linear-gradient(100deg, #f3dc6a, #d9b23c); color: #4a0c10; box-shadow: 0 8px 22px rgb(0 0 0 / .25); }
+.flash.off { background: rgb(255 255 255 / .1); color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--logo-gold); }
+.flash h3 { margin: 0; font: 800 19px var(--font-display); color: inherit; }
+.hero .flash p { margin: 2px 0 0; font-size: 13px; color: #6a1a1e; max-width: none; }
+.hero .flash.off p { color: var(--on-emerald); opacity: .85; }
 .flash .cd { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
-.flash .cd span { min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgb(0 0 0 / .28); text-align: center; font: 700 22px/1 var(--font-body); }
-.flash.off .cd span { background: var(--emerald); color: var(--on-emerald); }
+.flash .cd span { min-width: 48px; padding: 6px 4px; border-radius: 8px; background: #7e1218; color: #fff; text-align: center; font: 800 22px/1 var(--font-body); }
+.flash.off .cd span { background: var(--logo-gold); color: #4a0c10; }
 .flash .cd small { display: block; font-size: 10px; font-weight: 500; opacity: .8; margin-top: 3px; }
 .fs-tag { align-self: center; padding: 1px 6px; border-radius: 6px; background: #d93a22; color: #fff; font-size: 12px; font-weight: 700; }
 .fs-pill { display: none; padding: 6px 10px; border-radius: 999px; background: #d93a22; color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -237,47 +304,41 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="gioi-thieu/">Giới thiệu</a>
       <a href="#san-pham">Sản phẩm</a>
-      <a href="#qua-tet">Quà Tết</a>
-      <a href="#doanh-nghiep">Doanh nghiệp</a>
-      <a href="#cam-ket">Cam kết</a>
+      <a href="chung-nhan/">Chứng nhận &amp; Cam kết</a>
       <a href="kien-thuc/">Kiến thức</a>
-      <a href="#dat-hang">Đặt hàng</a>
     </nav>
-    <a class="fs-pill" id="fs-pill" href="#san-pham">⚡ Flash Sale</a>
-    <a class="btn btn-line" href="#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="#dat-hang">Liên hệ</a>
   </div>
 </header>
 
 <section class="hero" id="top">
   <div class="wrap">
     <div>
-      <div class="eyebrow">Yến sào · Đông trùng hạ thảo · Táo đỏ · Nha đam</div>
-      <h1>Tinh hoa tạo vị <span>Chất lượng tạo danh</span></h1>
-      <p>Phát Lộc Natural Food phân phối yến sào thương hiệu Việt Cường Nhân cùng đông trùng hạ thảo, táo đỏ và quà biếu. Mỗi sản phẩm có bản tự công bố và phiếu kiểm nghiệm, giao toàn quốc.</p>
-      <div class="cta">
-        <a class="btn btn-gold" href="#san-pham">Xem sản phẩm</a>
-        <a class="btn btn-ghost" href="#qua-tet">Hộp quà Tết 2027</a>
+      <div class="eyebrow"><span>Yến sào ·</span> <span>Đông trùng hạ thảo ·</span> <span>Táo đỏ ·</span> <span>Nha đam</span></div>
+      <h1><span>Phát Lộc Natural Food</span></h1>
+      <div class="seals"><button type="button" class="seal-c" data-doc="haccp" aria-label="Xem chứng nhận HACCP"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="ghaccp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e27a"/><stop offset="1" stop-color="#c9a232"/></linearGradient></defs><circle cx="60" cy="60" r="57" fill="url(#ghaccp)"/><circle cx="60" cy="60" r="49" fill="#fff"/><circle cx="60" cy="60" r="45" fill="none" stroke="#2a52a9" stroke-width="2" stroke-dasharray="3 3"/><text x="60" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#2a52a9" letter-spacing="1">CERTIFIED</text><text x="60" y="68" text-anchor="middle" font-size="24" font-weight="800" fill="#a81d24">HACCP</text><text x="60" y="86" text-anchor="middle" font-size="9" font-weight="700" fill="#2a52a9">FOOD SAFETY</text></svg></button><button type="button" class="seal-c" data-doc="iso" aria-label="Xem chứng nhận ISO"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="giso" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e27a"/><stop offset="1" stop-color="#c9a232"/></linearGradient></defs><circle cx="60" cy="60" r="57" fill="url(#giso)"/><circle cx="60" cy="60" r="49" fill="#fff"/><circle cx="60" cy="60" r="45" fill="none" stroke="#2a52a9" stroke-width="2" stroke-dasharray="3 3"/><text x="60" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#2a52a9" letter-spacing="1">CERTIFIED</text><text x="60" y="68" text-anchor="middle" font-size="24" font-weight="800" fill="#a81d24">ISO</text><text x="60" y="86" text-anchor="middle" font-size="10" font-weight="700" fill="#2a52a9">22000:2018</text></svg></button><button type="button" class="seal-c" data-doc="gmp" aria-label="Xem chứng nhận GMP"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="ggmp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e27a"/><stop offset="1" stop-color="#c9a232"/></linearGradient></defs><circle cx="60" cy="60" r="57" fill="url(#ggmp)"/><circle cx="60" cy="60" r="49" fill="#fff"/><circle cx="60" cy="60" r="45" fill="none" stroke="#2a52a9" stroke-width="2" stroke-dasharray="3 3"/><text x="60" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#2a52a9" letter-spacing="1">CERTIFIED</text><text x="60" y="68" text-anchor="middle" font-size="24" font-weight="800" fill="#a81d24">GMP</text><text x="60" y="86" text-anchor="middle" font-size="8.5" font-weight="700" fill="#2a52a9">GOOD PRACTICE</text></svg></button></div>
+      <div class="flash" id="flash" aria-live="polite">
+        <div><h3 id="fs-title">⚡ Flash Sale giảm 10% toàn bộ sản phẩm</h3></div>
+        <div class="cd" role="timer"><b id="fs-lbl" style="font-size:13px;font-weight:600;margin-right:4px">Kết thúc sau</b><span><b id="fs-h">00</b><small>giờ</small></span><span><b id="fs-m">00</b><small>phút</small></span><span><b id="fs-s">00</b><small>giây</small></span></div>
       </div>
       <div class="facts">
         <div><b id="f-count">67</b>sản phẩm</div>
         <div><b id="f-min">Từ 35.000đ</b>dùng thử</div>
-        <div><b>Toàn quốc</b>giao hàng</div>
+        <div><b>HACCP · ISO</b>GMP chứng nhận</div>
       </div>
     </div>
-    <div class="seal"><img src="logo.jpg" alt="Logo Phát Lộc, Tinh hoa tạo vị, Chất lượng tạo danh"></div>
+    <div class="seal"><img src="logo.jpg" alt="Logo Phát Lộc Natural Food, Tinh hoa tạo vị, Chất lượng tạo danh"></div>
   </div>
 </section>
 
 <section class="block" id="san-pham">
   <div class="wrap">
-    <div class="flash" id="flash" aria-live="polite">
-      <div><h3 id="fs-title">⚡ Flash Sale giảm 10% toàn bộ sản phẩm</h3><p id="fs-sub">Mỗi ngày 11:30–14:30 và 19:00–22:00 (giờ Việt Nam)</p></div>
-      <div class="cd" role="timer"><b id="fs-lbl" style="font-size:13px;font-weight:600;margin-right:4px">Kết thúc sau</b><span><b id="fs-h">00</b><small>giờ</small></span><span><b id="fs-m">00</b><small>phút</small></span><span><b id="fs-s">00</b><small>giây</small></span></div>
-    </div>
     <div class="head">
       <div><div class="eyebrow">Bảng giá</div><h2>Sản phẩm</h2></div>
       <div class="chips" id="chips" role="group" aria-label="Lọc theo nhóm"></div>
@@ -286,84 +347,6 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
     <div class="grid" id="grid"></div>
     <p class="dm-links" style="margin:16px 0 0;font-size:14px">Xem theo danh mục: <a href="qua-tet/">Quà Tết yến sào 2027</a> · <a href="yen-tinh-che/">Yến tinh chế, yến rút lông</a> · <a href="yen-tho/">Tổ yến thô</a> · <a href="nuoc-yen/">Nước yến chưng sẵn</a> · <a href="dong-trung-ha-thao/">Đông trùng hạ thảo</a> · <a href="tao-do/">Táo đỏ Tân Cương</a> · <a href="nha-dam/">Thạch nha đam</a> · <a href="my-pham/">Mỹ phẩm</a></p>
     <p style="margin:16px 0 0;font-size:13px;color:var(--muted)">Khuyến mãi: một số sản phẩm có quà tặng kèm như ghi trên ảnh sản phẩm, ví dụ tặng 500gr táo đỏ khi mua yến sào, tặng 200gr táo đỏ khi mua nấm đông trùng hạ thảo. Áp dụng đến khi hết quà tặng; nhân viên xác nhận quà tặng khi gọi lại xác nhận đơn.</p>
-  </div>
-</section>
-
-<section class="gift" id="qua-tet">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">Tết Đinh Mùi 2027</div>
-      <h2>Quà Tết yến sào Việt Cường Nhân</h2>
-      <ul>
-        <li>59 mẫu giỏ, hộp, khay, túi quà, giá từ 260.000đ đến 5.202.000đ</li>
-        <li>Yến sào, đông trùng hạ thảo, táo đỏ, hồng sâm, yến hũ chưng sẵn</li>
-        <li>Nhận làm theo ngân sách, đặt số lượng cho doanh nghiệp có chiết khấu riêng</li>
-        <li>Nhận đặt quà Tết doanh nghiệp từ 22/10/2026, đặt sớm để giữ mẫu và lịch giao</li>
-      </ul>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px"><button class="btn btn-line" type="button" data-showcat="Quà Tết">Xem 59 mẫu, lọc theo ngân sách</button><a class="btn btn-gold" href="#doanh-nghiep">Báo giá cho doanh nghiệp</a><a class="btn btn-line" href="qua-tet/">Trang Quà Tết 2027</a></div>
-    </div>
-    <div class="box">
-      <div class="eyebrow">Gợi ý · QTH24</div>
-      <h3 style="font-size:26px">Hộp Quà Yến Sào Cao Cấp</h3>
-      <p style="margin:0;color:var(--muted)">Yến tinh chế 100gr (hộp bát giác), đường phèn, táo đỏ, hộp quà đỏ khay vàng kèm túi</p>
-      <div class="price" id="feat-price" data-id="338"><b>2.798.000đ</b></div>
-      <button class="btn btn-gold" type="button" data-pick="338">Đặt hộp quà này</button>
-    </div>
-  </div>
-</section>
-
-<section class="b2b" id="doanh-nghiep">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow" style="color:var(--gold-soft)">Quà Tết doanh nghiệp 2027 · Nhận đặt từ 22/10/2026</div>
-      <h2>Đặt quà Tết số lượng cho công ty</h2>
-      <ul>
-        <li>Chọn trong 59 mẫu giỏ, hộp, khay quà, hoặc gửi ngân sách để Phát Lộc gợi ý mẫu phù hợp.</li>
-        <li>Chiết khấu riêng theo số lượng, báo giá trong ngày làm việc.</li>
-        <li>Xuất hóa đơn điện tử theo thông tin công ty.</li>
-        <li>Giao tận nơi tại TP.HCM và khu vực lân cận, gửi đi các tỉnh qua đơn vị vận chuyển.</li>
-        <li>Thanh toán chuyển khoản vào tài khoản đứng tên công ty Phát Lộc.</li>
-      </ul>
-      <div class="tiers"><div><b>Từ 20 hộp</b>chiết khấu</div><div><b>Từ 50 hộp</b>giá tốt hơn</div><div><b>Từ 100 hộp</b>giá riêng</div></div>
-      <p style="font-size:13px;opacity:.8;margin-top:12px">Mức chiết khấu cụ thể báo theo mẫu và số lượng. <b>Bắt đầu nhận đặt từ 22/10/2026</b> – đặt sớm để giữ mẫu và lịch giao.</p>
-    </div>
-    <form class="f" id="b2b-form" novalidate>
-      <h3 style="font-size:24px;color:var(--emerald-2);margin:0 0 6px">Nhận báo giá</h3>
-      <label for="b-company">Tên công ty<input id="b-company" required autocomplete="organization"></label>
-      <div class="row">
-        <label for="b-name">Người liên hệ<input id="b-name" required autocomplete="name"></label>
-        <label for="b-phone">Số điện thoại<input id="b-phone" required inputmode="tel" autocomplete="tel"></label>
-      </div>
-      <div class="row">
-        <label for="b-qty">Số lượng hộp<input id="b-qty" type="number" min="1" value="20"></label>
-        <label for="b-budget">Ngân sách mỗi hộp<select id="b-budget"><option>Dưới 500 nghìn</option><option selected>500 nghìn – 1 triệu</option><option>1 – 2 triệu</option><option>Trên 2 triệu</option><option>Chưa xác định</option></select></label>
-      </div>
-      <label for="b-date">Ngày cần nhận hàng<input id="b-date" type="date"></label>
-      <label for="b-note">Mẫu quan tâm, yêu cầu khác<textarea id="b-note" rows="2" placeholder="Ví dụ: QTH24, cần thiệp chúc Tết, giao 2 địa chỉ"></textarea></label>
-      <input id="b-web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
-      <p id="b-err" style="color:var(--sale);margin:0;font-size:13px" hidden>Vui lòng điền tên công ty, người liên hệ và số điện thoại.</p>
-      <button class="btn btn-gold" type="submit" id="b-btn">Gửi yêu cầu báo giá</button>
-      <p id="b-ok" style="color:var(--emerald-2);margin:0;font-weight:600" hidden></p>
-      <a class="btn btn-zalo" href="https://zalo.me/0768759419" target="_blank" rel="noopener" style="justify-self:start">Hoặc nhắn Zalo 0768 759 419</a>
-    </form>
-  </div>
-</section>
-
-<section class="block" id="cam-ket">
-  <div class="wrap">
-    <div class="head"><div><div class="eyebrow">Vì sao chọn Phát Lộc</div><h2>Cam kết</h2></div></div>
-    <div class="trust four">
-      <div><h3>Đủ giấy tờ</h3><p>Sản phẩm có bản tự công bố, phiếu kiểm nghiệm và chứng nhận ISO 22000, HACCP, GMP. <a href="#ho-so">Xem hồ sơ</a></p></div>
-      <div><h3>Hàng chính hãng</h3><p>Phân phối theo ủy quyền của Công ty TNHH TM-DV Việt Cường Nhân, chủ thương hiệu Yến sào Việt Cường Nhân. <a href="#ho-so">Xem giấy ủy quyền</a></p></div>
-      <div><h3>Tư vấn cách dùng</h3><p>Hướng dẫn ngâm, chưng và bảo quản cho từng loại yến trước khi giao hàng.</p></div>
-      <div><h3>Kiểm hàng, đổi trả</h3><p>Được kiểm hàng trước khi thanh toán. Giao sai, hư hỏng, hết hạn: đổi mới hoặc hoàn tiền, Phát Lộc chịu phí. <a href="chinh-sach/doi-tra.html">Xem chính sách</a></p></div>
-    </div>
-    <div class="docs" id="ho-so">
-      <h3>Hồ sơ pháp lý &amp; chứng nhận</h3>
-      <p style="margin:0;color:var(--muted)">Yến sào, đông trùng hạ thảo sản xuất tại nhà máy Việt Cường Nhân (511/9 Bùi Thị Xuân, Tân Đông Hiệp) đạt ISO 22000:2018, HACCP, GMP. Bấm vào từng giấy tờ để xem đủ các trang.</p>
-      <div class="grid-d"><button type="button" data-doc="cn"><img src="ho-so/chung-nhan-1.jpg" alt="ISO 22000 &amp; GMP nhà máy" loading="lazy"><span>ISO 22000 &amp; GMP nhà máy</span></button><button type="button" data-doc="cn2"><img src="ho-so/chung-nhan-3.jpg" alt="Chứng nhận HACCP" loading="lazy"><span>Chứng nhận HACCP</span></button><button type="button" data-doc="kn"><img src="ho-so/chung-nhan-2.jpg" alt="Kiểm nghiệm Eurofins" loading="lazy"><span>Kiểm nghiệm Eurofins</span></button><button type="button" data-doc="uq"><img src="ho-so/trang/uy-quyen-1.jpg" alt="Giấy ủy quyền phân phối Việt Cường Nhân" loading="lazy"><span>Giấy ủy quyền phân phối Việt Cường Nhân</span></button><button type="button" data-doc="gp"><img src="ho-so/giay-phep-kinh-doanh.jpg" alt="Giấy phép kinh doanh Phát Lộc" loading="lazy"><span>Giấy phép kinh doanh Phát Lộc</span></button><button type="button" data-doc="yt"><img src="ho-so/trang/yen-tho-1.jpg" alt="Tự công bố: Tổ yến thô" loading="lazy"><span>Tự công bố: Tổ yến thô</span></button><button type="button" data-doc="tc"><img src="ho-so/trang/yen-tinh-che-1.jpg" alt="Tự công bố: Yến tinh chế" loading="lazy"><span>Tự công bố: Yến tinh chế</span></button><button type="button" data-doc="dt"><img src="ho-so/trang/dong-trung-1.jpg" alt="Tự công bố: Đông trùng hạ thảo" loading="lazy"><span>Tự công bố: Đông trùng hạ thảo</span></button></div>
-      <details><summary>Phiếu công bố mỹ phẩm (17 sản phẩm) và chứng nhận xuất xứ</summary><ul><li><a href="ho-so/my-pham/sua-rua-mat.pdf" target="_blank" rel="noopener">Sữa rửa mặt T' Beauty</a></li><li><a href="ho-so/my-pham/nuoc-tay-trang.pdf" target="_blank" rel="noopener">Nước tẩy trang T' Beauty</a></li><li><a href="ho-so/my-pham/toner.pdf" target="_blank" rel="noopener">Toner T' Beauty</a></li><li><a href="ho-so/my-pham/serum.pdf" target="_blank" rel="noopener">Serum T' Beauty</a></li><li><a href="ho-so/my-pham/kem-duong.pdf" target="_blank" rel="noopener">Kem dưỡng T' Beauty</a></li><li><a href="ho-so/my-pham/tay-da-chet.pdf" target="_blank" rel="noopener">Gel tẩy da chết T' Beauty</a></li><li><a href="ho-so/my-pham/kem-chong-nang.pdf" target="_blank" rel="noopener">Kem chống nắng T' Beauty</a></li><li><a href="ho-so/my-pham/mat-na-cap-am.pdf" target="_blank" rel="noopener">Mặt nạ cấp ẩm T' Beauty</a></li><li><a href="ho-so/my-pham/mat-na-san-chac.pdf" target="_blank" rel="noopener">Mặt nạ săn chắc T' Beauty</a></li><li><a href="ho-so/my-pham/mat-na-phuc-hoi.pdf" target="_blank" rel="noopener">Mặt nạ phục hồi T' Beauty</a></li><li><a href="ho-so/my-pham/mat-na-diu-da.pdf" target="_blank" rel="noopener">Mặt nạ dịu da T' Beauty</a></li><li><a href="ho-so/my-pham/mat-na-hong-nang-tone.pdf" target="_blank" rel="noopener">Mặt nạ hồng nâng tone</a></li><li><a href="ho-so/my-pham/mat-na-nau-nang-tone.pdf" target="_blank" rel="noopener">Mặt nạ nâu nâng tone</a></li><li><a href="ho-so/my-pham/mat-na-trang-nang-tone.pdf" target="_blank" rel="noopener">Mặt nạ trắng nâng tone</a></li><li><a href="ho-so/my-pham/dau-goi-nhan-sam.pdf" target="_blank" rel="noopener">Dầu gội nhân sâm Hàn Quốc</a></li><li><a href="ho-so/my-pham/tinh-chat-duong-toc-nhan-sam.pdf" target="_blank" rel="noopener">Tinh chất dưỡng tóc nhân sâm</a></li><li><a href="ho-so/my-pham/kem-u-toc-nhan-sam.pdf" target="_blank" rel="noopener">Kem ủ tóc nhân sâm</a></li><li><a href="ho-so/my-pham/chung-nhan-xuat-xu-tbeauty.pdf" target="_blank" rel="noopener">Chứng nhận xuất xứ (C/O) T' Beauty</a></li><li><a href="ho-so/my-pham/chung-nhan-xuat-xu-eco.pdf" target="_blank" rel="noopener">Chứng nhận xuất xứ (C/O) Hàn Quốc</a></li></ul></details>
-    </div>
   </div>
 </section>
 
@@ -441,6 +424,8 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
 </dialog>
 
 <script>
+// Liên kết cũ tới các khối đã chuyển sang trang riêng (#qua-tet, #doanh-nghiep, #cam-ket, #ho-so).
+(() => { const m = { "#qua-tet": "qua-tet/", "#doanh-nghiep": "doanh-nghiep/", "#cam-ket": "chung-nhan/", "#ho-so": "chung-nhan/#ho-so" }; if (m[location.hash]) location.replace(m[location.hash]); })();
 // Bảng giá theo catalog Việt Cường Nhân (11/9). Dữ liệu gốc và ảnh: catalog/products.json trong thư mục dự án.
 const P = [
   [101,"Tổ Yến Thô","Yến Thô Tổ AB Ít Lông","100gr",2150000],
@@ -854,8 +839,8 @@ function fsTick() {
   document.getElementById("flash").classList.toggle("off", !st.on);
   document.getElementById("fs-lbl").textContent = st.on ? "Kết thúc sau" : "Bắt đầu sau";
   document.getElementById("fs-title").textContent = st.on ? `⚡ Flash Sale đang diễn ra: giảm ${FS_PCT}% toàn bộ sản phẩm` : `⚡ Flash Sale giảm ${FS_PCT}% toàn bộ sản phẩm`;
-  const pill = document.getElementById("fs-pill"); pill.classList.toggle("on", st.on); pill.textContent = `⚡ Flash Sale -${FS_PCT}% · ${hh}:${mm}:${ss}`;
-  const fp = document.getElementById("feat-price"), p = P.find(x => String(x[0]) === fp.dataset.id); if (p) fp.innerHTML = priceHtml(p);
+  const pill = document.getElementById("fs-pill"); if (pill) pill.classList.toggle("on", st.on), pill.textContent = `⚡ Flash Sale -${FS_PCT}% · ${hh}:${mm}:${ss}`;
+  const fp = document.getElementById("feat-price"), p = fp && P.find(x => String(x[0]) === fp.dataset.id); if (p) fp.innerHTML = priceHtml(p);
 }
 fsTick(); setInterval(fsTick, 1000);
 openFromHash();
@@ -907,32 +892,11 @@ Ghi chú: ${v("o-note") || "không"}`;
   }
   btn.disabled = false;
 });
-// Form báo giá quà Tết doanh nghiệp: gửi cùng địa chỉ nhận đơn, vào Pancake như một đơn chờ báo giá.
-document.getElementById("b2b-form").addEventListener("submit", async e => {
-  e.preventDefault();
-  const v = id => document.getElementById(id).value.trim();
-  const ok = v("b-company") && v("b-name") && v("b-phone");
-  document.getElementById("b-err").hidden = !!ok;
-  if (!ok) return;
-  const msg = document.getElementById("b-ok"), btn = document.getElementById("b-btn");
-  btn.disabled = true; msg.hidden = false; msg.textContent = "Đang gửi...";
-  const note = `BÁO GIÁ QUÀ TẾT DOANH NGHIỆP\nCông ty: ${v("b-company")}\nSố lượng: ${v("b-qty")} hộp\nNgân sách/hộp: ${v("b-budget")}\nNgày nhận: ${v("b-date") || "chưa chọn"}\nYêu cầu: ${v("b-note") || "không"}`;
-  try {
-    await fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", body: new URLSearchParams({
-      name: v("b-name") + " - " + v("b-company"), phone: v("b-phone"), addr: v("b-company") + " (báo giá doanh nghiệp, chưa có địa chỉ giao)",
-      product: "Báo giá quà Tết doanh nghiệp", spec: v("b-budget"), qty: v("b-qty") || "1", total: 0, note, website: v("b-web") }) });
-    try { fbq("track", "Lead", { content_name: "Báo giá quà Tết doanh nghiệp" }); } catch {}
-    try { gtag("event", "generate_lead", { form: "bao_gia_doanh_nghiep", quantity: +v("b-qty") || 0 }); } catch {}
-    msg.textContent = "Đã nhận yêu cầu. Phát Lộc sẽ gọi lại báo giá trong ngày làm việc.";
-    e.target.reset();
-  } catch { msg.textContent = "Chưa gửi được. Anh/chị vui lòng nhắn Zalo 0768 759 419."; }
-  btn.disabled = false;
-});
 // Đo lượt bấm Zalo / gọi điện trong Google Analytics.
 document.addEventListener("click", e => { const a = e.target.closest('a[href*="zalo.me"], a[href^="tel:"]'); if (a) { try { gtag("event", a.href.includes("zalo") ? "click_zalo" : "click_call"); } catch {} try { fbq("track", "Contact"); } catch {} } });
 // Hồ sơ pháp lý: mỗi giấy tờ mở trong khung xem ảnh, đủ các trang.
 const pages = (n, c, t) => Array.from({length: c}, (_, i) => [`ho-so/trang/${n}-${i + 1}.jpg`, `${t} (trang ${i + 1}/${c})`]);
-const DOCS = { cn: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn2: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], kn: [["ho-so/chung-nhan-2.jpg", "Kết quả thử nghiệm Eurofins Sắc Ký Hải Đăng"]],
+const DOCS = { haccp: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], iso: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], gmp: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn2: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], kn: [["ho-so/chung-nhan-2.jpg", "Kết quả thử nghiệm Eurofins Sắc Ký Hải Đăng"]],
   uq: pages("uy-quyen", 3, "Giấy ủy quyền phân phối và bán hàng Việt Cường Nhân – Phát Lộc"),
   gp: [["ho-so/giay-phep-kinh-doanh.jpg", "Giấy chứng nhận đăng ký doanh nghiệp Phát Lộc Natural Food"]],
   yt: pages("yen-tho", 5, "Bản tự công bố Tổ yến thô"), tc: pages("yen-tinh-che", 5, "Bản tự công bố Tổ yến tinh chế"), dt: pages("dong-trung", 7, "Bản tự công bố Nấm đông trùng hạ thảo") };

@@ -39,11 +39,11 @@ b1 = f'''  <p class="lede">Với ngân sách dưới 500.000đ mỗi phần, qu�
     <li><b>Hóa đơn:</b> Phát Lộc xuất hóa đơn điện tử, chiết khấu từ 20 phần.</li>
     <li><b>Giao hàng:</b> giao một lần tại công ty hoặc theo danh sách địa chỉ.</li>
   </ul>
-  <p>Gửi yêu cầu báo giá tại <a href="../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>. Xem thêm {L("qua-tet-doanh-nghiep-theo-ngan-sach", "Chọn quà Tết doanh nghiệp 2027 theo ngân sách")}.</p>'''
+  <p>Gửi yêu cầu báo giá tại <a href="../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>. Xem thêm {L("qua-tet-doanh-nghiep-theo-ngan-sach", "Chọn quà Tết doanh nghiệp 2027 theo ngân sách")}.</p>'''
 page('qua-tet-cho-nhan-vien-duoi-500k',
      'Gợi ý quà Tết 2027 cho nhân viên dưới 500.000đ: yến chưng sẵn, hộp quà, túi quà yến sào từ 230.000đ, kèm kinh nghiệm đặt số lượng, hóa đơn, giao hàng.',
      'Quà Tết cho nhân viên dưới 500.000đ – 11 gợi ý yến sào', 'Quà Tết', 'Quà Tết cho nhân viên dưới 500.000đ', b1,
-     '    <a class="btn btn-gold" href="../#doanh-nghiep">Nhận báo giá số lượng</a>',
+     '    <a class="btn btn-gold" href="../doanh-nghiep/">Nhận báo giá số lượng</a>',
      faq=[("Đặt quà Tết cho nhân viên trước bao lâu?", "Nên đặt trước 3–4 tuần với đơn từ 50 phần để kịp đóng gói và giao trước kỳ nghỉ Tết."),
           ("Có xuất hóa đơn điện tử không?", "Có, Phát Lộc xuất hóa đơn điện tử theo thông tin công ty."),
           ("Đặt bao nhiêu phần thì có chiết khấu?", "Từ 20 phần, mức chiết khấu tăng theo số lượng; gửi yêu cầu để nhận báo giá trong ngày.")])
@@ -66,7 +66,7 @@ b2 = f'''  <p class="lede">Quà Tết cho đối tác thể hiện sự trân tr
     <li><b>Thiệp và thương hiệu:</b> thiệp ghi tên công ty, lời cảm ơn cụ thể về năm hợp tác.</li>
     <li><b>Giao tận nơi:</b> với đối tác ở xa, giao thẳng đến văn phòng hoặc nhà riêng theo danh sách.</li>
   </ul>
-  <p>Xem đủ mẫu tại <a href="../qua-tet/">Quà Tết yến sào 2027</a> hoặc gửi danh sách để nhận báo giá tại <a href="../#doanh-nghiep">Quà Tết doanh nghiệp</a>.</p>'''
+  <p>Xem đủ mẫu tại <a href="../qua-tet/">Quà Tết yến sào 2027</a> hoặc gửi danh sách để nhận báo giá tại <a href="../doanh-nghiep/">Quà Tết doanh nghiệp</a>.</p>'''
 page('qua-tet-cho-doi-tac',
      'Cách chọn quà Tết cho đối tác theo mức độ quan hệ, gợi ý giỏ quà, hộp quà yến sào từ 1 đến 5 triệu và lưu ý khi biếu: thời điểm, người trao, thiệp, quy định nhận quà.',
      'Quà Tết cho đối tác: cách chọn và lưu ý khi biếu', 'Quà Tết', 'Quà Tết cho đối tác: cách chọn và lưu ý khi biếu', b2,
@@ -135,7 +135,7 @@ b4 = f'''  <p class="lede">Yến sào là thực phẩm dễ ăn, nhiều gia đ
   </ul>
 
   <h2>Chọn yến an toàn cho gia đình</h2>
-  <p>Ưu tiên yến có bản tự công bố, phiếu kiểm nghiệm và chứng nhận nhà máy. Xem {L("phan-biet-yen-sao-that-gia", "Cách phân biệt yến sào thật – giả")} và hồ sơ yến Việt Cường Nhân tại <a href="../#ho-so">Hồ sơ pháp lý</a>.</p>
+  <p>Ưu tiên yến có bản tự công bố, phiếu kiểm nghiệm và chứng nhận nhà máy. Xem {L("phan-biet-yen-sao-that-gia", "Cách phân biệt yến sào thật – giả")} và hồ sơ yến Việt Cường Nhân tại <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.</p>
 {NOTE}'''
 page('tre-em-ba-bau-nguoi-gia-an-yen',
      'Trẻ em, bà bầu, người lớn tuổi ăn yến sào thế nào: thời điểm bắt đầu, lượng dùng tham khảo, cách chế biến và lưu ý an toàn. Nên hỏi bác sĩ với trường hợp cụ thể.',
@@ -150,7 +150,7 @@ QA = [
   ("Đặt hàng", [
     ("Đặt hàng bằng cách nào?", 'Điền form <a href="../#dat-hang">Đặt hàng</a> trên website, nhắn Zalo hoặc gọi 0768 759 419, hoặc nhắn Fanpage Phát Lộc Natural Food. Nhân viên gọi xác nhận đơn trước khi giao.'),
     ("Có mua tại cửa hàng được không?", "Có, tại 511/9 Bùi Thị Xuân, Phường Tân Đông Hiệp, TP. Hồ Chí Minh, mở cửa 7:30–21:00 mỗi ngày."),
-    ("Đặt quà Tết số lượng cho công ty thế nào?", 'Gửi số lượng, ngân sách, ngày cần hàng tại <a href="../#doanh-nghiep">mục Quà Tết doanh nghiệp</a>; Phát Lộc báo giá trong ngày, chiết khấu từ 20 phần.')]),
+    ("Đặt quà Tết số lượng cho công ty thế nào?", 'Gửi số lượng, ngân sách, ngày cần hàng tại <a href="../doanh-nghiep/">mục Quà Tết doanh nghiệp</a>; Phát Lộc báo giá trong ngày, chiết khấu từ 20 phần.')]),
   ("Giao hàng", [
     ("Giao hàng mất bao lâu?", "TP. Hồ Chí Minh và lân cận 1–2 ngày làm việc; tỉnh, thành khác 2–5 ngày làm việc. Dịp lễ, Tết có thể lâu hơn."),
     ("Phí giao hàng bao nhiêu?", "Tính theo khu vực và khối lượng đơn, nhân viên báo khi gọi xác nhận, trước khi giao."),
@@ -162,7 +162,7 @@ QA = [
     ("Trường hợp nào được đổi trả?", 'Giao sai sản phẩm, thiếu hàng, hư hỏng do vận chuyển hoặc lỗi nhà sản xuất, hết hạn sử dụng. Báo trong 03 ngày kể từ khi nhận, kèm hình ảnh hoặc video mở hàng. Xem <a href="../chinh-sach/doi-tra.html">Chính sách đổi trả</a>.'),
     ("Hoàn tiền mất bao lâu?", "Trong 07 ngày làm việc kể từ khi Phát Lộc nhận lại hàng, chuyển khoản vào tài khoản khách cung cấp.")]),
   ("Sản phẩm và giấy tờ", [
-    ("Yến sào của Phát Lộc có nguồn gốc từ đâu?", 'Yến sào Việt Cường Nhân, Phát Lộc phân phối theo giấy ủy quyền. Nhà máy đạt ISO 22000, HACCP, GMP; xem <a href="../#ho-so">Hồ sơ pháp lý</a>.'),
+    ("Yến sào của Phát Lộc có nguồn gốc từ đâu?", 'Yến sào Việt Cường Nhân, Phát Lộc phân phối theo giấy ủy quyền. Nhà máy đạt ISO 22000, HACCP, GMP; xem <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.'),
     ("Sản phẩm có bản tự công bố và kiểm nghiệm không?", "Có. Bản tự công bố, phiếu kiểm nghiệm Eurofins và phiếu công bố mỹ phẩm được đăng công khai trên website."),
     ("Bảo quản yến sào thế nào?", "Yến khô để nơi khô ráo, đậy kín, mùa ẩm để ngăn mát tủ lạnh. Yến đã ngâm nở nên chưng ngay; nước yến chưng sẵn đã mở nắp dùng hết trong ngày.")])
 ]

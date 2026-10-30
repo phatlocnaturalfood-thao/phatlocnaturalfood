@@ -21,7 +21,7 @@
 <link rel="icon" href="../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="kt.css">
 </head>
 <body>
@@ -30,15 +30,16 @@
   <div class="wrap">
     <a class="brand" href="../index.html" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
-      <a href="../index.html#san-pham">Sản phẩm</a>
-      <a href="../index.html#qua-tet">Quà Tết</a>
-      <a href="./" aria-current="page">Kiến thức</a>
-      <a href="../index.html#dat-hang">Đặt hàng</a>
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="../gioi-thieu/">Giới thiệu</a>
+      <a href="../#san-pham">Sản phẩm</a>
+      <a href="../chung-nhan/">Chứng nhận &amp; Cam kết</a>
+      <a href="../kien-thuc/" aria-current="page">Kiến thức</a>
     </nav>
-    <a class="btn btn-line" href="../index.html#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="../index.html#dat-hang">Liên hệ</a>
   </div>
 </header>
 
@@ -52,7 +53,7 @@
   <ol>
     <li><b>Món chính rõ giá trị:</b> yến rút lông hoặc yến tinh chế khối lượng lớn (50–100gr), không phải chỉ toàn phụ kiện.</li>
     <li><b>Trình bày trang trọng:</b> giỏ, khay hoặc hộp chắc chắn, màu Tết, sắp xếp gọn.</li>
-    <li><b>Có giấy tờ:</b> nguồn gốc, bản tự công bố, phiếu kiểm nghiệm. Xem <a href="../#ho-so">Hồ sơ pháp lý</a> của Phát Lộc.</li>
+    <li><b>Có giấy tờ:</b> nguồn gốc, bản tự công bố, phiếu kiểm nghiệm. Xem <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a> của Phát Lộc.</li>
   </ol>
 
   <h2>Các mẫu trên 3 triệu</h2>
@@ -80,7 +81,7 @@
     <li><a href="../#sp-114"><b>Yến Rút Lông Định Hình</b></a> – 3.380.000đ. 100gr.</li>
     <li><a href="../#sp-116"><b>Yến Rút Lông Khô</b></a> – 4.169.000đ. 100gr.</li>
   </ul>
-  <p>Doanh nghiệp đặt số lượng có chiết khấu quà Tết từ 20 hộp, có hóa đơn điện tử. Xem mục <a href="../#doanh-nghiep">Quà Tết doanh nghiệp</a> hoặc nhắn Zalo 0768 759 419.</p>
+  <p>Doanh nghiệp đặt số lượng có chiết khấu quà Tết từ 20 hộp, có hóa đơn điện tử. Xem mục <a href="../doanh-nghiep/">Quà Tết doanh nghiệp</a> hoặc nhắn Zalo 0768 759 419.</p>
 
   <h2>Lưu ý khi tặng quà giá trị cao</h2>
   <ul>

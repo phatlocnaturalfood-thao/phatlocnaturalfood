@@ -21,7 +21,7 @@
 <link rel="icon" href="../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="kt.css">
 </head>
 <body>
@@ -30,15 +30,16 @@
   <div class="wrap">
     <a class="brand" href="../index.html" aria-label="Phát Lộc Natural Food">
       <span class="mark"><img src="../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
-      <a href="../index.html#san-pham">Sản phẩm</a>
-      <a href="../index.html#qua-tet">Quà Tết</a>
-      <a href="./" aria-current="page">Kiến thức</a>
-      <a href="../index.html#dat-hang">Đặt hàng</a>
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="../gioi-thieu/">Giới thiệu</a>
+      <a href="../#san-pham">Sản phẩm</a>
+      <a href="../chung-nhan/">Chứng nhận &amp; Cam kết</a>
+      <a href="../kien-thuc/" aria-current="page">Kiến thức</a>
     </nav>
-    <a class="btn btn-line" href="../index.html#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="../index.html#dat-hang">Liên hệ</a>
   </div>
 </header>
 
@@ -102,7 +103,7 @@
   <p>Cách tự nhận biết yến thật, giả khi nhận hàng xem thêm ở bài <a href="phan-biet-yen-sao-that-gia.html">phân biệt yến sào thật giả</a>.</p>
 
   <h2>Yến sào tại Phát Lộc có những giấy tờ gì</h2>
-  <p>Phát Lộc Natural Food phân phối yến sào Việt Cường Nhân theo giấy ủy quyền. Nhà máy Việt Cường Nhân đạt ISO 22000:2018, HACCP, GMP; sản phẩm có bản tự công bố và phiếu kiểm nghiệm Eurofins. Tất cả đăng công khai ở mục <a href="../#ho-so">Hồ sơ pháp lý</a> trên trang chủ, bạn bấm vào để xem đủ các trang. Tìm hiểu thêm về thương hiệu ở bài <a href="yen-sao-viet-cuong-nhan.html">yến sào Việt Cường Nhân là của công ty nào</a>.</p>
+  <p>Phát Lộc Natural Food phân phối yến sào Việt Cường Nhân theo giấy ủy quyền. Nhà máy Việt Cường Nhân đạt ISO 22000:2018, HACCP, GMP; sản phẩm có bản tự công bố và phiếu kiểm nghiệm Eurofins. Tất cả đăng công khai ở mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a> trên trang chủ, bạn bấm vào để xem đủ các trang. Tìm hiểu thêm về thương hiệu ở bài <a href="yen-sao-viet-cuong-nhan.html">yến sào Việt Cường Nhân là của công ty nào</a>.</p>
   <p>Một vài sản phẩm làm tại nhà máy này:</p>
   <ul>
     <li><a href="../san-pham/yen-tinh-che-1-lop-soi-18-20-tai-100gr/"><b>Yến Tinh Chế 1 Lớp Sợi 18-20 Tai</b></a> – 2.390.000đ. 100gr. Đã nhặt sạch lông.</li>
@@ -117,9 +118,9 @@
   <h3>ISO 22000 và HACCP khác nhau thế nào?</h3>
   <p>ISO 22000 là hệ thống quản lý an toàn thực phẩm của cả tổ chức; HACCP tập trung phân tích mối nguy và kiểm soát các điểm tới hạn trong quy trình. ISO 22000 đã bao gồm các nguyên tắc HACCP.</p>
   <h3>Xem giấy chứng nhận của yến Việt Cường Nhân ở đâu?</h3>
-  <p>Bạn xem bản scan chứng nhận ISO 22000:2018, HACCP, GMP, phiếu kiểm nghiệm Eurofins và bản tự công bố ở mục <a href="../#ho-so">Hồ sơ pháp lý</a> trên trang chủ.</p>
+  <p>Bạn xem bản scan chứng nhận ISO 22000:2018, HACCP, GMP, phiếu kiểm nghiệm Eurofins và bản tự công bố ở mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a> trên trang chủ.</p>
   <div class="cta">
-    <a class="btn btn-gold" href="../#ho-so">Xem hồ sơ pháp lý</a>
+    <a class="btn btn-gold" href="../chung-nhan/#ho-so">Xem hồ sơ pháp lý</a>
     <a class="btn btn-line" href="../yen-tinh-che/">Xem yến tinh chế</a>
     <a class="btn btn-line" href="./">Xem bài khác</a>
   </div>

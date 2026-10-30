@@ -1,0 +1,36 @@
+<section class="b2b" id="doanh-nghiep">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--gold-soft)">Quà Tết doanh nghiệp 2027 · Nhận đặt từ 22/10/2026</div>
+      <h1 style="font-size:clamp(30px,5vw,44px);margin:0 0 14px">Đặt quà Tết số lượng cho công ty</h1>
+      <ul>
+        <li>Chọn trong 59 mẫu giỏ, hộp, khay quà, hoặc gửi ngân sách để Phát Lộc gợi ý mẫu phù hợp.</li>
+        <li>Chiết khấu riêng theo số lượng, báo giá trong ngày làm việc.</li>
+        <li>Xuất hóa đơn điện tử theo thông tin công ty.</li>
+        <li>Giao tận nơi tại TP.HCM và khu vực lân cận, gửi đi các tỉnh qua đơn vị vận chuyển.</li>
+        <li>Thanh toán chuyển khoản vào tài khoản đứng tên công ty Phát Lộc.</li>
+      </ul>
+      <div class="tiers"><div><b>Từ 20 hộp</b>chiết khấu</div><div><b>Từ 50 hộp</b>giá tốt hơn</div><div><b>Từ 100 hộp</b>giá riêng</div></div>
+      <p style="font-size:13px;opacity:.8;margin-top:12px">Mức chiết khấu cụ thể báo theo mẫu và số lượng. <b>Bắt đầu nhận đặt từ 22/10/2026</b> – đặt sớm để giữ mẫu và lịch giao.</p>
+    </div>
+    <form class="f" id="b2b-form" novalidate>
+      <h3 style="font-size:24px;color:var(--emerald-2);margin:0 0 6px">Nhận báo giá</h3>
+      <label for="b-company">Tên công ty<input id="b-company" required autocomplete="organization"></label>
+      <div class="row">
+        <label for="b-name">Người liên hệ<input id="b-name" required autocomplete="name"></label>
+        <label for="b-phone">Số điện thoại<input id="b-phone" required inputmode="tel" autocomplete="tel"></label>
+      </div>
+      <div class="row">
+        <label for="b-qty">Số lượng hộp<input id="b-qty" type="number" min="1" value="20"></label>
+        <label for="b-budget">Ngân sách mỗi hộp<select id="b-budget"><option>Dưới 500 nghìn</option><option selected>500 nghìn – 1 triệu</option><option>1 – 2 triệu</option><option>Trên 2 triệu</option><option>Chưa xác định</option></select></label>
+      </div>
+      <label for="b-date">Ngày cần nhận hàng<input id="b-date" type="date"></label>
+      <label for="b-note">Mẫu quan tâm, yêu cầu khác<textarea id="b-note" rows="2" placeholder="Ví dụ: QTH24, cần thiệp chúc Tết, giao 2 địa chỉ"></textarea></label>
+      <input id="b-web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+      <p id="b-err" style="color:var(--sale);margin:0;font-size:13px" hidden>Vui lòng điền tên công ty, người liên hệ và số điện thoại.</p>
+      <button class="btn btn-gold" type="submit" id="b-btn">Gửi yêu cầu báo giá</button>
+      <p id="b-ok" style="color:var(--emerald-2);margin:0;font-weight:600" hidden></p>
+      <a class="btn btn-zalo" href="https://zalo.me/0768759419" target="_blank" rel="noopener" style="justify-self:start">Hoặc nhắn Zalo 0768 759 419</a>
+    </form>
+  </div>
+</section>
