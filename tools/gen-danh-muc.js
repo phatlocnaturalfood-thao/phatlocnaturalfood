@@ -81,7 +81,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../" aria-label="Phát Lộc Natural Food">
-      <span class="mark"><img src="../mark.jpg" alt=""></span>
+      <span class="mark"><img src="../mark-trong.png" alt=""></span>
       <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
     <nav class="menu" aria-label="Chính">

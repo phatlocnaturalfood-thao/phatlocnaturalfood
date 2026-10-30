@@ -43,7 +43,7 @@ def header(active):
     return f'''<header class="top">
   <div class="wrap">
     <a class="brand" href="../" aria-label="Phát Lộc Natural Food">
-      <span class="mark"><img src="../mark.jpg" alt=""></span>
+      <span class="mark"><img src="../mark-trong.png" alt=""></span>
       {BRAND}
     </a>
     <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){{const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}}">

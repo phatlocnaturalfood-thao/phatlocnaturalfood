@@ -94,8 +94,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--ivory) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand .mark { width: 52px; height: 52px; border-radius: 10px; background: #fff; display: grid; place-items: center; border: 1px solid var(--gold-soft); }
-.brand .mark img { width: 42px; }
+.brand .mark { width: 58px; height: 44px; display: grid; place-items: center; }
+.brand .mark img { width: 58px; height: 44px; object-fit: contain; }
 .brand b { font-family: var(--font-display); font-size: 19px; font-weight: 800; letter-spacing: .01em; color: var(--emerald-2); display: block; line-height: 1; }
 .brand small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 nav.menu { display: flex; gap: 22px; font-size: 14px; }
@@ -112,7 +112,7 @@ nav.menu a { white-space: nowrap; }
 @media (max-width: 900px) { nav.menu { display: none; } }
 @media (max-width: 430px) { .brand b { font-size: 15px; } }
 @media (max-width: 340px) { .brand b { font-size: 12px; } header .btn { padding: 7px 10px; font-size: 13px; } }
-@media (max-width: 380px) { .brand { gap: 8px; } .brand b { font-size: 14px; } header .btn { padding: 8px 12px; } .brand .mark { width: 38px; height: 38px; } .nav-t { width: 38px; height: 38px; } }
+@media (max-width: 380px) { .brand { gap: 8px; } .brand b { font-size: 14px; } header .btn { padding: 8px 12px; } .brand .mark, .brand .mark img { width: 46px; height: 35px; } .nav-t { width: 38px; height: 38px; } }
 @media (max-width: 760px) { nav.menu { display: none; } }
 /* Nút menu ☰ cho điện thoại: bấm mở danh sách mục bên dưới đầu trang. */
 .nav-t { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 0; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
@@ -303,7 +303,7 @@ dialog.lb::backdrop { background: rgba(8,16,12,.85); }
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Phát Lộc Natural Food">
-      <span class="mark"><img src="mark.jpg" alt=""></span>
+      <span class="mark"><img src="mark-trong.png" alt=""></span>
       <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
     <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
