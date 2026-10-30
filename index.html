@@ -175,13 +175,13 @@ section.block { padding-block: 56px; }
 .price s { font-size: 13px; color: var(--muted); }
 .card .btn { justify-content: center; margin-top: 8px; }
 /* product cards sit on the hero green so the whole tile reads as one green block */
-.grid .card { background: linear-gradient(160deg, #7e1218, var(--emerald)); border: 2px solid var(--logo-gold); color: var(--on-emerald); }
+.grid .card { background: linear-gradient(160deg, #063a1e, #0d5a30); border: 2px solid var(--logo-gold); color: var(--on-emerald); }
 .grid .card .cat { color: var(--logo-gold); }
 .grid .card .spec { color: color-mix(in srgb, var(--on-emerald) 72%, transparent); }
 .grid .card .price b { color: var(--logo-gold); }
 .grid .card .price s { color: color-mix(in srgb, var(--on-emerald) 60%, transparent); }
 .grid .card .btn-line { color: var(--on-emerald); box-shadow: inset 0 0 0 1px var(--logo-gold); }
-.grid .card .btn-line:hover { background: var(--logo-gold); color: #3a0a0d; }
+.grid .card .btn-line:hover { background: var(--logo-gold); color: #06301a; }
 
 /* gift band */
 .gift { background: var(--paper); border-block: 1px solid var(--line); }
@@ -758,7 +758,7 @@ const SETS = [
 const HET_HANG = [233];
 const DIR = "images/san-pham/";
 // Đổi số phiên bản khi thay ảnh catalog để trình duyệt tải ảnh mới thay vì ảnh cũ đã lưu.
-const IMG_V = "?v=21";
+const IMG_V = "?v=22";
 // Ảnh hiển thị dùng bản WebP (nhẹ hơn ~40%); bản .jpg gốc giữ lại cho dữ liệu SEO và chia sẻ.
 const webp = f => f.replace(/\.jpg$/, ".webp");
 const full = f => DIR + webp(f) + (/^(catalog|that|khung|tet)\//.test(f) ? IMG_V : "");
