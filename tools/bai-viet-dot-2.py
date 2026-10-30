@@ -74,7 +74,7 @@ b1 = f'''  <p class="lede">Mười mẫu quà Tết yến sào 2027 dưới đâ
   <ul>
     <li><b>Người nhận ít thời gian:</b> chọn mẫu có yến chưng sẵn.</li>
     <li><b>Người nhận quen chưng yến:</b> chọn mẫu có yến tinh chế hoặc rút lông.</li>
-    <li><b>Mua số lượng cho công ty:</b> từ 20 hộp có chiết khấu và hóa đơn điện tử, xem <a href="../#doanh-nghiep">Quà Tết doanh nghiệp</a>.</li>
+    <li><b>Mua số lượng cho công ty:</b> từ 20 hộp có chiết khấu và hóa đơn điện tử, xem <a href="../doanh-nghiep/">Quà Tết doanh nghiệp</a>.</li>
   </ul>
   <p>Xem đủ 59 mẫu chia theo ngân sách ở trang <a href="../qua-tet/">Quà Tết yến sào 2027</a>.</p>'''
 page('mau-gio-qua-tet-yen-sao-2027',
@@ -110,7 +110,7 @@ b2 = f'''  <p class="lede">Quà Tết biếu sếp nên trang trọng nhưng kh�
   <ul>
     <li><b>Thời điểm:</b> thường từ rằm tháng Chạp đến trước 28 Tết; tránh sát giao thừa khi người nhận bận việc gia đình.</li>
     <li><b>Bao bì:</b> giữ nguyên hộp, túi; kèm thiệp viết tay ngắn gọn.</li>
-    <li><b>Giấy tờ:</b> sản phẩm có bản tự công bố, phiếu kiểm nghiệm giúp người nhận yên tâm; xem <a href="../#ho-so">Hồ sơ pháp lý</a>.</li>
+    <li><b>Giấy tờ:</b> sản phẩm có bản tự công bố, phiếu kiểm nghiệm giúp người nhận yên tâm; xem <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.</li>
     <li><b>Giao hộ:</b> có thể giao thẳng đến nhà người nhận, người nhận được kiểm hàng.</li>
   </ul>
   <p>Xem thêm bài <a href="mau-gio-qua-tet-yen-sao-2027.html">10 mẫu giỏ quà Tết yến sào 2027 đáng chọn</a>.</p>'''
@@ -179,7 +179,7 @@ b4 = f'''  <p class="lede">Tại Phát Lộc, 100gr yến sào Việt Cường N
     <li><b>Ngày sản xuất, hạn sử dụng</b> và hướng dẫn bảo quản.</li>
     <li><b>Xuất xứ</b> và số lô nếu có.</li>
   </ul>
-  <p>Ngoài nhãn, hỏi người bán bản tự công bố sản phẩm và phiếu kiểm nghiệm. Giấy tờ yến Việt Cường Nhân do Phát Lộc phân phối được đăng tại <a href="../#ho-so">Hồ sơ pháp lý</a>.</p>
+  <p>Ngoài nhãn, hỏi người bán bản tự công bố sản phẩm và phiếu kiểm nghiệm. Giấy tờ yến Việt Cường Nhân do Phát Lộc phân phối được đăng tại <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>.</p>
   <p class="note">Giá có thể thay đổi theo lô hàng; giá mới nhất luôn hiển thị ở trang <a href="../yen-tinh-che/">Yến tinh chế</a> và <a href="../yen-tho/">Yến thô</a>.</p>'''
 page('gia-yen-sao-100gr',
      f'Giá yến sào 100gr mới nhất tại Phát Lộc: từ {vnd(rows[0][4])} đến {vnd(rows[-1][4])} cho yến thô, yến tinh chế, yến rút lông Việt Cường Nhân. Vì sao giá chênh và cách đọc nhãn yến sào.',

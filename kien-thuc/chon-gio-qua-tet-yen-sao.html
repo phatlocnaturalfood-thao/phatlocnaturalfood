@@ -21,7 +21,7 @@
 <link rel="icon" href="../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="kt.css">
 </head>
 <body>
@@ -29,16 +29,17 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../index.html" aria-label="Phát Lộc Natural Food">
-      <span class="mark"><img src="../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span class="mark"><img src="../mark-trong.png" alt=""></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
-    <nav class="menu" aria-label="Chính">
-      <a href="../index.html#san-pham">Sản phẩm</a>
-      <a href="../index.html#qua-tet">Quà Tết</a>
-      <a href="./" aria-current="page">Kiến thức</a>
-      <a href="../index.html#dat-hang">Đặt hàng</a>
+    <nav class="menu" id="menu" aria-label="Chính" onclick="if(event.target.closest('a')){const h=this.closest('header');h.classList.remove('open');h.querySelector('.nav-t').setAttribute('aria-expanded','false')}">
+      <a href="../gioi-thieu/">Giới thiệu</a>
+      <a href="../#san-pham">Sản phẩm</a>
+      <a href="../chung-nhan/">Chứng nhận &amp; Cam kết</a>
+      <a href="../kien-thuc/" aria-current="page">Kiến thức</a>
     </nav>
-    <a class="btn btn-line" href="../index.html#dat-hang">Đặt hàng</a>
+    <button type="button" class="nav-t" aria-label="Mở menu" aria-expanded="false" aria-controls="menu" onclick="const h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <a class="btn btn-line" href="../index.html#dat-hang">Liên hệ</a>
   </div>
 </header>
 
@@ -86,7 +87,7 @@
     <li>Hạn sử dụng in trên từng món, nhất là yến hũ.</li>
     <li>Có hóa đơn nếu bạn mua cho công ty.</li>
   </ol>
-  <p>Quà Tết tại Phát Lộc Natural Food dùng yến sào Việt Cường Nhân, cửa hàng phân phối theo giấy ủy quyền. Nhà máy đạt ISO 22000, HACCP, GMP; bản tự công bố và phiếu kiểm nghiệm Eurofins để công khai ở mục <a href="../#ho-so">Hồ sơ pháp lý</a>. Cách tự nhận biết yến thật, bạn xem thêm bài <a href="phan-biet-yen-sao-that-gia.html">phân biệt yến sào thật giả</a>.</p>
+  <p>Quà Tết tại Phát Lộc Natural Food dùng yến sào Việt Cường Nhân, cửa hàng phân phối theo giấy ủy quyền. Nhà máy đạt ISO 22000, HACCP, GMP; bản tự công bố và phiếu kiểm nghiệm Eurofins để công khai ở mục <a href="../chung-nhan/#ho-so">Hồ sơ pháp lý</a>. Cách tự nhận biết yến thật, bạn xem thêm bài <a href="phan-biet-yen-sao-that-gia.html">phân biệt yến sào thật giả</a>.</p>
 
   <h2>5. Hỏi chính sách giao hàng và kiểm hàng</h2>
   <p>Giỏ quà thường có nhiều món dễ vỡ, nên chính sách giao nhận quan trọng không kém giá. Tại cửa hàng:</p>
@@ -94,7 +95,7 @@
     <li>Giao toàn quốc: TP.HCM 1–2 ngày, tỉnh 2–5 ngày.</li>
     <li>Được kiểm hàng khi nhận, thanh toán COD hoặc chuyển khoản.</li>
     <li>Có hóa đơn điện tử; đổi trả trong 03 ngày theo chính sách.</li>
-    <li>Công ty mua từ 20 hộp có chiết khấu quà Tết doanh nghiệp, xem mục <a href="../#doanh-nghiep">Quà Tết doanh nghiệp</a>.</li>
+    <li>Công ty mua từ 20 hộp có chiết khấu quà Tết doanh nghiệp, xem mục <a href="../doanh-nghiep/">Quà Tết doanh nghiệp</a>.</li>
   </ul>
   <p>Gần Tết, đơn hàng dồn nhiều, bạn nên đặt sớm để chủ động thời gian tặng.</p>
 

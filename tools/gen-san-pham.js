@@ -60,7 +60,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
 <link rel="icon" href="../../mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../../kien-thuc/kt.css">
 <link rel="stylesheet" href="../../danh-muc.css">
 </head>
@@ -69,8 +69,8 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../../" aria-label="Phát Lộc Natural Food">
-      <span class="mark"><img src="../../mark.jpg" alt=""></span>
-      <span><b>PHÁT LỘC</b><small>Natural Food</small></span>
+      <span class="mark"><img src="../../mark-trong.png" alt=""></span>
+      <span><b>PHÁT LỘC</b><small>Natural Food · Tinh hoa tạo vị</small></span>
     </a>
     <nav class="menu" aria-label="Chính">
       <a href="../../qua-tet/">Quà Tết 2027</a>

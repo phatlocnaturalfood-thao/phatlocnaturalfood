@@ -1,0 +1,6 @@
+// Hồ sơ pháp lý: mỗi giấy tờ mở trong khung xem ảnh, đủ các trang.
+const pages = (n, c, t) => Array.from({length: c}, (_, i) => [`ho-so/trang/${n}-${i + 1}.jpg`, `${t} (trang ${i + 1}/${c})`]);
+const DOCS = { haccp: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], iso: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], gmp: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn: [["ho-so/chung-nhan-1.jpg", "Chứng nhận ISO 22000:2018 và GMP"]], cn2: [["ho-so/chung-nhan-3.jpg", "Chứng nhận HACCP"]], kn: [["ho-so/chung-nhan-2.jpg", "Kết quả thử nghiệm Eurofins Sắc Ký Hải Đăng"]],
+  uq: pages("uy-quyen", 3, "Giấy ủy quyền phân phối và bán hàng Việt Cường Nhân – Phát Lộc"),
+  gp: [["ho-so/giay-phep-kinh-doanh.jpg", "Giấy chứng nhận đăng ký doanh nghiệp Phát Lộc Natural Food"]],
+  yt: pages("yen-tho", 5, "Bản tự công bố Tổ yến thô"), tc: pages("yen-tinh-che", 5, "Bản tự công bố Tổ yến tinh chế"), dt: pages("dong-trung", 7, "Bản tự công bố Nấm đông trùng hạ thảo") };
