@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
 <defs>
   <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#fff3b0"/><stop offset=".25" stop-color="#e9c25a"/><stop offset=".5" stop-color="#a87418"/><stop offset=".72" stop-color="#f5d777"/><stop offset="1" stop-color="#8a5a10"/>
+    <stop offset="0" stop-color="#fff6c2"/><stop offset=".3" stop-color="#f2cf5b"/><stop offset=".55" stop-color="#d9a734"/><stop offset=".78" stop-color="#f7dc7a"/><stop offset="1" stop-color="#c8922a"/>
   </linearGradient>
   <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#fff6c8"/><stop offset=".45" stop-color="#e4b84e"/><stop offset=".55" stop-color="#b9831f"/><stop offset="1" stop-color="#f3d273"/>
@@ -12,7 +12,7 @@
   <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
   </linearGradient>
-  <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".35"/></filter>
+  <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#3a0a0d" flood-opacity=".45"/></filter>
   <!-- P: chân chữ có góc vát, bụng chữ cong -->
   <path id="P" d="M110 90 H560 C700 90 790 170 790 290 C790 410 700 490 560 490 H330 V700 L370 740 V760 H110 V740 L150 700 V150 Z
                    M330 170 V410 H545 C615 410 650 360 650 290 C650 220 615 170 545 170 Z" fill-rule="evenodd"/>
@@ -20,11 +20,13 @@
 </defs>
 <g filter="url(#sh)">
   <g>
+    <use href="#L" fill="none" stroke="#5a3606" stroke-width="40" stroke-linejoin="miter"/>
     <use href="#L" fill="url(#green)" stroke="url(#gold)" stroke-width="34" stroke-linejoin="miter"/>
     <use href="#L" fill="none" stroke="url(#gold2)" stroke-width="8" opacity=".9"/>
     <use href="#L" fill="url(#shine)" opacity=".7"/>
   </g>
   <g>
+    <use href="#P" fill="none" stroke="#5a3606" stroke-width="40" stroke-linejoin="miter"/>
     <use href="#P" fill="url(#green)" stroke="url(#gold)" stroke-width="34" stroke-linejoin="miter"/>
     <use href="#P" fill="none" stroke="url(#gold2)" stroke-width="8" stroke-linejoin="miter" transform="translate(0,0)" opacity=".9"/>
     <use href="#P" fill="url(#shine)" opacity=".7"/>
