@@ -1,13 +1,96 @@
 [
- {"ngay": "2026-10-23 11:00", "dang": "Mẫu quà", "tieu_de": "Hộp quà Yến Sào Cao Cấp QTH24", "anh": "images/san-pham/tet/QTH24.jpg"},
- {"ngay": "2026-10-23 15:00", "dang": "Mẫu quà", "tieu_de": "Khay Quà An Khang QTK02", "anh": "images/san-pham/tet/QTK02.jpg"},
- {"ngay": "2026-10-23 19:30", "dang": "Quà Tết DN", "tieu_de": "Quà Tết doanh nghiệp 2027 – nhận đặt từ 22/10", "anh": "images/mxh/qua-tet-doanh-nghiep.jpg"},
- {"ngay": "2026-10-24 11:00", "dang": "Mẫu quà", "tieu_de": "Hộp Quà Phúc Khang QTH11", "anh": "images/san-pham/tet/QTH11.jpg"},
- {"ngay": "2026-10-24 15:00", "dang": "Mẫu quà", "tieu_de": "Giỏ Quà Phúc Lộc Thọ QTG17", "anh": "images/san-pham/tet/QTG17.jpg"},
- {"ngay": "2026-10-24 19:30", "dang": "Uy tín", "tieu_de": "Yến sào Việt Cường Nhân chính hãng có đủ giấy tờ (carousel 3 chứng nhận)", "anh": "chứng nhận ISO/GMP/HACCP"},
- {"ngay": "2026-10-25 11:00", "dang": "Mẫu quà", "tieu_de": "Hộp Quà Thịnh Vượng QTH21", "anh": "images/san-pham/tet/QTH21.jpg"},
- {"ngay": "2026-10-25 15:00", "dang": "Mẫu quà", "tieu_de": "Giỏ Quà Trường Thọ QTG11", "anh": "images/san-pham/tet/QTG11.jpg"},
- {"ngay": "2026-10-25 19:30", "dang": "Giới thiệu", "tieu_de": "Giới thiệu Phát Lộc Natural Food (ảnh 1080x1350 logo + địa chỉ)", "anh": "images/mxh/ig-gioi-thieu.jpg"},
- {"ngay": "2026-10-27 17:30", "dang": "Kiến thức (carousel)", "tieu_de": "Yến thô, yến tinh chế, yến rút lông khác nhau thế nào (carousel 3 ảnh)", "anh": "images/san-pham/yen-tho-nguyen-to-1.jpg, yen-tinh-che-soi-ngan-1.jpg, yen-rut-long-dap-to-1.jpg", "ghi_chu": "lên lịch bù bài T2 26/10 (lỡ lịch)"},
- {"ngay": "2026-10-27 19:30", "dang": "Mẫu quà", "tieu_de": "Giỏ Quà Phú Quý Đại Cát QTG06", "anh": "images/san-pham/tet/QTG06.jpg"}
+ {
+  "ngay": "2026-10-23 11:00",
+  "dang": "Mẫu quà",
+  "tieu_de": "Hộp quà Yến Sào Cao Cấp QTH24",
+  "anh": "images/san-pham/tet/QTH24.jpg"
+ },
+ {
+  "ngay": "2026-10-23 15:00",
+  "dang": "Mẫu quà",
+  "tieu_de": "Khay Quà An Khang QTK02",
+  "anh": "images/san-pham/tet/QTK02.jpg"
+ },
+ {
+  "ngay": "2026-10-23 19:30",
+  "dang": "Quà Tết DN",
+  "tieu_de": "Quà Tết doanh nghiệp 2027 – nhận đặt từ 22/10",
+  "anh": "images/mxh/qua-tet-doanh-nghiep.jpg"
+ },
+ {
+  "ngay": "2026-10-24 11:00",
+  "dang": "Mẫu quà",
+  "tieu_de": "Hộp Quà Phúc Khang QTH11",
+  "anh": "images/san-pham/tet/QTH11.jpg"
+ },
+ {
+  "ngay": "2026-10-24 15:00",
+  "dang": "Mẫu quà",
+  "tieu_de": "Giỏ Quà Phúc Lộc Thọ QTG17",
+  "anh": "images/san-pham/tet/QTG17.jpg"
+ },
+ {
+  "ngay": "2026-10-24 19:30",
+  "dang": "Uy tín",
+  "tieu_de": "Yến sào Việt Cường Nhân chính hãng có đủ giấy tờ (carousel 3 chứng nhận)",
+  "anh": "chứng nhận ISO/GMP/HACCP"
+ },
+ {
+  "ngay": "2026-10-25 11:00",
+  "dang": "Mẫu quà",
+  "tieu_de": "Hộp Quà Thịnh Vượng QTH21",
+  "anh": "images/san-pham/tet/QTH21.jpg"
+ },
+ {
+  "ngay": "2026-10-25 15:00",
+  "dang": "Mẫu quà",
+  "tieu_de": "Giỏ Quà Trường Thọ QTG11",
+  "anh": "images/san-pham/tet/QTG11.jpg"
+ },
+ {
+  "ngay": "2026-10-25 19:30",
+  "dang": "Giới thiệu",
+  "tieu_de": "Giới thiệu Phát Lộc Natural Food (ảnh 1080x1350 logo + địa chỉ)",
+  "anh": "images/mxh/ig-gioi-thieu.jpg"
+ },
+ {
+  "ngay": "2026-10-27 17:30",
+  "dang": "Kiến thức (carousel)",
+  "tieu_de": "Yến thô, yến tinh chế, yến rút lông khác nhau thế nào (carousel 3 ảnh)",
+  "anh": "images/san-pham/yen-tho-nguyen-to-1.jpg, yen-tinh-che-soi-ngan-1.jpg, yen-rut-long-dap-to-1.jpg",
+  "ghi_chu": "lên lịch bù bài T2 26/10 (lỡ lịch)"
+ },
+ {
+  "ngay": "2026-10-27 19:30",
+  "dang": "Mẫu quà",
+  "tieu_de": "Giỏ Quà Phú Quý Đại Cát QTG06",
+  "anh": "images/san-pham/tet/QTG06.jpg"
+ },
+ {
+  "ngay": "2026-10-30 15:30",
+  "dang": "Mẫu quà theo ngân sách (carousel)",
+  "tieu_de": "Quà Tết yến sào theo ngân sách: QTH17 – QTH06 – QTH04 (carousel 3 ảnh)",
+  "anh": "images/san-pham/tet/QTH17.jpg, QTH06.jpg, QTH04.jpg",
+  "ghi_chu": "lên lịch bù bài T4 28/10 (lỡ lịch do máy nhà mất kết nối)"
+ },
+ {
+  "ngay": "2026-10-30 16:00",
+  "dang": "Công thức",
+  "tieu_de": "Công thức yến chưng táo đỏ hạt sen",
+  "anh": "images/san-pham/tao-do-tan-cuong-1.jpg",
+  "ghi_chu": "lên lịch bù bài T5 29/10"
+ },
+ {
+  "ngay": "2026-10-30 16:30",
+  "dang": "Uy tín (carousel)",
+  "tieu_de": "Yến sào Việt Cường Nhân chính hãng có đủ giấy tờ (carousel 3 chứng nhận)",
+  "anh": "ho-so/chung-nhan-1.jpg, chung-nhan-2.jpg, chung-nhan-3.jpg",
+  "ghi_chu": "đăng lại bài 24/10 19:30 bị Meta báo Không đăng được"
+ },
+ {
+  "ngay": "2026-10-30 19:30",
+  "dang": "Quà Tết doanh nghiệp",
+  "tieu_de": "Quà Tết doanh nghiệp 2027 – đặt sớm (QTH18, QTH07)",
+  "anh": "images/mxh/qua-tet-doanh-nghiep.jpg"
+ }
 ]
