@@ -174,8 +174,8 @@ module.exports = [
     cats: ["Thạch Nha Đam"],
     title: "Thạch nha đam Tây Nguyên có đường, không đường – túi 1kg | Phát Lộc",
     h1: "Thạch nha đam Tây Nguyên",
-    desc: "Thạch nha đam Tây Nguyên đã sơ chế, có đường và không đường, túi 1kg 59.000đ. Giòn, không đắng, dùng làm chè, sữa chua, nước giải khát.",
-    lede: `<p>Thạch nha đam Tây Nguyên đã gọt vỏ, cắt hạt lựu và xử lý hết nhớt đắng, mở ra là dùng. Có loại có đường và không đường, đóng túi 1kg (59.000đ).</p>
+    desc: "Thạch nha đam Tây Nguyên đã sơ chế, có đường và không đường, túi 1kg 47.000đ. Giòn, không đắng, dùng làm chè, sữa chua, nước giải khát.",
+    lede: `<p>Thạch nha đam Tây Nguyên đã gọt vỏ, cắt hạt lựu và xử lý hết nhớt đắng, mở ra là dùng. Có loại có đường và không đường, đóng túi 1kg (47.000đ).</p>
 <p>Loại không đường hợp người hạn chế đường hoặc muốn tự nêm; loại có đường dùng ngay cho chè, sữa chua, trà trái cây.</p>`,
     guide: `      <h2>Gợi ý dùng thạch nha đam</h2>
       <ul>

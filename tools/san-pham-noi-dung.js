@@ -17,7 +17,7 @@ module.exports = [
   },
   {
     id: 111, slug: "yen-tinh-che-1-lop-soi-18-20-tai-100gr", dm: "yen-tinh-che",
-    title: "Yến tinh chế 1 lớp sợi 18–20 tai 100gr – 2.390.000đ | Phát Lộc",
+    title: "Yến tinh chế 1 lớp sợi 18–20 tai 100gr – 3.136.000đ | Phát Lộc",
     desc: "Yến tinh chế 1 lớp sợi 18–20 tai 100gr Việt Cường Nhân, đã nhặt sạch lông, tai nhỏ dễ chia phần. Có bản tự công bố, phiếu kiểm nghiệm. Giao toàn quốc, kiểm hàng khi nhận.",
     points: ["100gr chia 18–20 tai, mỗi tai khoảng 5gr", "Tai nhỏ vừa một lần chưng cho 1–2 người", "Đã nhặt sạch lông, chỉ cần ngâm rồi chưng", "Có trong nhiều giỏ quà Tết 2027"],
     body: `<p>Yến tinh chế 1 lớp sợi là tổ yến đã làm sạch, ép lại thành tai mỏng một lớp. Loại 18–20 tai mỗi tai khoảng 5gr, tiện chia phần: mỗi lần chưng một tai cho 1–2 người, không phải cân đo.</p>
@@ -51,7 +51,7 @@ module.exports = [
   },
   {
     id: 136, slug: "nam-dong-trung-ha-thao-loai-cay-100gr", dm: "dong-trung-ha-thao",
-    title: "Nấm đông trùng hạ thảo sấy khô loại cây 100gr – 599.000đ | Phát Lộc",
+    title: "Nấm đông trùng hạ thảo sấy khô loại cây 100gr – 665.000đ | Phát Lộc",
     desc: "Nấm đông trùng hạ thảo sấy khô loại cây 100gr, sợi nguyên, đều màu. Pha trà, chưng yến, nấu canh. Có bản tự công bố, phiếu kiểm nghiệm. Giao toàn quốc.",
     points: ["Sợi nấm nguyên cây, đều màu cam vàng", "Pha trà, chưng yến, nấu canh, hầm gà", "100gr dùng được lâu cho cả gia đình", "Có loại 50gr và loại gãy giá mềm"],
     body: `<p>Nấm đông trùng hạ thảo loại cây giữ sợi nấm nguyên, đẹp, hợp vừa dùng vừa làm quà. Sấy khô nên bảo quản được lâu, dùng linh hoạt trong nhiều món.</p>
