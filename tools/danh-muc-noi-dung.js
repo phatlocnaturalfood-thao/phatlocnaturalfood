@@ -150,8 +150,8 @@ module.exports = [
     cats: ["Táo Đỏ Tân Cương"],
     title: "Táo đỏ Tân Cương sấy khô – size trung, đại, thượng hạng | Phát Lộc",
     h1: "Táo đỏ Tân Cương sấy khô",
-    desc: "Táo đỏ Tân Cương sấy khô size trung, đại, thượng hạng túi 1kg và hộp 350gr, táo đỏ Nhược Khương. Giá từ 45.000đ. Dùng chưng yến, nấu chè, pha trà. Giao toàn quốc.",
-    lede: `<p>Táo đỏ Tân Cương quả to, thịt dày, ngọt tự nhiên, là nguyên liệu quen thuộc khi chưng yến, nấu chè, hầm gà hay pha trà. Phát Lộc có 3 size theo số quả mỗi kg (trung 100–120 quả, đại 80–100 quả, thượng hạng 70–80 quả), đóng túi 1kg hoặc hộp 350gr, giá từ 45.000đ.</p>
+    desc: "Táo đỏ Tân Cương sấy khô size trung, đại, thượng hạng túi 1kg và hộp 350gr, táo đỏ Nhược Khương. Giá từ 50.000đ. Dùng chưng yến, nấu chè, pha trà. Giao toàn quốc.",
+    lede: `<p>Táo đỏ Tân Cương quả to, thịt dày, ngọt tự nhiên, là nguyên liệu quen thuộc khi chưng yến, nấu chè, hầm gà hay pha trà. Phát Lộc có 3 size theo số quả mỗi kg (trung 100–120 quả, đại 80–100 quả, thượng hạng 70–80 quả), đóng túi 1kg hoặc hộp 350gr, giá từ 50.000đ.</p>
 <p>Táo Nhược Khương quả nhỏ hơn, vị ngọt đậm, giá mềm, hợp dùng hằng ngày.</p>`,
     guide: `      <h2>Chọn size táo đỏ</h2>
       <ul>
