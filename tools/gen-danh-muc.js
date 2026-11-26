@@ -27,6 +27,8 @@ const footer = tpl.slice(tpl.indexOf("<footer>"));
 const PAGES = require("./danh-muc-noi-dung.js");
 const SP = Object.fromEntries(require("./san-pham-noi-dung.js").map(x => [x.id, x.slug]));
 
+// Nút Liên hệ mở form đặt hàng ở trang chủ, chọn sẵn sản phẩm (form gửi đơn về Pancake POS).
+const orderHash = p => { const m = p[2].match(/\b(QT[GHKT]\d{2})\b/); return "#" + (m ? m[1].toLowerCase() : "sp-" + p[0]); };
 function card(p) {
   const img = IMG[p[0]] ? IMG[p[0]][0] : null;
   return `      <article class="card">
@@ -35,7 +37,7 @@ function card(p) {
           <h3>${SP[p[0]] ? `<a href="../san-pham/${SP[p[0]]}/">${esc(p[2])}</a>` : esc(p[2])}</h3>
           <p class="spec">${esc(p[3])}</p>
           <p class="price"><b>${vnd(p[4])}</b>${p[5] ? ` <s>${vnd(p[5])}</s>` : ""}</p>
-          ${HET_HANG.includes(p[0]) ? `<span class="btn btn-line" aria-disabled="true" style="opacity:.55">Hết hàng</span>` : `<a class="btn btn-line" href="https://zalo.me/0768759419" target="_blank" rel="noopener">Liên hệ</a>`}
+          ${HET_HANG.includes(p[0]) ? `<span class="btn btn-line" aria-disabled="true" style="opacity:.55">Hết hàng</span>` : `<a class="btn btn-line" href="../${orderHash(p)}">Liên hệ</a>`}
         </div>
       </article>`;
 }

@@ -101,7 +101,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
 ${s.points.map(x => `          <li>${esc(x)}</li>`).join("\n")}
         </ul>
         <div class="buy">
-          <a class="btn btn-gold" href="https://zalo.me/0768759419" target="_blank" rel="noopener">Liên hệ</a>
+          <a class="btn btn-gold" href="../../${orderHash(p)}">Liên hệ</a>
           <a class="btn btn-line" href="https://zalo.me/0768759419" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','click_zalo');if(window.fbq)fbq('track','Contact')">Hỏi qua Zalo</a>
         </div>
         <p class="ship">Giao toàn quốc · Kiểm hàng khi nhận · Hotline <a href="tel:0768759419" onclick="if(window.gtag)gtag('event','click_call')">0768 759 419</a></p>
@@ -123,7 +123,7 @@ ${related.map(r => { const f = (IMG[r[0]] || [])[0]; const own = SP.find(x => x.
           <h3>${esc(r[2])}</h3>
           <p class="spec">${esc(r[3])}</p>
           <p class="price"><b>${vnd(r[4])}</b></p>
-          <a class="btn btn-line" href="${own ? "../" + own.slug + "/" : "https://zalo.me/0768759419"}"${own ? "" : ' target="_blank" rel="noopener"'}>${own ? "Xem chi tiết" : "Liên hệ"}</a>
+          <a class="btn btn-line" href="${own ? "../" + own.slug + "/" : "../../" + orderHash(r)}">${own ? "Xem chi tiết" : "Liên hệ"}</a>
         </div>
       </article>`; }).join("\n")}
     </div>
