@@ -28,7 +28,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Store","name":"Phát Lộc Natural Food","legalName":"Công ty TNHH Sản xuất Phát Lộc Natural Food","url":"https://phatlocnaturalfood.com/","logo":"https://phatlocnaturalfood.com/logo.jpg","image":"https://phatlocnaturalfood.com/logo.jpg","telephone":"+84768759419","email":"phatlocnaturalfood@gmail.com","taxID":"3703421984","address":{"@type":"PostalAddress","streetAddress":"511/9 Bùi Thị Xuân, Phường Tân Đông Hiệp","addressLocality":"TP. Hồ Chí Minh","addressCountry":"VN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:30","closes":"21:00"}],"priceRange":"35.000đ - 5.202.000đ","currenciesAccepted":"VND","paymentAccepted":"Tiền mặt, Chuyển khoản","areaServed":"VN","hasMap":"https://www.google.com/maps/search/?api=1&query=Ph%C3%A1t%20L%E1%BB%99c%20Natural%20Food%2C%20511/9%20B%C3%B9i%20Th%E1%BB%8B%20Xu%C3%A2n%2C%20Ph%C6%B0%E1%BB%9Dng%20T%C3%A2n%20%C4%90%C3%B4ng%20Hi%E1%BB%87p%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh","sameAs":["https://www.facebook.com/1415830271609330","https://zalo.me/0768759419"]}
 </script>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}/* Nút liên hệ nổi: Zalo + gọi điện, góc phải dưới */
+<style>body{margin:0}#form{scroll-margin-top:96px}img{max-width:100%}[hidden]{display:none!important}/* Nút liên hệ nổi: Zalo + gọi điện, góc phải dưới */
 .fab { position: fixed; right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 10px; z-index: 50; }
 .fab a { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.22); text-decoration: none; font: 700 13px var(--font-body); }
 .fab .z { background: #0068ff; color: #fff; }
@@ -806,7 +806,7 @@ function draw() {
         <h3>${p[2]}</h3>
         <div class="spec">${p[3]}</div>
         <div class="price">${priceHtml(p)}</div>
-        ${HET_HANG.includes(p[0]) ? `<button class="btn btn-line" type="button" disabled style="opacity:.55;cursor:not-allowed">Hết hàng</button>` : `<a class="btn btn-line" href="https://zalo.me/0768759419" target="_blank" rel="noopener">Liên hệ</a>`}
+        ${HET_HANG.includes(p[0]) ? `<button class="btn btn-line" type="button" disabled style="opacity:.55;cursor:not-allowed">Hết hàng</button>` : `<button class="btn btn-line" type="button" data-pick="${p[0]}" aria-label="Liên hệ đặt ${p[2]} ${p[3]}">Liên hệ</button>`}
       </div>
     </article>`).join("");
   chips.innerHTML = cats.map(c => `<button class="chip" type="button" aria-pressed="${c === cur}" data-cat="${c}">${c}</button>`).join("");
@@ -816,6 +816,12 @@ fillSel();
 document.getElementById("f-count").textContent = P.length;
 document.getElementById("f-min").textContent = "Từ " + vnd(Math.min(...P.map(p => p[4])));
 draw();
+// Nút "Liên hệ" trên thẻ sản phẩm: chọn sẵn sản phẩm trong form đặt hàng (form gửi đơn thẳng vào Pancake POS).
+function pickOrder(id) {
+  sel.value = id;
+  document.getElementById("form").scrollIntoView({behavior: "smooth", block: "start"});
+  setTimeout(() => { const n = document.getElementById("o-name"); if (n && !n.value) n.focus({preventScroll: true}); }, 900);
+}
 // Link đặt nhanh từng mẫu, ví dụ phatlocnaturalfood.com/#qth24 hoặc /#sp-338: chọn sẵn sản phẩm trong form đặt hàng.
 function openFromHash() {
   const h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
@@ -827,8 +833,7 @@ function openFromHash() {
   if (!p) return;
   cur = p[1]; draw();
   if (HET_HANG.includes(p[0])) return;
-  sel.value = p[0];
-  setTimeout(() => document.getElementById("dat-hang").scrollIntoView({behavior: "smooth"}), 100);
+  setTimeout(() => pickOrder(p[0]), 100);
 }
 const two = n => String(n).padStart(2, "0");
 function fsTick() {
@@ -854,7 +859,7 @@ document.addEventListener("click", e => {
   const c = e.target.closest("[data-cat]"); if (c) { cur = c.dataset.cat; bud = 0; draw(); return; }
   const sc = e.target.closest("[data-showcat]"); if (sc) { cur = sc.dataset.showcat; draw(); document.getElementById("san-pham").scrollIntoView({behavior: "smooth"}); return; }
   const k = e.target.closest("[data-pick]");
-  if (k) { sel.value = k.dataset.pick; document.getElementById("dat-hang").scrollIntoView({behavior: "smooth"}); }
+  if (k) { pickOrder(k.dataset.pick); try { gtag("event", "click_lien_he", { item_id: k.dataset.pick }); } catch {} }
 });
 // Địa chỉ Apps Script nhận đơn (Google Sheet). Để trống thì chỉ tạo nội dung đơn để gửi Zalo.
 const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbyWVw_Sv31oZmWk-JxbMjnJiiUAH1o7BDcKwgLaU7EaQdD1LIzYEaP3A0gj0m_6xwe5ZA/exec";
