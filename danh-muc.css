@@ -11,7 +11,7 @@
 .dm h2.grp small { font: 500 13px var(--font-body); color: var(--muted); margin-left: 6px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
 .card { background: var(--paper); border: 2px solid var(--logo-gold, #e8cf55); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
-.card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: #fff; }
+.card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; background: #fff; }
 .card .body { padding: 12px 14px 14px; display: grid; gap: 6px; align-content: start; }
 .card h3 { font: 600 15px/1.35 var(--font-body); }
 .card .spec { margin: 0; font-size: 12.5px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
